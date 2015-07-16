@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <style type="text/css" media="screen">
-    tr.t1 td {background-color:#fff;}/* 第一行的背景色 */
-    tr.t2 td {background-color:#eee;}/* 第二行的背景色 */
+    tr.t1 td {background-color:FFFFFF;}/* 第一行的背景色 */
+    tr.t2 td {background-color:#D2E9FF;}/* 第二行的背景色 */
 </style>
 <script type="text/javascript">
     <!--
@@ -10,7 +10,7 @@
         var ptr=document.getElementById("Table").getElementsByTagName("tr");
         var pth=document.getElementById("Table").getElementsByTagName("th");
         for (i=1;i<ptr.length+1;i++) {
-            ptr[i-1].className = (i%2>0)?"t1":"t2";
+            ptr[i-1].className = (i%2>0)?"t2":"t1";
         }
         for (i=1;i<pth.length+1;i++) {
             pth[i-1].width = 100/pth.length+"%";
@@ -20,6 +20,7 @@
 </script>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
     <link href="mybeacon.css" rel="stylesheet" type="text/css" media="all" />
     <title>在席情報</title>
 </head>
@@ -61,13 +62,12 @@ $result = mysql_query($sql, $conn);
 
 echo "<div  align='left'>";
 
-echo '<table id="Table" border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo width="100%">';
+echo '<table id="Table" border=1 cellpadding=10 cellspacing=2 bordercolor=#408080 width="100%">';
 
 
 //表头
 $thstr = "<th>" . implode("</th><th>", $dbcolarray) . " </th>";
 echo $thstr;
-
 
 //表中的内容
 while ($row=mysql_fetch_array($result, MYSQL_ASSOC)){
@@ -78,8 +78,14 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC)){
         if($td=="名前"){
             $tdstr .= "<td>".$row["username"]."</td>";
         }else{
-            if($row["locationname"] == $td){
-                $tdstr .= "<td>○</td>";
+            if($row["locationname"] == $td) {
+                if ($row["status2"] == "0") {
+                    $tdstr .= "<td align='center' style='color:#006000;' >●</td>";
+                } else if ($row["status2"] == "1") {
+                    $tdstr .= "<td align='center' style='color:#FF0000;' >●</td>";
+                } else {
+                    $tdstr .= "<td></td>";
+                }
             }else{
                 $tdstr .= "<td></td>";
             }
