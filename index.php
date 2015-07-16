@@ -144,9 +144,10 @@ mysql_close($conn);
             var locationname = data.locationname;
             var status =data.status;
             updataRowInTable(username,locationname,status);
+            alert(username);
         },false);//使用false表示在冒泡阶段处理事件，而不是捕获阶段。
     }
-    alert(typeof(EventSource));
+
 </script>
 
 </html>
