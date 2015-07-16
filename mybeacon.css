@@ -1,0 +1,16 @@
+@charset "utf-8";
+h1
+{
+    color:Red;
+    text-align:center;
+}
+table th
+{
+    background-color:#7cfc00;
+}
+.div{
+    
+}
+#cellid{
+ width:20px;   
+}
