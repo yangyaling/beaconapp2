@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <style type="text/css" media="screen">
-    tr.t1 td {background-color:#FFFFFF;}/* 第一行的背景色 */
+    tr.t1 td {background-color:FFFFFF;}/* 第一行的背景色 */
     tr.t2 td {background-color:#D2E9FF;}/* 第二行的背景色 */
 </style>
 <script type="text/javascript">
@@ -62,8 +62,17 @@ $result = mysql_query($sql, $conn);
 
 echo "<div  align='left'>";
 
-echo '<table id="Table" border=1 cellpadding=10 cellspacing=2 bordercolor=#408080 width="100%">';
+echo '<table id="Table" border=1 cellpadding=10 cellspacing=1 bordercolor=#408080 width="100%">';
+echo '<h1>【R＆D室要員在席情報一覧】</h1>';
 
+$thstr = "※時間　";
+echo $thstr;
+
+$thstr = "<script type='text/javascript'>";
+$thstr = $thstr."var myDate = new Date();";
+$thstr = $thstr."document.write(myDate.toLocaleString())";
+$thstr = $thstr."</script>";
+echo $thstr;
 
 //表头
 $thstr = "<th>" . implode("</th><th>", $dbcolarray) . " </th>";
@@ -80,7 +89,7 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC)){
         }else{
             if($row["locationname"] == $td) {
                 if ($row["status2"] == "0") {
-                    $tdstr .= "<td align='center' style='color:#006000;' >●</td>";
+                    $tdstr .= "<td align='center' style='color:#00DB00;' >●</td>";
                 } else if ($row["status2"] == "1") {
                     $tdstr .= "<td align='center' style='color:#FF0000;' >●</td>";
                 } else {
@@ -96,6 +105,10 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC)){
 }
 echo "</table>";
 echo "</div>";
+
+$thstr ="<br/>";
+$thstr = $thstr."<a href='mybeacon.php'>■Beacon管理</a>";
+echo $thstr;
 
 mysql_free_result($result);
 mysql_close($conn);
