@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <style type="text/css" media="screen">
-    tr.t1 td {background-color:FFFFFF;}/* 第一行的背景色 */
+    tr.t1 td {background-color:#FFFFFF;}/* 第一行的背景色 */
     tr.t2 td {background-color:#D2E9FF;}/* 第二行的背景色 */
 </style>
 <script type="text/javascript">
