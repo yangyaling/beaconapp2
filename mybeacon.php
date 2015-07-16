@@ -38,8 +38,8 @@ $tpl_db_coltitle = $dbcolarray;
 $tpl_db_rows = array();
 $sql = sprintf("select %s from %s", implode(",",$dbcolarray), $tpl_db_tablename);
 $result = mysql_query($sql, $conn);
-echo "<div  align='center'>";
-echo "<div>";
+echo "<div  align='center' width='480px'>";
+echo "<div width='480px'>";
 echo "<caption style='font-size:15px' align='left'>ロケーション数：<label id='tableRowCount'>".$dbcount[0]."</label></caption>";
 echo '<table id="Table" border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo>';
 
@@ -73,7 +73,7 @@ mysql_close($conn);
 ?>
 
 
-<div id="editdiv" style="display:none;color:red;">
+<div id="editdiv" style="display:none;color:red;" width='480px'>
 <table id="editItem" border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo>
     <th>id</th><th>locationname</th><th>uuid</th><th>major</th><th>minor</th><th>Action</th>
     <tr>
@@ -86,7 +86,7 @@ mysql_close($conn);
     </tr>
 </table>
 </div>
-<div id="adddiv" style="display:none;color:green;" >
+<div id="adddiv" style="display:none;color:green;" width='480px'>
 <table id="editItem" border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo>
     <th>id</th><th>locationname</th><th>uuid</th><th>major</th><th>minor</th><th>Action</th>
     <tr>
