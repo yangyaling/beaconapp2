@@ -39,7 +39,7 @@ $tpl_db_rows = array();
 $sql = sprintf("select %s from %s", implode(",",$dbcolarray), $tpl_db_tablename);
 $result = mysql_query($sql, $conn);
 echo "<div  align='center'>";
-echo "<div  align='left'>";
+echo "<div>";
 echo "<caption style='font-size:15px' align='left'>ロケーション数：<label id='tableRowCount'>".$dbcount[0]."</label></caption>";
 echo '<table id="Table" border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo>';
 
@@ -73,7 +73,7 @@ mysql_close($conn);
 ?>
 
 
-<div id="editdiv" style="display:none;color:red;" align="left">
+<div id="editdiv" style="display:none;color:red;">
 <table id="editItem" border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo>
     <th>id</th><th>locationname</th><th>uuid</th><th>major</th><th>minor</th><th>Action</th>
     <tr>
@@ -86,7 +86,7 @@ mysql_close($conn);
     </tr>
 </table>
 </div>
-<div id="adddiv" style="display:none;color:green;" align="left">
+<div id="adddiv" style="display:none;color:green;" >
 <table id="editItem" border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo>
     <th>id</th><th>locationname</th><th>uuid</th><th>major</th><th>minor</th><th>Action</th>
     <tr>
