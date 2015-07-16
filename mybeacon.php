@@ -42,14 +42,6 @@ $result = mysql_query($sql, $conn);
 echo "<div  align='left'>";
 echo "<caption style='font-size:15px' align='left'>当前记录数：<label id='tableRowCount'>".$dbcount[0]."</label></caption>";
 echo '<table id="Table" border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo>';
-echo"<tr style=‘height: 0px’>
-        <td width='50'></td>
-        <td width='250'></td>
-        <td width='350'></td>
-        <td width='100'></td>
-        <td width='100'></td>
-        <td width='150'></td>
-    </tr>";
 
 //表头
 $thstr = "<th>" . implode("</th><th>", $dbcolarray) . " </th>";
@@ -83,14 +75,6 @@ mysql_close($conn);
 
 <div id="editdiv" style="display:none;color:red;" align="left">
 <table id="editItem" border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo>
-    <tr style="height: 0px">
-        <td width='50'></td>
-        <td width='250'></td>
-        <td width='350'></td>
-        <td width='100'></td>
-        <td width='100'></td>
-        <td width='150'></td>
-    </tr>
     <th>id</th><th>locationname</th><th>uuid</th><th>major</th><th>minor</th><th>Action</th>
     <tr>
         <td><input  style="width:20px"  type=text id="editdiv_id" size="1" readonly="true" /></td>
@@ -104,14 +88,6 @@ mysql_close($conn);
 </div>
 <div id="adddiv" style="display:none;color:green;" align="left">
 <table id="editItem" border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo>
-    <tr style="height: 0px">
-        <td width='50'></td>
-        <td width='250'></td>
-        <td width='350'></td>
-        <td width='100'></td>
-        <td width='100'></td>
-        <td width='150'></td>
-    </tr>
     <th>id</th><th>locationname</th><th>uuid</th><th>major</th><th>minor</th><th>Action</th>
     <tr>
         <td class="cellid">Auto</td>
