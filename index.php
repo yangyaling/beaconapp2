@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <style type="text/css" media="screen">
-    tr.t1 td {background-color:FFFFFF;}/* 第一行的背景色 */
+    tr.t1 td {background-color:#FFFFFF;}/* 第一行的背景色 */
     tr.t2 td {background-color:#D2E9FF;}/* 第二行的背景色 */
 </style>
 <script type="text/javascript">
@@ -14,6 +14,24 @@
         }
         for (i=1;i<pth.length+1;i++) {
             pth[i-1].width = 100/pth.length+"%";
+        }
+    }
+    function updataRowInTable(username, locationname,status)
+    {
+        var row = SearchIdInTable($("#Table tr"), username);
+        if (row != -1)
+        {
+            var pth=document.getElementById("Table").getElementsByTagName("th");
+            var strtitle ="";
+            for (i=2;i<pth.length+1;i++) {
+                strtitle = pth[i-1].html;
+                $("#Table tr:eq(" + i + ") td:eq("+i+")").html(strtitle == locationname ? "●" : "");
+            }
+            if(status =="1"){
+                $("#Table tr:eq(" + i + ") td:eq("+i+")").style ='color:#FF0000;';
+            }else{
+                $("#Table tr:eq(" + i + ") td:eq("+i+")").style ='color:#00DB00;';
+            }
         }
     }
     //-->
@@ -115,4 +133,19 @@ mysql_close($conn);
 ?>
 
 </body>
+
+<script>
+    if(typeof(EventSource)!=="undefined"){
+        var es = new EventSource("rdupdate_sse.php");
+        es.addEventListener("message",function(e){
+            //e.data
+            var data = JSON.parse(e.data);
+            var username = data.username;
+            var locationname = data.locationname;
+            var status =data.status;
+            updataRowInTable(username,locationname,status);
+        },false);//使用false表示在冒泡阶段处理事件，而不是捕获阶段。
+    }
+</script>
+
 </html>
