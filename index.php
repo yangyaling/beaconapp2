@@ -137,7 +137,8 @@ mysql_close($conn);
 <script>
     if(typeof(EventSource)!=="undefined"){
         var es = new EventSource("rdupdate_sse.php");
-        es.addEventListener("message",function(e){
+
+        es.onmessage = function(e) {
             //e.data
             var data = JSON.parse(e.data);
             var username = data.username;
@@ -145,9 +146,8 @@ mysql_close($conn);
             var status =data.status;
             updataRowInTable(username,locationname,status);
             alert(username);
-        },false);//使用false表示在冒泡阶段处理事件，而不是捕获阶段。
+        };
     }
-
 </script>
 
 </html>
