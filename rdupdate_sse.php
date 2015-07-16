@@ -22,6 +22,7 @@ $sql = "SELECT U.username, IF( ISNULL( B.locationname ) ,  '', B.locationname ) 
 $sql = $sql."LEFT JOIN (SELECT M. *  FROM RDUSERSTATUS M WHERE M.updatetime = (  SELECT MAX( MM.updatetime )  FROM RDUSERSTATUS MM ";
 $sql = $sql."WHERE M.useruuid = MM.useruuid ) GROUP BY M.useruuid) AS M ON U.uuid = M.useruuid LEFT JOIN RDBEACONINFO B ON M.uuid = B.uuid ";
 $sql = $sql."AND M.major = B.major AND M.minor = B.minor GROUP BY U.uuid ";
+while (true){
 
 $result = mysql_query($sql, $conn);
 while ($row=mysql_fetch_row($result)) {
@@ -34,5 +35,6 @@ while ($row=mysql_fetch_row($result)) {
     echo PHP_EOL;
     ob_flush();
     flush();
+}
 }
 ?>
