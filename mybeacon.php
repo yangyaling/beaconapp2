@@ -8,7 +8,7 @@
     <title>RDBEACONINFO</title>
 </head>
 <body>
-<h1>表名：RDBEACONINFO</h1>
+<h1>テーブルネーム：RDBEACONINFO</h1>
 
 <?php
 
@@ -38,9 +38,9 @@ $tpl_db_coltitle = $dbcolarray;
 $tpl_db_rows = array();
 $sql = sprintf("select %s from %s", implode(",",$dbcolarray), $tpl_db_tablename);
 $result = mysql_query($sql, $conn);
-
+echo "<div  align='center'>";
 echo "<div  align='left'>";
-echo "<caption style='font-size:15px' align='left'>当前记录数：<label id='tableRowCount'>".$dbcount[0]."</label></caption>";
+echo "<caption style='font-size:15px' align='left'>ロケーション数：<label id='tableRowCount'>".$dbcount[0]."</label></caption>";
 echo '<table id="Table" border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo>';
 
 //表头
@@ -98,6 +98,7 @@ mysql_close($conn);
         <td><input type=button name="Insert" value="Insert" onclick="insertFun()" /></td>
     </tr>
 </table>
+</div>
 </div>
 </body>
 </html> 
