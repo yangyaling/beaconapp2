@@ -12,6 +12,7 @@ echo "<script language='javascript' type='text/javascript'>";
 
 echo "</script>";
 echo "hello";
+echo "test";
 
 
 ?>
