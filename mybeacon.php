@@ -99,7 +99,8 @@ mysql_close($conn);
     </tr>
 </table>
 </div>
-<a href='javascript :history.back(-1)'>在席情報へ戻る</a>
+
+<a href='index.php'>在席情報へ戻る</a>
 </div>
 </body>
 </html> 
