@@ -14,8 +14,6 @@ define("SAE_MYSQL_USER",     "bf7588dfac7e65");
 define("SAE_MYSQL_PASS",     "92137672");
 define("SAE_MYSQL_DB",     "rdbeacoAvghw9hxk");
 
-
-
 $conn = @mysql_connect(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS);
 mysql_select_db(SAE_MYSQL_DB,$conn);
 $sql = "SELECT U.username, IF( ISNULL( B.locationname ) ,  '', B.locationname ) AS locationname, U.status2 FROM RDUSERINFO U ";

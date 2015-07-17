@@ -120,7 +120,7 @@ mysql_close($conn);
         alert("start");
         var es = new EventSource("rdupdate_sse.php");
         es.addEventListener("message",function(e){
-
+            alert("1");
             var data = JSON.parse(e.data);
             var username = data.username;
             var locationname = data.locationname;
