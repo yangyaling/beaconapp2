@@ -31,7 +31,7 @@ while ($row=mysql_fetch_row($result)) {
     $d = array("locationname"=>$row[1],"username"=>$row[0],"status"=>$row[2]);
     echo "data:".json_encode($d)."\n\n";
 
-    ob_flush();
+    @ob_flush();
     flush();
 }
 mysql_close($conn);

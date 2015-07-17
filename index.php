@@ -117,6 +117,7 @@ mysql_close($conn);
 
 <script>
     if(typeof(EventSource)!=="undefined"){
+        alert("start");
         var es = new EventSource("rdupdate_sse.php");
         es.addEventListener("message",function(e){
 
