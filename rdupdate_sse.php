@@ -22,8 +22,8 @@ $sql = $sql."WHERE M.useruuid = MM.useruuid ) GROUP BY M.useruuid) AS M ON U.uui
 $sql = $sql."AND M.major = B.major AND M.minor = B.minor GROUP BY U.uuid ";
 
 
-/*$result = mysql_query($sql, $conn);
-while ($row=mysql_fetch_row($result)) {
+$result = mysql_query($sql, $conn);
+/*while ($row=mysql_fetch_row($result)) {
     $arrayReturn=array('username'=>$row[0],'locationname'=>$row[1],'status'=>$row[2]);
     echo $arrayReturn;
     $d = array("locationname"=>$row[1],"username"=>$row[0],"status"=>$row[2]);
@@ -44,4 +44,3 @@ echo "data:".json_encode($d)."\n\n";
 flush();
 sleep(10);
 
-?>
