@@ -26,16 +26,11 @@ function updateRowInTable(username, locationname,status)
             var strtitle = pth[irow-1].innerHTML;
             var strvalue;
             if(status=="1"){
-                strvalue="●[XX作業中]";
+                strvalue="○[会議中]";
             }else{
-                strvalue="●";
+                strvalue="○";
             }
             $("#Table tr:eq(" + i + ") td:eq("+(irow -1)+")").html(strtitle == locationname ? strvalue : "");
-        }
-        if(status =="1"){
-            $("#Table tr:eq(" + i + ") td:eq("+(irow -1)+")").style.color ='#FF0000;';
-        }else{
-            $("#Table tr:eq(" + i + ") td:eq("+(irow -1)+")").style.color ='#00DB00;';
         }
     }
 }

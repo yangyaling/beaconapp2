@@ -92,14 +92,14 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC)){
         }else{
             if($row["locationname"] == $td) {
                 if ($row["status2"] == "0") {
-                    $tdstr .= "<td align='center' style='color:#00DB00;' >●</td>";
+                    $tdstr .= "<td align='center' style='color:#311bdb;' >○</td>";
                 } else if ($row["status2"] == "1") {
-                    $tdstr .= "<td align='center' style='color:#00DB00;'>●[XX作業中]</td>";
+                    $tdstr .= "<td align='center' style='color:#311bdb;'>○[会議中]</td>";
                 } else {
-                    $tdstr .= "<td  align='center'  style='color:#00DB00;'></td>";
+                    $tdstr .= "<td  align='center'  style='color:#311bdb;'></td>";
                 }
             }else{
-                $tdstr .= "<td  align='center'  style='color:#00DB00;'></td>";
+                $tdstr .= "<td  align='center'  style='color:#311bdb;'></td>";
             }
         }
     }
