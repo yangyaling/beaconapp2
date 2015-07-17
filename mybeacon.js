@@ -15,7 +15,8 @@ function SearchIdInTable(tablerow, findid)
 function updateRowInTable(username, locationname,status)
 {
     var i = SearchIdInTable($("#Table tr"), username);
-
+    var myDate = new Date();;
+    document.getElementById("updatetime").innerHTML =myDate.toLocaleString();
     if (i != -1)
     {
         var pth=document.getElementById("Table").getElementsByTagName("th");

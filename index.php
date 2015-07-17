@@ -70,12 +70,13 @@ echo '<h1>【R＆D室要員在席情報一覧】</h1>';
 $thstr = "※時間　";
 echo $thstr;
 
+echo "<div id='updatetime'>";
 $thstr = "<script type='text/javascript'>";
 $thstr = $thstr."var myDate = new Date();";
 $thstr = $thstr."document.write(myDate.toLocaleString())";
 $thstr = $thstr."</script>";
 echo $thstr;
-
+echo "</div>";
 //表头
 $thstr = "<th>" . implode("</th><th>", $dbcolarray) . " </th>";
 echo $thstr;
