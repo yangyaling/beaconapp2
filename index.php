@@ -63,6 +63,10 @@ $sql = $sql."AND M.major = B.major AND M.minor = B.minor GROUP BY U.uuid ";
 $result = mysql_query($sql, $conn);
 
 echo "<div  align='left'>";
+
+
+echo '<table id="Table" border=1 cellpadding=10 cellspacing=1 bordercolor=#408080 width="100%">';
+echo '<h1>【R＆D室要員在席情報一覧】</h1>';
 $thstr = "※時間　";
 echo $thstr;
 
@@ -72,9 +76,6 @@ $thstr = $thstr."document.write(myDate.toLocaleString())";
 $thstr = $thstr."</script>";
 echo $thstr;
 
-
-echo '<table id="Table" border=1 cellpadding=10 cellspacing=1 bordercolor=#408080 width="100%">';
-echo '<h1>【R＆D室要員在席情報一覧】</h1>';
 //表头
 $thstr = "<th>" . implode("</th><th>", $dbcolarray) . " </th>";
 echo $thstr;

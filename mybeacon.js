@@ -37,7 +37,6 @@ function updateRowInTable(username, locationname,status)
             $("#Table tr:eq(" + i + ") td:eq("+(irow -1)+")").style.color ='#00DB00;';
         }
     }
-
 }
 
 //用CSS控制奇偶行的颜色
