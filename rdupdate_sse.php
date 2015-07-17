@@ -22,7 +22,7 @@ $sql = $sql."WHERE M.useruuid = MM.useruuid ) GROUP BY M.useruuid) AS M ON U.uui
 $sql = $sql."AND M.major = B.major AND M.minor = B.minor GROUP BY U.uuid ";
 
 
-$result = mysql_query($sql, $conn);
+/*$result = mysql_query($sql, $conn);
 while ($row=mysql_fetch_row($result)) {
     $arrayReturn=array('username'=>$row[0],'locationname'=>$row[1],'status'=>$row[2]);
     echo $arrayReturn;
@@ -35,4 +35,13 @@ while ($row=mysql_fetch_row($result)) {
 mysql_close($conn);
 
 sleep(10);
+*/
+$d = array("locationname"=>"喫煙室","username"=>"123","status"=>"b");
+echo "data:".json_encode($d)."\n\n";
+//echo "locationname:"."";
+//echo "status:"."";
+@ob_flush();
+flush();
+sleep(10);
+
 ?>
