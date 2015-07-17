@@ -11,6 +11,31 @@ function SearchIdInTable(tablerow, findid)
             return i;
     return -1;
 }
+
+function updateRowInTable(username, locationname,status)
+{
+    var i = SearchIdInTable($("#Table tr"), username);
+
+    if (i != -1)
+    {
+        var pth=document.getElementById("Table").getElementsByTagName("th");
+
+        var irow;
+        for (irow=2;irow<pth.length+1;irow++) {
+            var strtitle = pth[irow-1].innerHTML;
+
+            $("#Table tr:eq(" + i + ") td:eq("+(irow -1)+")").html(strtitle == locationname ? "●" : "");
+            alert(strtitle +"=="+ locationname );
+        }
+        if(status =="1"){
+            $("#Table tr:eq(" + i + ") td:eq("+(irow -1)+")").style.color ='#FF0000;';
+        }else{
+            $("#Table tr:eq(" + i + ") td:eq("+(irow -1)+")").style.color ='#00DB00;';
+        }
+    }
+
+}
+
 //用CSS控制奇偶行的颜色
 function SetTableRowColor()
 {

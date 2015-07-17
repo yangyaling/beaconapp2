@@ -22,25 +22,19 @@ $sql = "SELECT U.username, IF( ISNULL( B.locationname ) ,  '', B.locationname ) 
 $sql = $sql."LEFT JOIN (SELECT M. *  FROM RDUSERSTATUS M WHERE M.updatetime = (  SELECT MAX( MM.updatetime )  FROM RDUSERSTATUS MM ";
 $sql = $sql."WHERE M.useruuid = MM.useruuid ) GROUP BY M.useruuid) AS M ON U.uuid = M.useruuid LEFT JOIN RDBEACONINFO B ON M.uuid = B.uuid ";
 $sql = $sql."AND M.major = B.major AND M.minor = B.minor GROUP BY U.uuid ";
-while (true){
-    echo "username: $row[0]" . PHP_EOL;
-    echo "locationname: >$row[1]" . PHP_EOL;
-    echo "status: >$row[2]" . PHP_EOL;
-    echo PHP_EOL;
-    ob_flush();
-    flush();
+
+
 $result = mysql_query($sql, $conn);
 while ($row=mysql_fetch_row($result)) {
     $arrayReturn=array('username'=>$row[0],'locationname'=>$row[1],'status'=>$row[2]);
     echo $arrayReturn;
+    $d = array("locationname"=>$row[1],"username"=>$row[0],"status"=>$row[2]);
+    echo "data:".json_encode($d)."\n\n";
 
-    echo "username: $row[0]" . PHP_EOL;
-    echo "locationname: >$row[1]" . PHP_EOL;
-    echo "status: >$row[2]" . PHP_EOL;
-    echo PHP_EOL;
     ob_flush();
     flush();
 }
+mysql_close($conn);
 
-}
+sleep(10);
 ?>

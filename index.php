@@ -16,30 +16,14 @@
             pth[i-1].width = 100/pth.length+"%";
         }
     }
-    function updataRowInTable(username, locationname,status)
-    {
-        var row = SearchIdInTable($("#Table tr"), username);
-        if (row != -1)
-        {
-            var pth=document.getElementById("Table").getElementsByTagName("th");
-            var strtitle ="";
-            for (i=2;i<pth.length+1;i++) {
-                strtitle = pth[i-1].html;
-                $("#Table tr:eq(" + i + ") td:eq("+i+")").html(strtitle == locationname ? "●" : "");
-            }
-            if(status =="1"){
-                $("#Table tr:eq(" + i + ") td:eq("+i+")").style ='color:#FF0000;';
-            }else{
-                $("#Table tr:eq(" + i + ") td:eq("+i+")").style ='color:#00DB00;';
-            }
-        }
-    }
     //-->
 </script>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
     <link href="mybeacon.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="mybeacon.js"></script>
+
     <title>在席情報</title>
 </head>
 <body onload="init()">
@@ -79,10 +63,6 @@ $sql = $sql."AND M.major = B.major AND M.minor = B.minor GROUP BY U.uuid ";
 $result = mysql_query($sql, $conn);
 
 echo "<div  align='left'>";
-
-echo '<table id="Table" border=1 cellpadding=10 cellspacing=1 bordercolor=#408080 width="100%">';
-echo '<h1>【R＆D室要員在席情報一覧】</h1>';
-
 $thstr = "※時間　";
 echo $thstr;
 
@@ -92,6 +72,9 @@ $thstr = $thstr."document.write(myDate.toLocaleString())";
 $thstr = $thstr."</script>";
 echo $thstr;
 
+
+echo '<table id="Table" border=1 cellpadding=10 cellspacing=1 bordercolor=#408080 width="100%">';
+echo '<h1>【R＆D室要員在席情報一覧】</h1>';
 //表头
 $thstr = "<th>" . implode("</th><th>", $dbcolarray) . " </th>";
 echo $thstr;
@@ -132,22 +115,21 @@ mysql_free_result($result);
 mysql_close($conn);
 ?>
 
-</body>
-
 <script>
     if(typeof(EventSource)!=="undefined"){
         var es = new EventSource("rdupdate_sse.php");
+        es.addEventListener("message",function(e){
 
-        es.onmessage = function(e) {
-            //e.data
             var data = JSON.parse(e.data);
             var username = data.username;
             var locationname = data.locationname;
-            var status =data.status;
-            updataRowInTable(username,locationname,status);
-            alert(username);
-        };
+            var status= data.status;
+
+            updateRowInTable(username, locationname,status);
+
+        },false);
     }
 </script>
 
+</body>
 </html>
