@@ -92,12 +92,12 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC)){
                 if ($row["status2"] == "0") {
                     $tdstr .= "<td align='center' style='color:#00DB00;' >●</td>";
                 } else if ($row["status2"] == "1") {
-                    $tdstr .= "<td align='center' style='color:#FF0000;' >●</td>";
+                    $tdstr .= "<td align='center' style='color:#00DB00;'>●[XX作業中]</td>";
                 } else {
-                    $tdstr .= "<td></td>";
+                    $tdstr .= "<td  align='center'  style='color:#00DB00;'></td>";
                 }
             }else{
-                $tdstr .= "<td></td>";
+                $tdstr .= "<td  align='center'  style='color:#00DB00;'></td>";
             }
         }
     }
@@ -117,7 +117,7 @@ mysql_close($conn);
 
 <script>
     if(typeof(EventSource)!=="undefined"){
-        alert("start");
+
         var es = new EventSource("rdupdate_sse.php");
         es.addEventListener("message",function(e){
             var data = JSON.parse(e.data);

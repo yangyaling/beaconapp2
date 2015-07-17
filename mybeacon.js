@@ -23,8 +23,13 @@ function updateRowInTable(username, locationname,status)
         var irow;
         for (irow=2;irow<pth.length+1;irow++) {
             var strtitle = pth[irow-1].innerHTML;
-
-            $("#Table tr:eq(" + i + ") td:eq("+(irow -1)+")").html(strtitle == locationname ? "●" : "");
+            var strvalue;
+            if(status=="1"){
+                strvalue="●[XX作業中]";
+            }else{
+                strvalue="●";
+            }
+            $("#Table tr:eq(" + i + ") td:eq("+(irow -1)+")").html(strtitle == locationname ? strvalue : "");
         }
         if(status =="1"){
             $("#Table tr:eq(" + i + ") td:eq("+(irow -1)+")").style.color ='#FF0000;';
