@@ -31,7 +31,7 @@ while ($row=mysql_fetch_row($result)) {
 
     @ob_flush();
     flush();
-    sleep(10);
+    sleep(1);
 }
 mysql_close($conn);
 
