@@ -25,7 +25,6 @@ function updateRowInTable(username, locationname,status)
             var strtitle = pth[irow-1].innerHTML;
 
             $("#Table tr:eq(" + i + ") td:eq("+(irow -1)+")").html(strtitle == locationname ? "●" : "");
-            alert(strtitle +"=="+ locationname );
         }
         if(status =="1"){
             $("#Table tr:eq(" + i + ") td:eq("+(irow -1)+")").style.color ='#FF0000;';
