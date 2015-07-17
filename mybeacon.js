@@ -29,7 +29,7 @@ function updateRowInTable(username, locationname,status)
             }else{
                 strvalue="●";
             }
-            alert(locationname+"||"+strtitle);
+            alert(username+"||"+locationname+"||"+strtitle);
             $("#Table tr:eq(" + i + ") td:eq("+(irow -1)+")").html(strtitle == locationname ? strvalue : "");
         }
         if(status =="1"){
