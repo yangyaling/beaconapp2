@@ -55,7 +55,7 @@ $tpl_db_coltitle = $dbcolarray;
 
 //表中内容
 $tpl_db_rows = array();
-$sql = "SELECT U.username, IF( ISNULL( B.locationname ) ,  '', B.locationname ) AS locationname, U.status2 FROM RDUSERINFO U ";
+$sql = "SELECT U.username, IF( ISNULL( B.locationname ) ,  '', B.locationname ) AS locationname, U.status2,U.comment  FROM RDUSERINFO U ";
 $sql = $sql."LEFT JOIN (SELECT M. *  FROM RDUSERSTATUS M WHERE M.updatetime = (  SELECT MAX( MM.updatetime )  FROM RDUSERSTATUS MM ";
 $sql = $sql."WHERE M.useruuid = MM.useruuid ) GROUP BY M.useruuid) AS M ON U.uuid = M.useruuid LEFT JOIN RDBEACONINFO B ON M.uuid = B.uuid ";
 $sql = $sql."AND M.major = B.major AND M.minor = B.minor GROUP BY U.uuid ";
@@ -94,7 +94,7 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC)){
                 if ($row["status2"] == "0") {
                     $tdstr .= "<td align='center' style='color:#311bdb;' >○</td>";
                 } else if ($row["status2"] == "1") {
-                    $tdstr .= "<td align='center' style='color:#311bdb;'>○[会議中]</td>";
+                    $tdstr .= "<td align='center' style='color:#311bdb;'>○[".$row["comment"]."]</td>";
                 } else {
                     $tdstr .= "<td  align='center'  style='color:#311bdb;'></td>";
                 }
@@ -126,8 +126,9 @@ mysql_close($conn);
             var username = data.username;
             var locationname = data.locationname;
             var status= data.status;
+            var comment = data.comment;
 
-            updateRowInTable(username, locationname,status);
+            updateRowInTable(username, locationname,status,comment);
 
         },false);
     }

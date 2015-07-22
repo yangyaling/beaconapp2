@@ -16,7 +16,7 @@ define("SAE_MYSQL_DB",     "rdbeacoAvghw9hxk");
 
 $conn = @mysql_connect(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS);
 mysql_select_db(SAE_MYSQL_DB,$conn);
-$sql = "SELECT U.username, IF( ISNULL( B.locationname ) ,  '', B.locationname ) AS locationname, U.status2 FROM RDUSERINFO U ";
+$sql = "SELECT U.username, IF( ISNULL( B.locationname ) ,  '', B.locationname ) AS locationname, U.status2,U.comment FROM RDUSERINFO U ";
 $sql = $sql."LEFT JOIN (SELECT M. *  FROM RDUSERSTATUS M WHERE M.updatetime = (  SELECT MAX( MM.updatetime )  FROM RDUSERSTATUS MM ";
 $sql = $sql."WHERE M.useruuid = MM.useruuid ) GROUP BY M.useruuid) AS M ON U.uuid = M.useruuid LEFT JOIN RDBEACONINFO B ON M.uuid = B.uuid ";
 $sql = $sql."AND M.major = B.major AND M.minor = B.minor GROUP BY U.uuid ";
@@ -24,7 +24,7 @@ $sql = $sql."AND M.major = B.major AND M.minor = B.minor GROUP BY U.uuid ";
 
 $result = mysql_query($sql, $conn);
 while ($row=mysql_fetch_row($result)) {
-    $d = array("locationname"=>$row[1],"username"=>$row[0],"status"=>$row[2]);
+    $d = array("locationname"=>$row[1],"username"=>$row[0],"status"=>$row[2],"comment"=>$row[3]);
     echo "data:".json_encode($d)."\n\n";
 
     @ob_flush();

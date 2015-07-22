@@ -12,10 +12,10 @@ function SearchIdInTable(tablerow, findid)
     return -1;
 }
 
-function updateRowInTable(username, locationname,status)
+function updateRowInTable(username, locationname,status,comment)
 {
     var i = SearchIdInTable($("#Table tr"), username);
-    var myDate = new Date();;
+    var myDate = new Date();
     document.getElementById("updatetime").innerHTML =myDate.toLocaleString();
     if (i != -1)
     {
@@ -26,7 +26,12 @@ function updateRowInTable(username, locationname,status)
             var strtitle = pth[irow-1].innerHTML;
             var strvalue;
             if(status=="1"){
-                strvalue="○[会議中]";
+                if(comment !=''){
+                    strvalue="○["+comment+"]";
+                }else{
+                    strvalue="○";
+                }
+
             }else{
                 strvalue="○";
             }

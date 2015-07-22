@@ -66,6 +66,31 @@ function getalluserinfo(){
     //print_r($arrayReturn);
     return $arrayReturn;
 }
+
+function updateusercomment($useruuid,$comment){
+    $ret=array();
+    $conn = @mysql_connect(SAE_MYSQL_HOST_M,SAE_MYSQL_USER,SAE_MYSQL_PASS);
+    if($conn){
+        mysql_select_db(SAE_MYSQL_DB,$conn);
+
+        //$sqldel ="delete from APPUSERINFO WHERE uuid='" . $useruuid ."'";
+
+        $sqlupdate ="update RDUSERINFO set comment='".$comment."' WHERE uuid='" . $useruuid ."'";
+
+        $result = mysql_query($sqlupdate);
+
+        if($result){
+
+            $ret['error'] ="";
+        }else{
+            $ret['error']=mysql_error();
+        }
+    }
+    mysql_close($conn);
+    //print_r($ret);
+    return $ret;
+}
+
 function insertnewuser($useruuid,$username,$status2){
     $ret=array();
     $conn = @mysql_connect(SAE_MYSQL_HOST_M,SAE_MYSQL_USER,SAE_MYSQL_PASS);
