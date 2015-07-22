@@ -26,7 +26,7 @@ function updateRowInTable(username, locationname,status,comment)
             var strtitle = pth[irow-1].innerHTML;
             var strvalue;
             if(status=="1"){
-                if(comment !=''){
+                if(comment !=""){
                     strvalue="○["+comment+"]";
                 }else{
                     strvalue="○";
