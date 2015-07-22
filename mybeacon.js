@@ -23,19 +23,22 @@ function updateRowInTable(username, locationname,status,comment)
 
         var irow;
         for (irow=2;irow<pth.length+1;irow++) {
-            var strtitle = pth[irow-1].innerHTML;
+            var strtitle = pth[irow - 1].innerHTML;
             var strvalue;
-            if(status=="1"){
-                if(comment !=""){
-                    strvalue="○["+comment+"]";
-                }else{
-                    strvalue="○";
+            if (status == "1") {
+                if (comment != "") {
+                    strvalue = "○[" + comment + "]";
+                } else {
+                    strvalue = "○";
                 }
 
-            }else{
-                strvalue="○";
+            } else {
+                strvalue = "○";
             }
-            alert(strtitle+"||"+locationname);
+            if (strtitle == locationname) {
+
+                alert(strtitle + "||" + locationname + "||" +strvalue);
+            }
             $("#Table tr:eq(" + i + ") td:eq("+(irow -1)+")").html(strtitle == locationname ? strvalue : "");
         }
     }
