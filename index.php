@@ -127,7 +127,7 @@ mysql_close($conn);
             var locationname = data.locationname;
             var status= data.status;
             var comment = data.comment;
-            alert(username+locationname+status+comment);
+
             updateRowInTable(username, locationname,status,comment);
 
         },false);
