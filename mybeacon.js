@@ -36,7 +36,7 @@ function updateRowInTable(username, locationname,status,comment)
                 strvalue = "○";
             }
 
-                if (irow == 5) {
+                if (irow == 6) {
                     alert("||" + strtitle + "||" + locationname + "||" + strvalue + "||");
                 }
             $("#Table tr:eq(" + i + ") td:eq("+(irow -1)+")").html(strtitle == locationname ? strvalue : "");
