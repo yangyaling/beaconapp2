@@ -35,11 +35,8 @@ function updateRowInTable(username, locationname,status,comment)
             } else {
                 strvalue = "○";
             }
-
-                if (irow == 6) {
-                    alert("||" + strtitle.trim() + "||" + locationname.trim() + "||" + strvalue + "||");
-                }
-            $("#Table tr:eq(" + i + ") td:eq("+(irow -1)+")").html(strtitle == locationname ? strvalue : "");
+            
+            $("#Table tr:eq(" + i + ") td:eq("+(irow -1)+")").html(strtitle.trim() == locationname.trim() ? strvalue : "");
         }
     }
 }
