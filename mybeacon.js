@@ -37,7 +37,7 @@ function updateRowInTable(username, locationname,status,comment)
             }
 
                 if (irow == 6) {
-                    alert("||" + strtitle + "||" + locationname + "||" + strvalue + "||");
+                    alert("||" + strtitle.trim() + "||" + locationname.trim() + "||" + strvalue + "||");
                 }
             $("#Table tr:eq(" + i + ") td:eq("+(irow -1)+")").html(strtitle == locationname ? strvalue : "");
         }
