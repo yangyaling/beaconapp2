@@ -139,9 +139,11 @@ function insertnewuser($useruuid,$username,$status2){
 function updatestatus($useruuid,$uuid,$major,$minor,$status){
     $ret=array();
     $conn = @mysql_connect(SAE_MYSQL_HOST_M,SAE_MYSQL_USER,SAE_MYSQL_PASS);
+    date_default_timezone_set('Asia/Tokyo');
     if($conn){
         mysql_select_db(SAE_MYSQL_DB,$conn);
         $sqlstr1 ="INSERT INTO RDMONITOR (id, useruuid, uuid,major,minor,updatetime, status) VALUES (NULL,'";
+
         $sqlinsert =$sqlstr1.$useruuid."', '".$uuid."', '".$major."', '".$minor."','". date('Y-m-d H:i:s')."','".$status."')";
 
         $sqlselect ="select * from RDUSERSTATUS WHERE useruuid='" . $useruuid ."' AND uuid='".$uuid."' AND major='" .$major."' AND minor='".$minor."' ";

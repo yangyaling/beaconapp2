@@ -35,7 +35,7 @@ function updateRowInTable(username, locationname,status,comment)
             } else {
                 strvalue = "○";
             }
-            
+
             $("#Table tr:eq(" + i + ") td:eq("+(irow -1)+")").html(strtitle.trim() == locationname.trim() ? strvalue : "");
         }
     }
