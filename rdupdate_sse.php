@@ -10,9 +10,9 @@ header('Content-Type: text/event-stream');
 header('Cache-Control: no-cache');
 
 define("SAE_MYSQL_HOST_M",     "ja-cdbr-azure-east-a.cloudapp.net");
-define("SAE_MYSQL_USER",     "bf7588dfac7e65");
-define("SAE_MYSQL_PASS",     "92137672");
-define("SAE_MYSQL_DB",     "rdbeacoAvghw9hxk");
+define("SAE_MYSQL_USER",     "b5b35eecdcd068");
+define("SAE_MYSQL_PASS",     "b5074189");
+define("SAE_MYSQL_DB",     "rdbeacoAd7N1JMXE");
 
 $conn = @mysql_connect(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS);
 mysql_select_db(SAE_MYSQL_DB,$conn);
