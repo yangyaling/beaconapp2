@@ -172,7 +172,7 @@ function insertFun()
     }
     //submit to server 返回插入数据的id
     $.post("myinsert.php", {locationname:locationname, uuid:uuid,major:major,minor:minor}, function(data){
-        
+
         if (data == "f")
         {
             alert("Insert date failed");
@@ -228,6 +228,147 @@ function updateFun()
         else
         {
             updataRowInTable(id,  locationname, uuid,major,minor);
+        }
+    });
+}
+
+
+
+
+
+
+//room edit
+
+//响应edit按钮
+function editFunRoom(id)
+{
+    var i = SearchIdInTable($("#Table tr"), id);
+    $("#editdiv").show();
+    $("#adddiv").hide();
+    $("#editdiv_id").val(id);
+    $("#editdiv_roomid").val($("#Table tr:eq(" + i + ") td:eq(1)").html());
+    $("#editdiv_roomname").val($("#Table tr:eq(" + i + ") td:eq(2)").html());
+}
+//响应add按钮
+function addFunRoom()
+{
+    $("#editdiv").hide();
+    $("#adddiv").show();
+    return;
+}
+//记录条数增加
+function IncTableRowCountRoom()
+{
+    var tc = $("#tableRowCount");
+    tc.html(parseInt(tc.html()) + 1);
+}
+//记录条数减少
+function DecTableRowCountRoom()
+{
+    var tc = $("#tableRowCount");
+    tc.html(parseInt(tc.html()) - 1);
+}
+//增加一行
+function addRowInTableRoom(id, roomid, roomname)
+{
+    //新增加一行
+    var appendstr = "<tr>";
+    appendstr += "<td>" + id + "</td>";
+    appendstr += "<td>" + roomid + "</td>";
+    appendstr += "<td>" + roomname + "</td>";
+    appendstr += "<td><input type=\"button\" value=\"Edit\" onclick=\"editFunRoom(id);\" />";
+    appendstr += "<input type=\"button\" value=\"Delete\" onclick=\"deleteFunRoom(id)\" /></td>";
+    appendstr += "</tr>";
+    $("#Table").append(appendstr);
+    IncTableRowCount();
+}
+//修改某一行
+function updataRowInTableRoom(id, roomid, roomname)
+{
+    var i = SearchIdInTable($("#Table tr"), id);
+    if (i != -1)
+    {
+        $("#Table tr:eq(" + i + ") td:eq(1)").html(roomid != "" ? roomid : " ");
+        $("#Table tr:eq(" + i + ") td:eq(2)").html(roomname != "" ? roomname : " ");
+        $("#editdiv").hide();
+    }
+}
+//删除某一行
+function deleteRowInTableRoom(id)
+{
+    var i = SearchIdInTable($("#Table tr"), id);
+    if (i != -1)
+    {
+        //删除表格中该行
+        $("#Table tr:eq(" + i + ")").remove();
+        SetTableRowColor();
+        DecTableRowCount();
+    }
+}
+//增加删除修改数据库函数 通过AJAX与服务器通信
+function insertFunRoom()
+{
+    var roomid = $("#adddiv_roomid").val();
+    var roomname = $("#adddiv_roomname").val();
+
+
+    if (roomid == "" || roomname == "" )
+    {
+        alert("信息不完整!");
+        return ;
+    }
+
+    //submit to server 返回插入数据的id
+    $.post("myinsertroom.php", {roomid:roomid, roomname:roomname}, function(data){
+
+        if (data == "f")
+        {
+            alert("Insert date failed");
+        }
+        else
+        {
+            addRowInTableRoom(data, roomid, roomname);
+            SetTableRowColor();
+            $("#adddiv").hide();
+        }
+    });
+}
+function deleteFunRoom(id)
+{
+    if (confirm(id+" 确认删除?"))
+    {
+        //submit to server
+        $.post("mydeleteroom.php", {id:id}, function(data){
+            if (data == "f")
+            {
+                alert("delete date failed");
+            }
+            else
+            {
+                deleteRowInTableRoom(id);
+            }
+        });
+    }
+}
+function updateFun()
+{
+    var id = $("#editdiv_id").val();
+    var roomid = $("#editdiv_roomid").val();
+    var roomname = $("#editdiv_roomname").val();
+    if (roomid == "" || roomname == "")
+    {
+        alert("信息不完整!");
+        return ;
+    }
+    //submit to server
+    $.post("myupdateroom.php", {id:id, roomid:roomid, roomname:roomname}, function(data){
+        if (data == "f")
+        {
+            alert("Updata date failed");
+        }
+        else
+        {
+            updataRowInTableRoom(id,  roomid, roomname);
         }
     });
 }
