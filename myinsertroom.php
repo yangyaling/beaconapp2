@@ -18,7 +18,7 @@ $roomname = $_POST['roomname'];
 
 //insert db
 
-$sql = sprintf("INSERT INTO %s(id,roomid,roomnamer) VALUES(null,'%s', '%s')", 'RDROOM',$roomid, $roomname);
+$sql = sprintf("INSERT INTO %s(id,roomid,roomname) VALUES(null,'%s', '%s')", 'RDROOM',$roomid, $roomname);
 
 $result=mysql_query($sql, $conn);
 
