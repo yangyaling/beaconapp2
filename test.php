@@ -48,18 +48,14 @@ $result = mysql_query($sql, $conn);
 
 $dbcolarray = array(0=>'ルームID',1=>'ルームネーム',2=>'状態');
 
-echo   "<div  align='left'>
-        ※更新時間：
-        <div id='updatetime'>
+echo   "<div  align='center'>
+        <table id='Table' border=1 cellpadding=10 cellspacing=1 bordercolor=#408080 width='50%'>
+        <h1>【R＆D室要員在席情報一覧】(メンテナンス中)</h1>
+※更新時間： <div id='updatetime'>
             <script type='text/javascript'>
                 var myDate = new Date();
                 document.write(myDate.toLocaleString())
-            </script>
-        </div></div>";
-
-echo   "<div  align='center'>
-        <table id='Table' border=1 cellpadding=10 cellspacing=1 bordercolor=#408080 width='50%'>
-        <h1>【R＆D室要員在席情報一覧】(メンテナンス中)</h1>";
+            </script>";
 
 
 echo "<th>" . implode("</th><th>", $dbcolarray) . " </th>";
@@ -70,11 +66,14 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC)) {
     echo $thstr;
     echo "</tr>";
 }
+
+echo "<br/><a href='mybeacon.php'>■Beacon管理</a>";
+
 echo "</table>";
 echo "</div>";
 
 
-echo "<br/><a href='mybeacon.php'>■Beacon管理</a>";
+
 
 mysql_free_result($result);
 mysql_close($conn);
