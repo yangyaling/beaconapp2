@@ -66,10 +66,8 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC)) {
     echo $thstr;
     echo "</tr>";
 }
-
-echo "<br/><a href='mybeacon.php'>■Beacon管理</a>";
-
 echo "</table>";
+echo "<br/><a href='mybeacon.php'>■Beacon管理</a>";
 echo "</div>";
 
 
