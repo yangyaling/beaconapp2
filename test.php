@@ -34,19 +34,6 @@ define("SAE_MYSQL_USER",     "b5b35eecdcd068");
 define("SAE_MYSQL_PASS",     "b5074189");
 define("SAE_MYSQL_DB",     "rdbeacoAd7N1JMXE");
 
-echo   "<div  align='center'>
-        <table id='Table' border=1 cellpadding=10 cellspacing=1 bordercolor=#408080 width='50%'>
-        <h1>【R＆D室要員在席情報一覧】(メンテナンス中)</h1>
-        ※更新時間：
-        <div id='updatetime'>
-            <script type='text/javascript'>
-                var myDate = new Date();
-                document.write(myDate.toLocaleString())
-            </script>
-        </div>";
-//表头
-
-
 $conn = @mysql_connect(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS);
 mysql_select_db(SAE_MYSQL_DB,$conn);
 
@@ -59,13 +46,29 @@ $sql = "SELECT r.roomid,r.roomname,ifnull(count(us.useruuid),0) as num FROM rdro
 
 $result = mysql_query($sql, $conn);
 
-
 $dbcolarray = array(0=>'ルームID',1=>'ルームネーム',2=>'状態');
+
+echo   "<div  align='left'>
+        ※更新時間：
+        <div id='updatetime'>
+            <script type='text/javascript'>
+                var myDate = new Date();
+                document.write(myDate.toLocaleString())
+            </script>
+        </div></div>";
+
+echo   "<div  align='center'>
+        <table id='Table' border=1 cellpadding=10 cellspacing=1 bordercolor=#408080 width='50%'>
+        <h1>【R＆D室要員在席情報一覧】(メンテナンス中)</h1>";
+
+
 echo "<th>" . implode("</th><th>", $dbcolarray) . " </th>";
 
 while ($row=mysql_fetch_array($result, MYSQL_ASSOC)) {
-        $thstr = "<tr>" . implode("</tr><tr>", $row) . " </tr>";
+    echo "<tr>";
+        $thstr = "<td>" . implode("</td><td>", $row) . " </td>";
     echo $thstr;
+    echo "</tr>";
 }
 echo "</table>";
 echo "</div>";
