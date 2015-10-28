@@ -65,7 +65,7 @@ echo "<th>" . implode("</th><th>", $dbcolarray) . " </th>";
 echo $result;
 echo '11111111111';
 while ($row=mysql_fetch_array($result, MYSQL_ASSOC)) {
-    echo $row[0];
+    echo $row['roomid'];
     echo "<tr>";
     if ($row["num"] > 0) {
         $thstr = "<tr>" . implode("</tr><tr>", $row) . " </tr>";
