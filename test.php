@@ -62,7 +62,16 @@ echo "<th>" . implode("</th><th>", $dbcolarray) . " </th>";
 
 while ($row=mysql_fetch_array($result, MYSQL_ASSOC)) {
     echo "<tr>";
-        $thstr = "<td>" . implode("</td><td>", $row) . " </td>";
+    $roomid= $row['roomid'];
+    $roomname=$row['roomname'];
+    $num=$row['num'];
+    $inhtm = '';
+    if($num >0){
+        $inhtm ="<img src='open.png'>";
+    }else{
+        $inhtm ="<img src='close.png'>";
+    }
+    $thstr = "<td></td>$roomid<td>$roomname</td><td>$inhtm</td>";
     echo $thstr;
     echo "</tr>";
 }
