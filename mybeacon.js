@@ -139,7 +139,7 @@ function updataRowInTable(id, locationname, uuid,major,minor,roomid)
         $("#Table tr:eq(" + i + ") td:eq(2)").html(uuid != "" ? uuid : " ");
         $("#Table tr:eq(" + i + ") td:eq(3)").html(major != "" ? major : " ");
         $("#Table tr:eq(" + i + ") td:eq(4)").html(minor != "" ? minor : " ");
-        $("#Table tr:eq(" + i + ") td:eq(4)").html(roomid != "" ? roomid : " ");
+        $("#Table tr:eq(" + i + ") td:eq(5)").html(roomid != "" ? roomid : " ");
         $("#editdiv").hide();
     }
 }
