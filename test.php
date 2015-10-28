@@ -51,7 +51,7 @@ echo   "<div  align='left'>
 //表头
 
 
-
+$conn = @mysql_connect(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS);
 //表中的内容
 $sql = "SELECT r.roomid,r.roomname,ifnull(count(us.useruuid),0) as num FROM rdroom r
         left join rdbeaconinfo b on b.roomid = r.roomid
