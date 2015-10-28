@@ -71,7 +71,7 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC)) {
     }else{
         $inhtm ="<img src='close.png'>";
     }
-    $thstr = "<td></td>$roomid<td>$roomname</td><td>$inhtm</td>";
+    $thstr = "<td>$roomid</td><td>$roomname</td><td>$inhtm</td>";
     echo $thstr;
     echo "</tr>";
 }

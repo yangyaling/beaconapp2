@@ -18,7 +18,16 @@ function updateStatusInTable(roomid, num)
     document.getElementById("updatetime").innerHTML =myDate.toLocaleString();
     if (i != -1)
     {
-        $("#Table tr:eq(" + i + ") td:eq(2)").html(num);
+        if(num >0){
+            var inhtm ="<img src='open.png'>";
+            $("#Table tr:eq(" + i + ") td:eq(2)").html(inhtm);
+
+        }else{
+            var inhtm ="<img src='close.png'>";
+            $("#Table tr:eq(" + i + ") td:eq(2)").html(inhtm);
+
+        }
+
     }
 }
 
