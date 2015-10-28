@@ -80,15 +80,14 @@ mysql_close($conn);
 <script>
     if(typeof(EventSource)!=="undefined"){
 
-        var es = new EventSource("rdupdate_sse.php");
+        var es = new EventSource("rdupdate_sse_new.php");
         es.addEventListener("message",function(e){
             var data = JSON.parse(e.data);
-            var username = data.username;
-            var locationname = data.locationname;
-            var status= data.status;
-            var comment = data.comment;
+            var roomid = data.roomid;
+            var rommname = data.roomname;
+            var num= data.num;
 
-            updateRowInTable(username, locationname,status,comment);
+            updateStatusInTable(roomid,num);
 
         },false);
     }

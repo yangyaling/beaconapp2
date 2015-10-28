@@ -11,6 +11,16 @@ function SearchIdInTable(tablerow, findid)
             return i;
     return -1;
 }
+function updateStatusInTable(roomid, num)
+{
+    var i = SearchIdInTable($("#Table tr"), roomid);
+    var myDate = new Date();
+    document.getElementById("updatetime").innerHTML =myDate.toLocaleString();
+    if (i != -1)
+    {
+        $("#Table tr:eq(" + i + ") td:eq(2)").html(num);
+    }
+}
 
 function updateRowInTable(username, locationname,status,comment)
 {
