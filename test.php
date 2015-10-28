@@ -38,12 +38,9 @@ $dbcolarray = array(0=>'ルームID',1=>'ルームネーム',2=>'状態');
 
 
 echo "<div  align='left'>";
-
-
 echo '<table id="Table" border=1 cellpadding=10 cellspacing=1 bordercolor=#408080 width="100%">';
 echo '<h1>【R＆D室要員在席情報一覧】(メンテナンス中)</h1>';
-$thstr = "※更新時間：";
-echo $thstr;
+echo "※更新時間：";
 
 echo "<div id='updatetime'>
         <script type='text/javascript'>
@@ -52,12 +49,10 @@ echo "<div id='updatetime'>
         </script>
     </div>";
 //表头
-$thstr = "<th>" . implode("</th><th>", $dbcolarray) . " </th>";
-echo $thstr;
+
+echo "<th>" . implode("</th><th>", $dbcolarray) . " </th>";
 
 //表中的内容
-//表中内容
-$tpl_db_rows = array();
 $sql = "SELECT r.roomid,r.roomname,ifnull(count(us.useruuid),0) as num FROM rdroom r
 left join rdbeaconinfo b on b.roomid = r.roomid
 left join rduserstatus us on b.uuid=us.uuid and b.major=us.major and b.minor=us.minor
@@ -65,8 +60,9 @@ and date_format(us.updatetime,'%Y-%m-%d') = date_format(now(),'%Y-%m-%d')
 group by r.roomid ";
 
 $result = mysql_query($sql, $conn);
-
+echo '11111111111';
 while ($row=mysql_fetch_array($result, MYSQL_ASSOC)) {
+    echo $row[0];
     echo "<tr>";
     if ($row["num"] > 0) {
         $thstr = "<tr>" . implode("</tr><tr>", $row) . " </tr>";
