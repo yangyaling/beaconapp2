@@ -34,33 +34,36 @@ define("SAE_MYSQL_USER",     "b5b35eecdcd068");
 define("SAE_MYSQL_PASS",     "b5074189");
 define("SAE_MYSQL_DB",     "rdbeacoAd7N1JMXE");
 
-$dbcolarray = array(0=>'ルームID',1=>'ルームネーム',2=>'状態');
 
 
-echo "<div  align='left'>";
-echo '<table id="Table" border=1 cellpadding=10 cellspacing=1 bordercolor=#408080 width="100%">';
-echo '<h1>【R＆D室要員在席情報一覧】(メンテナンス中)</h1>';
-echo "※更新時間：";
 
-echo "<div id='updatetime'>
-        <script type='text/javascript'>
-            var myDate = new Date();
-            document.write(myDate.toLocaleString())
-        </script>
-    </div>";
+
+echo   "<div  align='left'>
+        <table id='Table' border=1 cellpadding=10 cellspacing=1 bordercolor=#408080 width='100%'>
+        <h1>【R＆D室要員在席情報一覧】(メンテナンス中)</h1>
+        ※更新時間：
+        <div id='updatetime'>
+            <script type='text/javascript'>
+                var myDate = new Date();
+                document.write(myDate.toLocaleString())
+            </script>
+        </div>";
 //表头
 
-echo "<th>" . implode("</th><th>", $dbcolarray) . " </th>";
+
 
 //表中的内容
 $sql = "SELECT r.roomid,r.roomname,ifnull(count(us.useruuid),0) as num FROM rdroom r
-left join rdbeaconinfo b on b.roomid = r.roomid
-left join rduserstatus us on b.uuid=us.uuid and b.major=us.major and b.minor=us.minor
-and date_format(us.updatetime,'%Y-%m-%d') = date_format(now(),'%Y-%m-%d')
-group by r.roomid ";
+        left join rdbeaconinfo b on b.roomid = r.roomid
+        left join rduserstatus us on b.uuid=us.uuid and b.major=us.major and b.minor=us.minor
+        and date_format(us.updatetime,'%Y-%m-%d') = date_format(now(),'%Y-%m-%d')
+        group by r.roomid ";
 
 $result = mysql_query($sql, $conn);
+
 echo '11111111111';
+$dbcolarray = array(0=>'ルームID',1=>'ルームネーム',2=>'状態');
+echo "<th>" . implode("</th><th>", $dbcolarray) . " </th>";
 while ($row=mysql_fetch_array($result, MYSQL_ASSOC)) {
     echo $row[0];
     echo "<tr>";
