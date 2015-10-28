@@ -34,10 +34,6 @@ define("SAE_MYSQL_USER",     "b5b35eecdcd068");
 define("SAE_MYSQL_PASS",     "b5074189");
 define("SAE_MYSQL_DB",     "rdbeacoAd7N1JMXE");
 
-
-
-
-
 echo   "<div  align='left'>
         <table id='Table' border=1 cellpadding=10 cellspacing=1 bordercolor=#408080 width='100%'>
         <h1>【R＆D室要員在席情報一覧】(メンテナンス中)</h1>
@@ -52,6 +48,8 @@ echo   "<div  align='left'>
 
 
 $conn = @mysql_connect(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS);
+mysql_select_db(SAE_MYSQL_DB,$conn);
+
 //表中的内容
 $sql = "SELECT r.roomid,r.roomname,ifnull(count(us.useruuid),0) as num FROM rdroom r
         left join rdbeaconinfo b on b.roomid = r.roomid
