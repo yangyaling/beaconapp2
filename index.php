@@ -34,84 +34,53 @@ define("SAE_MYSQL_USER",     "b5b35eecdcd068");
 define("SAE_MYSQL_PASS",     "b5074189");
 define("SAE_MYSQL_DB",     "rdbeacoAd7N1JMXE");
 
-$dbcolarray = array('名前');
-$tpl_db_tablename = 'RDBEACONINFO';
-
 $conn = @mysql_connect(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS);
-$sql = sprintf("select locationname from %s",$tpl_db_tablename);
-
-
 mysql_select_db(SAE_MYSQL_DB,$conn);
 
-$result = mysql_query($sql, $conn);
-
-while ($row1=mysql_fetch_array($result, MYSQL_ASSOC)){
-    $title=$row1["locationname"];
-    array_push($dbcolarray, $title);
-}
-
-
-$tpl_db_coltitle = $dbcolarray;
-
-//表中内容
-$tpl_db_rows = array();
-$sql = "SELECT U.username, IF( ISNULL( B.locationname ) ,  '', B.locationname ) AS locationname, U.status2,U.comment  FROM RDUSERINFO U ";
-$sql = $sql."LEFT JOIN (SELECT M. *  FROM RDUSERSTATUS M WHERE M.updatetime = (  SELECT MAX( MM.updatetime )  FROM RDUSERSTATUS MM ";
-$sql = $sql."WHERE M.useruuid = MM.useruuid ) GROUP BY M.useruuid) AS M ON U.uuid = M.useruuid LEFT JOIN RDBEACONINFO B ON M.uuid = B.uuid ";
-$sql = $sql."AND M.major = B.major AND M.minor = B.minor GROUP BY U.uuid ";
-
-$result = mysql_query($sql, $conn);
-
-echo "<div  align='left'>";
-
-
-echo '<table id="Table" border=1 cellpadding=10 cellspacing=1 bordercolor=#408080 width="100%">';
-echo '<h1>【R＆D室要員在席情報一覧】(メンテナンス中)</h1>';
-$thstr = "※更新時間：";
-echo $thstr;
-
-echo "<div id='updatetime'>";
-$thstr = "<script type='text/javascript'>";
-$thstr = $thstr."var myDate = new Date();";
-$thstr = $thstr."document.write(myDate.toLocaleString())";
-$thstr = $thstr."</script>";
-echo $thstr;
-echo "</div>";
-//表头
-$thstr = "<th>" . implode("</th><th>", $dbcolarray) . " </th>";
-echo $thstr;
-
 //表中的内容
-while ($row=mysql_fetch_array($result, MYSQL_ASSOC)){
-    echo "<tr>";
-    $tdstr = "";
+$sql = "SELECT r.roomid,r.roomname,ifnull(count(us.useruuid),0) as num FROM rdroom r
+        left join rdbeaconinfo b on b.roomid = r.roomid
+        left join rduserstatus us on b.uuid=us.uuid and b.major=us.major and b.minor=us.minor
+        and date_format(us.updatetime,'%Y-%m-%d') = date_format(now(),'%Y-%m-%d')
+        group by r.roomid ";
 
-    foreach ($dbcolarray as $td){
-        if($td=="名前"){
-            $tdstr .= "<td>".$row["username"]."</td>";
-        }else{
-            if($row["locationname"] == $td) {
-                if ($row["status2"] == "0") {
-                    $tdstr .= "<td align='center' style='color:#311bdb;' >○</td>";
-                } else if ($row["status2"] == "1") {
-                    $tdstr .= "<td align='center' style='color:#311bdb;'>○[".$row["comment"]."]</td>";
-                } else {
-                    $tdstr .= "<td  align='center'  style='color:#311bdb;'></td>";
-                }
-            }else{
-                $tdstr .= "<td  align='center'  style='color:#311bdb;'></td>";
-            }
-        }
+$result = mysql_query($sql, $conn);
+
+$dbcolarray = array(0=>'ルームID',1=>'ルームネーム',2=>'状態');
+
+echo   "<div  align='center'>
+        <table id='Table' border=1 cellpadding=10 cellspacing=1 bordercolor=#408080 width='50%'>
+        <h1>【R＆D室要員在席情報一覧】(メンテナンス中)</h1>
+※更新時間： <div id='updatetime'>
+            <script type='text/javascript'>
+                var myDate = new Date();
+                document.write(myDate.toLocaleString())
+            </script>";
+
+
+echo "<th>" . implode("</th><th>", $dbcolarray) . " </th>";
+
+while ($row=mysql_fetch_array($result, MYSQL_ASSOC)) {
+    echo "<tr>";
+    $roomid= $row['roomid'];
+    $roomname=$row['roomname'];
+    $num=$row['num'];
+    $inhtm = '';
+    if($num >0){
+        $inhtm ="<img src='open.png'>";
+    }else{
+        $inhtm ="<img src='close.png'>";
     }
-    echo $tdstr;
+    $thstr = "<td>$roomid</td><td>$roomname</td><td>$inhtm</td>";
+    echo $thstr;
     echo "</tr>";
 }
 echo "</table>";
+echo "<br/><a href='mybeacon.php'>■Beacon管理</a>";
 echo "</div>";
 
-$thstr ="<br/>";
-$thstr = $thstr."<a href='mybeacon.php'>■Beacon管理</a>";
-echo $thstr;
+
+
 
 mysql_free_result($result);
 mysql_close($conn);
@@ -120,15 +89,14 @@ mysql_close($conn);
 <script>
     if(typeof(EventSource)!=="undefined"){
 
-        var es = new EventSource("rdupdate_sse.php");
+        var es = new EventSource("rdupdate_sse_new.php");
         es.addEventListener("message",function(e){
             var data = JSON.parse(e.data);
-            var username = data.username;
-            var locationname = data.locationname;
-            var status= data.status;
-            var comment = data.comment;
+            var roomid = data.roomid;
+            var rommname = data.roomname;
+            var num= data.num;
 
-            updateRowInTable(username, locationname,status,comment);
+            updateStatusInTable(roomid,num);
 
         },false);
     }
