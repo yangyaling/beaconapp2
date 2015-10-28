@@ -91,6 +91,7 @@ function editFun(id)
     $("#editdiv_uuid").val($("#Table tr:eq(" + i + ") td:eq(2)").html());
     $("#editdiv_major").val($("#Table tr:eq(" + i + ") td:eq(3)").html());
     $("#editdiv_minor").val($("#Table tr:eq(" + i + ") td:eq(4)").html());
+    $("#editdiv_roomid").val($("#Table tr:eq(" + i + ") td:eq(5)").html());
 }
 //响应add按钮
 function addFun()
@@ -112,7 +113,7 @@ function DecTableRowCount()
     tc.html(parseInt(tc.html()) - 1);
 }
 //增加一行
-function addRowInTable(id, locationname, uuid,major,minor)
+function addRowInTable(id, locationname, uuid,major,minor,roomid)
 {
     //新增加一行
     var appendstr = "<tr>";
@@ -121,6 +122,7 @@ function addRowInTable(id, locationname, uuid,major,minor)
     appendstr += "<td>" + uuid + "</td>";
     appendstr += "<td>" + major + "</td>";
     appendstr += "<td>" + minor + "</td>";
+    appendstr += "<td>" + roomid + "</td>";
     appendstr += "<td><input type=\"button\" value=\"Edit\" onclick=\"editFun(id);\" />";
     appendstr += "<input type=\"button\" value=\"Delete\" onclick=\"deleteFun(id)\" /></td>";
     appendstr += "</tr>";
@@ -128,7 +130,7 @@ function addRowInTable(id, locationname, uuid,major,minor)
     IncTableRowCount();
 }
 //修改某一行
-function updataRowInTable(id, locationname, uuid,major,minor)
+function updataRowInTable(id, locationname, uuid,major,minor,roomid)
 {
     var i = SearchIdInTable($("#Table tr"), id);
     if (i != -1)
@@ -137,6 +139,7 @@ function updataRowInTable(id, locationname, uuid,major,minor)
         $("#Table tr:eq(" + i + ") td:eq(2)").html(uuid != "" ? uuid : " ");
         $("#Table tr:eq(" + i + ") td:eq(3)").html(major != "" ? major : " ");
         $("#Table tr:eq(" + i + ") td:eq(4)").html(minor != "" ? minor : " ");
+        $("#Table tr:eq(" + i + ") td:eq(4)").html(roomid != "" ? roomid : " ");
         $("#editdiv").hide();
     }
 }
@@ -159,8 +162,8 @@ function insertFun()
     var uuid = $("#adddiv_uuid").val();
     var major = $("#adddiv_major").val();
     var minor = $("#adddiv_minor").val();
-
-    if (locationname == "" || uuid == "" || major == "" || minor == "")
+    var roomid = $("#adddiv_roomid").val();
+    if (locationname == "" || uuid == "" || major == "" || minor == "" || roomid == "")
     {
         alert("信息不完整!");
         return ;
@@ -171,7 +174,7 @@ function insertFun()
         return ;
     }
     //submit to server 返回插入数据的id
-    $.post("myinsert.php", {locationname:locationname, uuid:uuid,major:major,minor:minor}, function(data){
+    $.post("myinsert.php", {locationname:locationname, uuid:uuid,major:major,minor:minor,roomid:roomid}, function(data){
 
         if (data == "f")
         {
@@ -179,7 +182,7 @@ function insertFun()
         }
         else
         {
-            addRowInTable(data, locationname, uuid,major,minor);
+            addRowInTable(data, locationname, uuid,major,minor,roomid);
             SetTableRowColor();
             $("#adddiv").hide();
         }
@@ -209,7 +212,8 @@ function updateFun()
     var uuid = $("#editdiv_uuid").val();
     var major = $("#editdiv_major").val();
     var minor = $("#editdiv_minor").val();
-    if (locationname == "" || uuid == "" || major == "" || minor == "")
+    var roomid = $("#editdiv_roomid").val();
+    if (locationname == "" || uuid == "" || major == "" || minor == "" || roomid == "")
     {
         alert("信息不完整!");
         return ;
@@ -220,14 +224,14 @@ function updateFun()
         return ;
     }
     //submit to server
-    $.post("myupdate.php", {id:id, locationname:locationname, uuid:uuid,major:major,minor:minor}, function(data){
+    $.post("myupdate.php", {id:id, locationname:locationname, uuid:uuid,major:major,minor:minor,roomid:roomid}, function(data){
         if (data == "f")
         {
             alert("Updata date failed");
         }
         else
         {
-            updataRowInTable(id,  locationname, uuid,major,minor);
+            updataRowInTable(id,  locationname, uuid,major,minor,roomid);
         }
     });
 }

@@ -21,9 +21,10 @@ $locationname = $_POST['locationname'];
 $uuid = $_POST['uuid'];
 $major = $_POST['major'];
 $minor = $_POST['minor'];
+$roomid = $_POST['roomid'];
 //updata db
 
-$sql = sprintf("update %s set locationname='%s',uuid='%s',major=%s,minor=%s where id=%d", 'RDBEACONINFO', $locationname, $uuid,$major,$minor, $id);
+$sql = sprintf("update %s set locationname='%s',uuid='%s',major=%s,minor=%s,roomid=%s where id=%d", 'RDBEACONINFO', $locationname, $uuid,$major,$minor,$roomid, $id);
 
 $result=mysql_query($sql, $conn);
 

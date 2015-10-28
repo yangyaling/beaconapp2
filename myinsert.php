@@ -17,9 +17,10 @@ $locationname = $_POST['locationname'];
 $uuid = $_POST['uuid'];
 $major = $_POST['major'];
 $minor = $_POST['minor'];
+$roomid = $_POST['roomid'];
 //insert db
 
-$sql = sprintf("INSERT INTO %s(id,locationname,uuid,major,minor) VALUES(null,'%s', '%s',%s,%s)", 'RDBEACONINFO',$locationname, $uuid,$major,$minor);
+$sql = sprintf("INSERT INTO %s(id,locationname,uuid,major,minor,roomid) VALUES(null,'%s', '%s',%s,%s)", 'RDBEACONINFO',$locationname, $uuid,$major,$minor,$roomid);
 
 $result=mysql_query($sql, $conn);
 
