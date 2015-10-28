@@ -61,9 +61,11 @@ $sql = "SELECT r.roomid,r.roomname,ifnull(count(us.useruuid),0) as num FROM rdro
 
 $result = mysql_query($sql, $conn);
 
-echo '11111111111';
+
 $dbcolarray = array(0=>'ルームID',1=>'ルームネーム',2=>'状態');
 echo "<th>" . implode("</th><th>", $dbcolarray) . " </th>";
+echo $result;
+echo '11111111111';
 while ($row=mysql_fetch_array($result, MYSQL_ASSOC)) {
     echo $row[0];
     echo "<tr>";
