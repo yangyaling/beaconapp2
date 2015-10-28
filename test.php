@@ -34,7 +34,7 @@ define("SAE_MYSQL_USER",     "b5b35eecdcd068");
 define("SAE_MYSQL_PASS",     "b5074189");
 define("SAE_MYSQL_DB",     "rdbeacoAd7N1JMXE");
 
-echo   "<div  align='left'>
+echo   "<div  align='center'>
         <table id='Table' border=1 cellpadding=10 cellspacing=1 bordercolor=#408080 width='50%'>
         <h1>【R＆D室要員在席情報一覧】(メンテナンス中)</h1>
         ※更新時間：
@@ -65,6 +65,7 @@ echo "<th>" . implode("</th><th>", $dbcolarray) . " </th>";
 
 while ($row=mysql_fetch_array($result, MYSQL_ASSOC)) {
         $thstr = "<tr>" . implode("</tr><tr>", $row) . " </tr>";
+    echo $thstr;
 }
 echo "</table>";
 echo "</div>";
