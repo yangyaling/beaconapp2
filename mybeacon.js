@@ -350,7 +350,7 @@ function deleteFunRoom(id)
         });
     }
 }
-function updateFun()
+function updateFunRoom()
 {
     var id = $("#editdiv_id").val();
     var roomid = $("#editdiv_roomid").val();

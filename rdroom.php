@@ -58,9 +58,9 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC))//与$row=mysql_fetch_assoc(
     echo $tdstr;
 
     echo "<td>";
-    $functionstr = "'editFun(".$row[$dbcolarray[0]].")'";
+    $functionstr = "'editFunRoom(".$row[$dbcolarray[0]].")'";
     echo "<input type='button' value='Edit' onclick=".$functionstr."/>";
-    $functionstr="'deleteFun(".$row[$dbcolarray[0]].")'";
+    $functionstr="'deleteFunRoom(".$row[$dbcolarray[0]].")'";
     echo    "<input type='button' value='Delete' onclick=".$functionstr."/>";
     echo '</td>';
     echo "</tr>";
@@ -80,7 +80,7 @@ mysql_close($conn);
         <td><input  style="width:20px"  type=text id="editdiv_id" size="1" readonly="true" /></td>
         <td><input type=text id="editdiv_roomid" size="15"/></td>
         <td><input type=text id="editdiv_roomname" size="45"/></td>
-        <td><input type=button name="Update" value="Update" onclick="updateFun()" /></td>
+        <td><input type=button name="Update" value="Update" onclick="updateFunRoom()" /></td>
     </tr>
 </table>
 </div>
@@ -91,7 +91,7 @@ mysql_close($conn);
             <td class="cellid">Auto</td>
             <td><input type=text id="adddiv_roomid" size="15"/></td>
             <td><input type=text id="adddiv_roomname" size="45"/></td>
-            <td><input type=button name="Insert" value="Insert" onclick="insertFun()" /></td>
+            <td><input type=button name="Insert" value="Insert" onclick="insertFunRoom()" /></td>
         </tr>
     </table>
 </div>
