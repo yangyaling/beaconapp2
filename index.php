@@ -67,7 +67,7 @@ echo "<div  align='left'>";
 
 echo '<table id="Table" border=1 cellpadding=10 cellspacing=1 bordercolor=#408080 width="100%">';
 echo '<h1>【R＆D室要員在席情報一覧】(メンテナンス中)</h1>';
-$thstr = "※更新時間　";
+$thstr = "※更新時間：";
 echo $thstr;
 
 echo "<div id='updatetime'>";
