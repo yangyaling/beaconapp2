@@ -365,7 +365,7 @@ function updateFunRoom()
     var visible = $("#editdiv_visible").val();
     if (roomid == "" || roomname == "" || visible == "")
     {
-        alert("信息不完整!");
+        alert("Room信息不完整!");
         return ;
     }
     //submit to server
