@@ -64,7 +64,7 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC))//与$row=mysql_fetch_assoc(
     $index = 0;
     foreach ($dbcolarray as $td) {
         if ($index == 3) {
-            if($row[$td]>0){
+            if($row[$td]>'0'){
                 $tdstr .= "<td><input type='checkbox' size=45 id='textid' disabled=true checked =true></td>";
             }else{
                 $tdstr .= "<td><input type='checkbox' size=45 id='textid' disabled=true checked =false></td>";
