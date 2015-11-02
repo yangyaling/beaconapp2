@@ -281,7 +281,12 @@ function addRowInTableRoom(id, roomid, roomname,visible)
     appendstr += "<td>" + id + "</td>";
     appendstr += "<td>" + roomid + "</td>";
     appendstr += "<td>" + roomname + "</td>";
-    appendstr += "<td>" + visible + "</td>";
+    if(visible){
+        appendstr += "<td><input type='checkbox' disabled='ture' checked ='true'></td>";
+    }else{
+        appendstr += "<td><input type='checkbox' disabled='ture'></td>";
+    }
+    //appendstr += "<td>" + visible + "</td>";
     appendstr += "<td><input type=\"button\" value=\"Edit\" onclick=\"editFunRoom(id);\" />";
     appendstr += "<input type=\"button\" value=\"Delete\" onclick=\"deleteFunRoom(id)\" /></td>";
     appendstr += "</tr>";
@@ -296,7 +301,12 @@ function updataRowInTableRoom(id, roomid, roomname,visible)
     {
         $("#Table tr:eq(" + i + ") td:eq(1)").html(roomid != "" ? roomid : " ");
         $("#Table tr:eq(" + i + ") td:eq(2)").html(roomname != "" ? roomname : " ");
-        $("#Table tr:eq(" + i + ") td:eq(3)").html(visible != "" ? visible : " ");
+        if(visible){
+            $("#Table tr:eq(" + i + ") td:eq(3)").html("<td><input type='checkbox' disabled='ture' checked='true'></td>");
+        }else{
+            $("#Table tr:eq(" + i + ") td:eq(3)").html("<td><input type='checkbox' disabled='ture' ></td>");
+        }
+        //$("#Table tr:eq(" + i + ") td:eq(3)").html(visible != "" ? visible : " ");
         $("#editdiv").hide();
     }
 }
