@@ -22,7 +22,7 @@ if($_SESSION["admin"] == null)
     header("location:login.html");
     exit();
 } else {
-    echo "管理者：".$_SESSION['admin'];
+    echo "管理者：".$_SESSION['admin']."<br>";
 }   echo "<a href='logout.php'>サインアウト</a>"
 ?>
 
@@ -119,7 +119,7 @@ mysql_close($conn);
 </table>
 </div>
 
-<a href='index.php'>在席情報へ戻る</a>
+<a href='rdroom.php'>RDROOM(場所管理)画面へ</a>
 </div>
 </body>
 </html> 

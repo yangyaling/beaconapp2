@@ -98,7 +98,7 @@ mysql_close($conn);
     </table>
 </div>
 
-<a href='index.php'>在席情報へ戻る</a>
+<a href='mybeacon.php'>RDBEACONINFO(Beacon管理)画面へ</a>
 </div>
 </body>
 </html> 
