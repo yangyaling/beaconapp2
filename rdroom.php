@@ -88,11 +88,11 @@ mysql_close($conn);
 <table id="editItem" border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo padding='0px'>
     <th width='100'>id</th><th width='100'>roomid</th><th width='100'>roomname</th><th width='100'>visible</th><th width='100'>Action</th>
     <tr>
-        <td width="40"><input  style="width:20px"  type=text id="editdiv_id" size="1" readonly="true" /></td>
-        <td width="40"><input type=text id="editdiv_roomid" size="15"/></td>
-        <td width="40"><input type=text id="editdiv_roomname" size="35"/></td>
-        <td width="40"><input type=text id="editdiv_visible" size="35"/></td>
-        <td width="40"><input type=button name="Update" value="Update" onclick="updateFunRoom()" /></td>
+        <td><input  style="width:20px"  type=text id="editdiv_id" size="1" readonly="true" /></td>
+        <td><input type=text id="editdiv_roomid"/></td>
+        <td><input type=text id="editdiv_roomname"/></td>
+        <td><input type=text id="editdiv_visible"/></td>
+        <td><input type=button name="Update" value="Update" onclick="updateFunRoom()" /></td>
     </tr>
 </table>
 </div>
@@ -100,11 +100,11 @@ mysql_close($conn);
     <table id="editItem" border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo padding='0px'>
         <th>id</th><th>roomid</th><th>roomname</th><th>visible</th><th>Action</th>
         <tr>
-            <td width="40" class="cellid">Auto</td>
-            <td width="40"><input type=text id="adddiv_roomid" size="15"/></td>
-            <td width="40"><input type=text id="adddiv_roomname" size="35"/></td>
-            <td width="40"><input type=text id="adddiv_visible" size="35"/></td>
-            <td width="40"><input type=button name="Insert" value="Insert" onclick="insertFunRoom()" /></td>
+            <td class="cellid">Auto</td>
+            <td><input type=text id="adddiv_roomid" /></td>
+            <td><input type=text id="adddiv_roomname" /></td>
+            <td><input type=text id="adddiv_visible"/></td>
+            <td><input type=button name="Insert" value="Insert" onclick="insertFunRoom()" /></td>
         </tr>
     </table>
 </div>
