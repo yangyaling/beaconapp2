@@ -62,15 +62,15 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC))//与$row=mysql_fetch_assoc(
     echo "<tr>";
     $tdstr = "";
     $index = 0;
-    foreach ($dbcolarray as $td)
-        echo $index."|";
-        if ($index == 3){
+    foreach ($dbcolarray as $td) {
+        if ($index == 3) {
             $tdstr .= "<td><input type='checkbox' size=45 id='textid' disabled=true checked=$row[$td]></td>";
-        }else{
+        } else {
             $tdstr .= "<td>$row[$td]</td>";
         }
 
-        $index = $index+1;
+        $index = $index + 1;
+    }
     echo $tdstr;
 
     echo "<td>";
