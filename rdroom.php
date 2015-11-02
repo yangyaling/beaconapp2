@@ -17,7 +17,7 @@ define("SAE_MYSQL_USER",     "b5b35eecdcd068");
 define("SAE_MYSQL_PASS",     "b5074189");
 define("SAE_MYSQL_DB",     "rdbeacoAd7N1JMXE");
 
-$dbcolarray = array('id', 'roomid', 'roomname');
+$dbcolarray = array('id', 'roomid', 'roomname', 'visible');
 $conn = @mysql_connect(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS);
 mysql_select_db(SAE_MYSQL_DB,$conn);
 $sql = sprintf("select count(*) from %s", "RDROOM");
@@ -75,22 +75,24 @@ mysql_close($conn);
 
 <div id="editdiv" style="display:none;color:red;" padding='0px''>
 <table id="editItem" border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo padding='0px'>
-    <th>id</th><th>roomid</th><th>roomname</th><th>Action</th>
+    <th>id</th><th>roomid</th><th>roomname</th><th>visible</th><th>Action</th>
     <tr>
         <td><input  style="width:20px"  type=text id="editdiv_id" size="1" readonly="true" /></td>
         <td><input type=text id="editdiv_roomid" size="15"/></td>
         <td><input type=text id="editdiv_roomname" size="45"/></td>
+        <td><input type=text id="editdiv_visible" size="45"/></td>
         <td><input type=button name="Update" value="Update" onclick="updateFunRoom()" /></td>
     </tr>
 </table>
 </div>
 <div id="adddiv" style="display:none;color:green;" padding='0px'>
     <table id="editItem" border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo padding='0px'>
-        <th>id</th><th>roomid</th><th>roomname</th><th>Action</th>
+        <th>id</th><th>roomid</th><th>roomname</th><th>visible</th><th>Action</th>
         <tr>
             <td class="cellid">Auto</td>
             <td><input type=text id="adddiv_roomid" size="15"/></td>
             <td><input type=text id="adddiv_roomname" size="45"/></td>
+            <td><input type=text id="adddiv_visible" size="45"/></td>
             <td><input type=button name="Insert" value="Insert" onclick="insertFunRoom()" /></td>
         </tr>
     </table>

@@ -19,9 +19,11 @@ $id = $_POST['id'];
 $roomid = $_POST['roomid'];
 
 $roomname = $_POST['roomname'];
+
+$visible = $_POST['visible'];
 //updata db
 
-$sql = sprintf("update %s set roomid='%s',roomname='%s' where id=%d", 'RDROOM', $roomid, $roomname, $id);
+$sql = sprintf("update %s set roomid='%s',roomname='%s' ,visible='%s' where id=%d", 'RDROOM', $roomid, $roomname,$visible, $id);
 
 $result=mysql_query($sql, $conn);
 

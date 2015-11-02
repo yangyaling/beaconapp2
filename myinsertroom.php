@@ -16,9 +16,10 @@ $roomid = $_POST['roomid'];
 
 $roomname = $_POST['roomname'];
 
+$visible = $_POST['visible'];
 //insert db
 
-$sql = sprintf("INSERT INTO %s(id,roomid,roomname) VALUES(null,'%s', '%s')", 'RDROOM',$roomid, $roomname);
+$sql = sprintf("INSERT INTO %s(id,roomid,roomname,visible) VALUES(null,'%s', '%s', '%s')", 'RDROOM',$roomid, $roomname,$visible);
 
 $result=mysql_query($sql, $conn);
 

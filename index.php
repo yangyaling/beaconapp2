@@ -76,8 +76,8 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC)) {
     echo "</tr>";
 }
 echo "</table>";
-echo "<br/><a href='rdroom.php'>■場所（ルーム）管理</a>";
-echo "<br/><a href='mybeacon.php'>■Beacon管理</a>";
+//echo "<br/><a href='rdroom.php'>■場所（ルーム）管理</a>";
+//echo "<br/><a href='mybeacon.php'>■Beacon管理</a>";
 echo "</div>";
 
 

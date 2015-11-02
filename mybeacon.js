@@ -252,6 +252,7 @@ function editFunRoom(id)
     $("#editdiv_id").val(id);
     $("#editdiv_roomid").val($("#Table tr:eq(" + i + ") td:eq(1)").html());
     $("#editdiv_roomname").val($("#Table tr:eq(" + i + ") td:eq(2)").html());
+    $("#editdiv_visible").val($("#Table tr:eq(" + i + ") td:eq(3)").html());
 }
 //响应add按钮
 function addFunRoom()
@@ -273,13 +274,14 @@ function DecTableRowCountRoom()
     tc.html(parseInt(tc.html()) - 1);
 }
 //增加一行
-function addRowInTableRoom(id, roomid, roomname)
+function addRowInTableRoom(id, roomid, roomname,visible)
 {
     //新增加一行
     var appendstr = "<tr>";
     appendstr += "<td>" + id + "</td>";
     appendstr += "<td>" + roomid + "</td>";
     appendstr += "<td>" + roomname + "</td>";
+    appendstr += "<td>" + visible + "</td>";
     appendstr += "<td><input type=\"button\" value=\"Edit\" onclick=\"editFunRoom(id);\" />";
     appendstr += "<input type=\"button\" value=\"Delete\" onclick=\"deleteFunRoom(id)\" /></td>";
     appendstr += "</tr>";
@@ -287,13 +289,14 @@ function addRowInTableRoom(id, roomid, roomname)
     IncTableRowCount();
 }
 //修改某一行
-function updataRowInTableRoom(id, roomid, roomname)
+function updataRowInTableRoom(id, roomid, roomname,visible)
 {
     var i = SearchIdInTable($("#Table tr"), id);
     if (i != -1)
     {
         $("#Table tr:eq(" + i + ") td:eq(1)").html(roomid != "" ? roomid : " ");
         $("#Table tr:eq(" + i + ") td:eq(2)").html(roomname != "" ? roomname : " ");
+        $("#Table tr:eq(" + i + ") td:eq(3)").html(visible != "" ? visible : " ");
         $("#editdiv").hide();
     }
 }
@@ -314,16 +317,16 @@ function insertFunRoom()
 {
     var roomid = $("#adddiv_roomid").val();
     var roomname = $("#adddiv_roomname").val();
+    var visible = $("#adddiv_visible").val();
 
-
-    if (roomid == "" || roomname == "" )
+    if (roomid == "" || roomname == ""  || visible == "")
     {
         alert("信息不完整!");
         return ;
     }
 
     //submit to server 返回插入数据的id
-    $.post("myinsertroom.php", {roomid:roomid, roomname:roomname}, function(data){
+    $.post("myinsertroom.php", {roomid:roomid, roomname:roomname,visible:visible}, function(data){
 
         if (data == "f")
         {
@@ -331,7 +334,7 @@ function insertFunRoom()
         }
         else
         {
-            addRowInTableRoom(data, roomid, roomname);
+            addRowInTableRoom(data, roomid, roomname,visible);
             SetTableRowColor();
             $("#adddiv").hide();
         }
@@ -359,20 +362,21 @@ function updateFunRoom()
     var id = $("#editdiv_id").val();
     var roomid = $("#editdiv_roomid").val();
     var roomname = $("#editdiv_roomname").val();
-    if (roomid == "" || roomname == "")
+    var visible = $("#editdiv_visible").val();
+    if (roomid == "" || roomname == "" || visible == "")
     {
         alert("信息不完整!");
         return ;
     }
     //submit to server
-    $.post("myupdateroom.php", {id:id, roomid:roomid, roomname:roomname}, function(data){
+    $.post("myupdateroom.php", {id:id, roomid:roomid, roomname:roomname,visible:visible}, function(data){
         if (data == "f")
         {
             alert("Updata date failed");
         }
         else
         {
-            updataRowInTableRoom(id,  roomid, roomname);
+            updataRowInTableRoom(id,  roomid, roomname,visible);
         }
     });
 }
