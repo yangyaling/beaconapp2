@@ -36,6 +36,7 @@ if ($myrow = mysql_fetch_row($result)){
     header("WWW-Authenticate:Basic realm='userid or password is not valid'");
     header("HTTP/1.0 401 Unauthorized");
     echo "認証が失敗しました、正しいユーザID、パスワードで再度試してください。";
+    echo $_SESSION["admin"];
     exit();
 }
 
