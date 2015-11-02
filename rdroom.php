@@ -64,10 +64,10 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC))//与$row=mysql_fetch_assoc(
     $index = 0;
     foreach ($dbcolarray as $td) {
         if ($index == 3) {
-            if($row[$td]=='1'){
-                $tdstr .= "<td><input type='checkbox' size=45 id='textid' disabled=true checked =true>$row[$td]</td>";
+            if($row[$td]==1){
+                $tdstr .= "<td><input type='checkbox'  disabled=true checked =1>$row[$td]</td>";
             }else{
-                $tdstr .= "<td><input type='checkbox' size=45 id='textid' disabled=true checked =false>$row[$td]</td>";
+                $tdstr .= "<td><input type='checkbox'  disabled=true checked =0>$row[$td]</td>";
             }
 
         } else {
