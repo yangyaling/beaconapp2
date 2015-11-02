@@ -16,12 +16,13 @@ define("SAE_MYSQL_HOST_M",     "ja-cdbr-azure-east-a.cloudapp.net");
 define("SAE_MYSQL_USER",     "b5b35eecdcd068");
 define("SAE_MYSQL_PASS",     "b5074189");
 define("SAE_MYSQL_DB",     "rdbeacoAd7N1JMXE");
-
+session_start();
 if($_SESSION["admin"])
 {
     header("login.html");
     exit();
 }
+echo $_SESSION["admin"];
 /*连接数据库*/
 $conn = @mysql_connect(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS);
 mysql_select_db(SAE_MYSQL_DB,$conn);

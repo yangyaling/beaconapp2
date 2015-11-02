@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<style type="text/css">
+
+    .head {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height:2rem;
+        line-height: 2rem;
+        background: #10661e;
+        padding-left: .3rem;
+    }
+    .body{
+        position: absolute;
+        top: 2rem;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+    }
+    .body .nav {
+        position: absolute;
+        padding-left: 1.0rem;
+        top: 0;
+        height: 1.5rem;
+        left: 0;
+        right: 0;
+        background: #b2aed5;
+    }
+    .body .list {
+        position: absolute;
+        top: 1.5rem;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+    }
+    .body .list .ul .li {
+        position: relative;
+        height: 2.8rem;
+        border-bottom: 1px solid #ccc;
+    }
+    .body .list .ul .li .dl {
+        position: absolute;
+        padding-left: 1.3rem;
+        border-bottom: 1px solid #ccc;
+        background: #10661e;
+    }
+    .body .list .ul .li .dt {
+        position: absolute;
+        padding-left: 1.3rem;
+        border-bottom: 1px solid #ccc;
+    }
+</style>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" >
+    <meta content="telephone=no" name="format-detection" >
+    <title>ＡＰＩ情報</title>
+</head>
+<body>
+<form name="LoginForm" method="post" action="login.php" onSubmit="return InputCheck(this)">
+    <p>
+        <label for="username" class="label">Username:</label>
+        <input id="username" name="username" type="text" class="input" />
+    <p/>
+    <p>
+        <label for="password" class="label">Password:</label>
+        <input id="password" name="password" type="password" class="input" />
+    <p/>
+    <p>
+        <input type="submit" name="submit" value="  Login  " class="left" />
+    </p>
+
+
+</form>
+
+</body>
+</html>
