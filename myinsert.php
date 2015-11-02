@@ -23,7 +23,7 @@ $roomid = $_POST['roomid'];
 $sql = sprintf("INSERT INTO %s(id,locationname,uuid,major,minor,roomid) VALUES(null,'%s', '%s','%s','%s')", 'RDBEACONINFO',$locationname, $uuid,$major,$minor,$roomid);
 
 $result=mysql_query($sql, $conn);
-
+mysql_close($conn);
 if ($result)
 
     echo mysql_insert_id($conn);
@@ -32,6 +32,6 @@ else
 
     echo 'f';
 
-mysql_close($conn);
+
 
 ?>
