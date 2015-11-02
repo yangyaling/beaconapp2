@@ -63,17 +63,7 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC))//与$row=mysql_fetch_assoc(
     $tdstr = "";
     $index = 0;
     foreach ($dbcolarray as $td) {
-        if ($index == 3) {
-            if($row[$td]==1){
-                $tdstr .= "<td><input type='checkbox' disabled='ture' checked ='true'></td>";
-            }else{
-                $tdstr .= "<td><input type='checkbox' disabled='ture' ></td>";
-            }
-
-        } else {
-            $tdstr .= "<td>$row[$td]</td>";
-        }
-
+        $tdstr .= "<td>$row[$td]</td>";
         $index = $index + 1;
     }
     echo $tdstr;
@@ -101,7 +91,7 @@ mysql_close($conn);
         <td><input  style="width:20px"  type=text id="editdiv_id" size="1" readonly="true" /></td>
         <td><input type=text id="editdiv_roomid" size="15"/></td>
         <td><input type=text id="editdiv_roomname" size="45"/></td>
-        <td><input type=checkbox id="editdiv_visible" size="45"/></td>
+        <td><input type=text id="editdiv_visible" size="45"/></td>
         <td><input type=button name="Update" value="Update" onclick="updateFunRoom()" /></td>
     </tr>
 </table>
@@ -113,7 +103,7 @@ mysql_close($conn);
             <td class="cellid">Auto</td>
             <td><input type=text id="adddiv_roomid" size="15"/></td>
             <td><input type=text id="adddiv_roomname" size="45"/></td>
-            <td><input type=checkbox id="adddiv_visible" size="45"/></td>
+            <td><input type=text id="adddiv_visible" size="45"/></td>
             <td><input type=button name="Insert" value="Insert" onclick="insertFunRoom()" /></td>
         </tr>
     </table>
