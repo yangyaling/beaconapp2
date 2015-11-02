@@ -19,7 +19,7 @@ define("SAE_MYSQL_DB",     "rdbeacoAd7N1JMXE");
 session_start();
 if($_SESSION["admin"] == null)
 {
-    header("login.html");
+    header("location:login.html");
     exit();
 }
 echo $_SESSION["admin"];
