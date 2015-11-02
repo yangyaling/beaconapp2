@@ -17,6 +17,43 @@ define("SAE_MYSQL_USER",     "b5b35eecdcd068");
 define("SAE_MYSQL_PASS",     "b5074189");
 define("SAE_MYSQL_DB",     "rdbeacoAd7N1JMXE");
 
+if(!isset($PHP_AUTH_USER))
+{
+    header("WWW-Authenticate:Basic realm='身份验证功能'");
+header("HTTP/1.0 401 Unauthorized");
+echo "身份验证失败，您无权共享网络资源!";
+exit();
+}
+/*连接数据库*/
+$db=mysql_connect("localhost","root","");
+//选择数据库
+mysql_select_db("XinXiKu",$db);
+//查询用户是否存在
+$result=mysql_query("SELECT * FROM user where name='$PHP_AUTH_USER' and password='$PHP_AUTH_PW'",$db);
+if ($myrow = mysql_fetch_row($result))
+{
+//以下为身份验证成功后的相关操作
+
+}
+else
+{
+//身份验证不成功，提示用户重新输入
+    header("WWW-Authenticate:Basic realm='身份验证功能'");
+header("HTTP/1.0 401 Unauthorized");
+echo "身份验证失败，您无权共享网络资源!";
+exit();
+}
+
+?>
+
+
+<?php
+
+define("SAE_MYSQL_HOST_M",     "ja-cdbr-azure-east-a.cloudapp.net");
+define("SAE_MYSQL_USER",     "b5b35eecdcd068");
+define("SAE_MYSQL_PASS",     "b5074189");
+define("SAE_MYSQL_DB",     "rdbeacoAd7N1JMXE");
+
 $dbcolarray = array('id', 'locationname', 'uuid', 'major', 'minor','roomid');
 $conn = @mysql_connect(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS);
 mysql_select_db(SAE_MYSQL_DB,$conn);
