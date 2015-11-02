@@ -17,12 +17,9 @@ define("SAE_MYSQL_USER",     "b5b35eecdcd068");
 define("SAE_MYSQL_PASS",     "b5074189");
 define("SAE_MYSQL_DB",     "rdbeacoAd7N1JMXE");
 
-if(!isset($PHP_AUTH_USER))
+if($_SESSION["admin"])
 {
-    header("Content-type:text/html;charset=utf-8");
-    header("WWW-Authenticate:Basic realm='Sign In Please'");
-    header("HTTP/1.0 401 Unauthorized");
-    echo "認証が失敗しました、正しいユーザID、パスワードで再度試してください。";
+    header("login.html");
     exit();
 }
 /*连接数据库*/
