@@ -20,6 +20,7 @@ $sql = "SELECT r.roomid,r.roomname,ifnull(count(us.useruuid),0) as num FROM rdro
         left join rdbeaconinfo b on b.roomid = r.roomid
         left join rduserstatus us on b.uuid=us.uuid and b.major=us.major and b.minor=us.minor
         and date_format(us.updatetime,'%Y-%m-%d') = date_format(now(),'%Y-%m-%d')
+        where r.visible >0
         group by r.roomid";
 
 
