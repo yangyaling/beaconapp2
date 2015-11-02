@@ -77,7 +77,7 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC))//与$row=mysql_fetch_assoc(
     echo "</tr>";
 }
 echo "</table>";
-echo "</div>";
+
 
 mysql_free_result($result);
 mysql_close($conn);
@@ -107,6 +107,8 @@ mysql_close($conn);
             <td width="20"><input type=button name="Insert" value="Insert" onclick="insertFunRoom()" /></td>
         </tr>
     </table>
+</div>
+
 </div>
 
 <a href='mybeacon.php'>RDBEACONINFO(Beacon管理)画面へ</a>
