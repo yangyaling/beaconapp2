@@ -63,7 +63,7 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC))//与$row=mysql_fetch_assoc(
     $tdstr = "";
     $index = 0;
     foreach ($dbcolarray as $td) {
-        $tdstr .= "<td width='40'>$row[$td]</td>";
+        $tdstr .= "<td>$row[$td]</td>";
         $index = $index + 1;
     }
     echo $tdstr;
