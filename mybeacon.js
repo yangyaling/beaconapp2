@@ -178,7 +178,7 @@ function insertFun()
 
         if (data == "f")
         {
-            alert("Insert date failed");
+            alert("Insert data failed");
         }
         else
         {
@@ -330,7 +330,7 @@ function insertFunRoom()
 
         if (data == "f")
         {
-            alert("Insert date failed");
+            alert("Insert data failed");
         }
         else
         {
