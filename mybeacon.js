@@ -328,7 +328,7 @@ function insertFunRoom()
 {
     var roomid = $("#adddiv_roomid").val();
     var roomname = $("#adddiv_roomname").val();
-    var visible = $("#adddiv_visible").checked;
+    var visible = $("#adddiv_visible").val();
 
     if (roomid == "" || roomname == ""  || visible == "")
     {
@@ -373,7 +373,7 @@ function updateFunRoom()
     var id = $("#editdiv_id").val();
     var roomid = $("#editdiv_roomid").val();
     var roomname = $("#editdiv_roomname").val();
-    var visible = $("#editdiv_visible").checked;
+    var visible = $("#editdiv_visible").val();
     alert(visible);
     if (roomid == "" || roomname == "" || visible == "")
     {
