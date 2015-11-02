@@ -26,7 +26,7 @@ $result=mysql_query($sql, $conn);
 mysql_close($conn);
 if ($result)
 
-    echo 't';
+    echo mysql_insert_id($conn);
 
 else
 
