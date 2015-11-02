@@ -17,7 +17,7 @@ define("SAE_MYSQL_USER",     "b5b35eecdcd068");
 define("SAE_MYSQL_PASS",     "b5074189");
 define("SAE_MYSQL_DB",     "rdbeacoAd7N1JMXE");
 session_start();
-if($_SESSION["admin"])
+if($_SESSION["admin"] == null)
 {
     header("login.html");
     exit();
