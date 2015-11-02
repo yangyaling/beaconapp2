@@ -63,6 +63,7 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC))//与$row=mysql_fetch_assoc(
     $tdstr = "";
     $index = 0;
     foreach ($dbcolarray as $td)
+        echo $index."|";
         if ($index == 3){
             $tdstr .= "<td><input type='checkbox' size=45 id='textid' disabled=true checked=$row[$td]></td>";
         }else{
