@@ -23,7 +23,7 @@ if($_SESSION["admin"] == null)
     exit();
 } else {
     echo "管理者：".$_SESSION['admin'];
-}
+}   echo "<a href='logout.php'>サインアウト</a>"
 ?>
 
 
