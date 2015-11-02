@@ -301,10 +301,11 @@ function updataRowInTableRoom(id, roomid, roomname,visible)
     {
         $("#Table tr:eq(" + i + ") td:eq(1)").html(roomid != "" ? roomid : " ");
         $("#Table tr:eq(" + i + ") td:eq(2)").html(roomname != "" ? roomname : " ");
+        alert(visible);
         if(visible){
-            $("#Table tr:eq(" + i + ") td:eq(3)").html("<td><input type='checkbox' disabled='ture' checked='true'></td>");
+            $("#Table tr:eq(" + i + ") td:eq(3)").html("<input type='checkbox' disabled='ture' checked='true'>");
         }else{
-            $("#Table tr:eq(" + i + ") td:eq(3)").html("<td><input type='checkbox' disabled='ture' ></td>");
+            $("#Table tr:eq(" + i + ") td:eq(3)").html("<input type='checkbox' disabled='ture' >");
         }
         //$("#Table tr:eq(" + i + ") td:eq(3)").html(visible != "" ? visible : " ");
         $("#editdiv").hide();
@@ -373,6 +374,7 @@ function updateFunRoom()
     var roomid = $("#editdiv_roomid").val();
     var roomname = $("#editdiv_roomname").val();
     var visible = $("#editdiv_visible").checked;
+    alert(visible);
     if (roomid == "" || roomname == "" || visible == "")
     {
         alert("Room信息不完整!");
