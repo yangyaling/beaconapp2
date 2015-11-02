@@ -9,13 +9,21 @@
 </head>
 <body>
 <h1>テーブルネーム：RDROOM</h1>
-
 <?php
 
 define("SAE_MYSQL_HOST_M",     "ja-cdbr-azure-east-a.cloudapp.net");
 define("SAE_MYSQL_USER",     "b5b35eecdcd068");
 define("SAE_MYSQL_PASS",     "b5074189");
 define("SAE_MYSQL_DB",     "rdbeacoAd7N1JMXE");
+session_start();
+if($_SESSION["admin"] == null)
+{
+    header("location:login.html");
+    exit();
+} else {
+    echo "管理者：" . $_SESSION['admin'] . "<br>";
+    echo "<a href='logout.php'>サインアウト</a>";
+}
 
 $dbcolarray = array('id', 'roomid', 'roomname', 'visible');
 $conn = @mysql_connect(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS);
