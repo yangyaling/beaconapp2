@@ -46,8 +46,8 @@ $tpl_db_coltitle = $dbcolarray;
 $tpl_db_rows = array();
 $sql = sprintf("select %s from %s", implode(",",$dbcolarray), $tpl_db_tablename);
 $result = mysql_query($sql, $conn);
-echo "<div  align='center' width='480px'>";
-echo "<div padding='0px'>";
+echo "<div  align='center' width='380px'>";
+
 echo "<caption style='font-size:15px' align='left'>ルーム数：<label id='tableRowCount'>".$dbcount[0]."</label></caption>";
 echo "<table id='Table' border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo padding='0px'>";
 
@@ -107,8 +107,6 @@ mysql_close($conn);
             <td width="40"><input type=button name="Insert" value="Insert" onclick="insertFunRoom()" /></td>
         </tr>
     </table>
-</div>
-
 </div>
 
 <a href='mybeacon.php'>RDBEACONINFO(Beacon管理)画面へ</a>
