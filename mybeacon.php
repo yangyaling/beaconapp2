@@ -19,28 +19,24 @@ define("SAE_MYSQL_DB",     "rdbeacoAd7N1JMXE");
 
 if(!isset($PHP_AUTH_USER))
 {
-    header("WWW-Authenticate:Basic realm='身份验证功能'");
+    header("WWW-Authenticate:Basic realm='管理者認証'");
 header("HTTP/1.0 401 Unauthorized");
-echo "身份验证失败，您无权共享网络资源!";
+echo "認証が失敗しました、正しいユーザID、パスワードで再度試してください。";
 exit();
 }
 /*连接数据库*/
-$db=mysql_connect("localhost","root","");
-//选择数据库
-mysql_select_db("XinXiKu",$db);
+$conn = @mysql_connect(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS);
+mysql_select_db(SAE_MYSQL_DB,$conn);
 //查询用户是否存在
-$result=mysql_query("SELECT * FROM user where name='$PHP_AUTH_USER' and password='$PHP_AUTH_PW'",$db);
-if ($myrow = mysql_fetch_row($result))
-{
+$result=mysql_query("SELECT * FROM user where name='$PHP_AUTH_USER' and password='$PHP_AUTH_PW'",$conn);
+if ($myrow = mysql_fetch_row($result)){
 //以下为身份验证成功后的相关操作
 
-}
-else
-{
+}else{
 //身份验证不成功，提示用户重新输入
-    header("WWW-Authenticate:Basic realm='身份验证功能'");
-header("HTTP/1.0 401 Unauthorized");
-echo "身份验证失败，您无权共享网络资源!";
+    header("WWW-Authenticate:Basic realm='管理者認証'");
+    header("HTTP/1.0 401 Unauthorized");
+    echo "認証が失敗しました、正しいユーザID、パスワードで再度試してください。";
 exit();
 }
 
