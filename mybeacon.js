@@ -317,7 +317,7 @@ function insertFunRoom()
 {
     var roomid = $("#adddiv_roomid").val();
     var roomname = $("#adddiv_roomname").val();
-    var visible = $("#adddiv_visible").val();
+    var visible = $("#adddiv_visible").checked;
 
     if (roomid == "" || roomname == ""  || visible == "")
     {
@@ -362,7 +362,7 @@ function updateFunRoom()
     var id = $("#editdiv_id").val();
     var roomid = $("#editdiv_roomid").val();
     var roomname = $("#editdiv_roomname").val();
-    var visible = $("#editdiv_visible").val();
+    var visible = $("#editdiv_visible").checked;
     if (roomid == "" || roomname == "" || visible == "")
     {
         alert("Room信息不完整!");
