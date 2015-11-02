@@ -54,7 +54,7 @@ echo "<table id='Table' border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaao
 //表头
 $thstr = "<th width='100'>" . implode("</th><th width='100'>", $dbcolarray) . " </th>";
 echo $thstr;
-echo "<th width='100'><input type='button' value='Add' onclick='addFun()' /> </th>";
+echo "<th width='120'><input type='button' value='Add' onclick='addFun()' /> </th>";
 
 //表中的内容
 while ($row=mysql_fetch_array($result, MYSQL_ASSOC))//与$row=mysql_fetch_assoc($result)等价
