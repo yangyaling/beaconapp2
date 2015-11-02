@@ -25,7 +25,8 @@ if ($myrow = mysql_fetch_row($result)){
     $_SESSION["admin"] = $username;
 }else{
     $_SESSION["admin"] = null;
-    die("用户名密码错误");
+    header("Content-type: text/html; charset=utf-8");
+    die("ユーザID　または　パスワードが不正");
     header("location:login.html");
 }
 ?>
