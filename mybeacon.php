@@ -35,7 +35,7 @@ if ($myrow = mysql_fetch_row($result)){
     //alert();
 }else{
 //身份验证不成功，提示用户重新输入
-    header("WWW-Authenticate:Basic realm='Sign In Please'");
+    header("WWW-Authenticate:Basic realm='userid or password is not valid'");
     header("HTTP/1.0 401 Unauthorized");
     echo "認証が失敗しました、正しいユーザID、パスワードで再度試してください。";
     exit();
