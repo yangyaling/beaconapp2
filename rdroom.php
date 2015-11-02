@@ -65,9 +65,9 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC))//与$row=mysql_fetch_assoc(
     foreach ($dbcolarray as $td) {
         if ($index == 3) {
             if($row[$td]=='1'){
-                $tdstr .= "<td><input type='checkbox' size=45 id='textid' disabled=true checked =true></td>";
+                $tdstr .= "<td><input type='checkbox' size=45 id='textid' disabled=true checked =true>$row[$td]</td>";
             }else{
-                $tdstr .= "<td><input type='checkbox' size=45 id='textid' disabled=true checked =false></td>";
+                $tdstr .= "<td><input type='checkbox' size=45 id='textid' disabled=true checked =false>$row[$td]</td>";
             }
 
         } else {
