@@ -87,7 +87,7 @@ body {
 	font-family: Verdana, Arial;
 	font-weight: normal;
 	font-size: 12px;
-	color: #ffffff;
+    color: #c8c8c8;
 }
 
 
@@ -106,6 +106,7 @@ form, .welcome {
 	margin-top: 33px;
 	margin-left: 40px;
 	font-size: 20px;
+    color: #64c8c8;
 }
 
 .username-text {
@@ -113,6 +114,7 @@ form, .welcome {
 	float: left;
 	margin-top: 50px;
 	margin-left: 40px;
+
 }
 
 .password-text {
@@ -120,6 +122,7 @@ form, .welcome {
 	float: left;
 	margin-top: 50px;
 	margin-left: 0px;
+
 }
 
 .welcome-text {
@@ -136,7 +139,6 @@ form, .welcome {
 	float:left;
 	margin-top: 10px;
 	margin-left: 35px;
-	background: url(images/username-field.png) center left no-repeat;
 }
 
 .username-field:hover {
