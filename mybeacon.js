@@ -175,8 +175,8 @@ function insertFun()
     }
     //submit to server 返回插入数据的id
     $.post("myinsert.php", {locationname:locationname, uuid:uuid,major:major,minor:minor,roomid:roomid}, function(data){
-
-        if (data == "f")
+        alert(data);
+        if (data != "t")
         {
             alert("Insert data failed");
         }
