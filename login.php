@@ -23,10 +23,11 @@ if ($myrow = mysql_fetch_row($result)){
 //以下为身份验证成功后的相关操作
     //alert();
     $_SESSION["admin"] = $username;
+    header("location:mybeacon.php");
 }else{
     $_SESSION["admin"] = null;
     header("Content-type: text/html; charset=utf-8");
-    die("ユーザID　または　パスワードが不正");
+    echo "ユーザID　または　パスワードが不正";
     header("location:login.html");
 }
 ?>
