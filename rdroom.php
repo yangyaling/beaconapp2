@@ -52,9 +52,9 @@ echo "<caption style='font-size:15px' align='left'>ルーム数：<label id='tab
 echo "<table id='Table' border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo padding='0px'>";
 
 //表头
-$thstr = "<th width='100'>" . implode("</th><th>", $dbcolarray) . " </th>";
+$thstr = "<th width='100'>" . implode("</th><th width='100'>", $dbcolarray) . " </th>";
 echo $thstr;
-echo "<th><input type='button' value='Add' onclick='addFun()' /> </th>";
+echo "<th width='100'><input type='button' value='Add' onclick='addFun()' /> </th>";
 
 //表中的内容
 while ($row=mysql_fetch_array($result, MYSQL_ASSOC))//与$row=mysql_fetch_assoc($result)等价
@@ -86,7 +86,7 @@ mysql_close($conn);
 
 <div id="editdiv" style="display:none;color:red;" padding='0px''>
 <table id="editItem" border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo padding='0px'>
-    <th>id</th><th>roomid</th><th>roomname</th><th>visible</th><th>Action</th>
+    <th width='100'>id</th><th width='100'>roomid</th><th width='100'>roomname</th><th width='100'>visible</th><th width='100'>Action</th>
     <tr>
         <td width="40"><input  style="width:20px"  type=text id="editdiv_id" size="1" readonly="true" /></td>
         <td width="40"><input type=text id="editdiv_roomid" size="15"/></td>
