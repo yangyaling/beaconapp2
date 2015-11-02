@@ -281,11 +281,8 @@ function addRowInTableRoom(id, roomid, roomname,visible)
     appendstr += "<td>" + id + "</td>";
     appendstr += "<td>" + roomid + "</td>";
     appendstr += "<td>" + roomname + "</td>";
-    if(visible){
-        appendstr += "<td><input type='checkbox' disabled='ture' checked ='true'></td>";
-    }else{
-        appendstr += "<td><input type='checkbox' disabled='ture'></td>";
-    }
+    appendstr += "<td>" + visible + "</td>";
+
     //appendstr += "<td>" + visible + "</td>";
     appendstr += "<td><input type=\"button\" value=\"Edit\" onclick=\"editFunRoom(id);\" />";
     appendstr += "<input type=\"button\" value=\"Delete\" onclick=\"deleteFunRoom(id)\" /></td>";
