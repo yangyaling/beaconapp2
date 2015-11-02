@@ -19,7 +19,7 @@ define("SAE_MYSQL_DB",     "rdbeacoAd7N1JMXE");
 
 if(!isset($PHP_AUTH_USER))
 {
-    header('content-type: text/html; charset: utf-8');
+    header("Content-type:text/html;charset=utf-8");
     header("WWW-Authenticate:Basic realm='管理者認証'");
     header("HTTP/1.0 401 Unauthorized");
     echo "認証が失敗しました、正しいユーザID、パスワードで再度試してください。";
