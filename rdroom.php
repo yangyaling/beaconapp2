@@ -52,7 +52,7 @@ echo "<caption style='font-size:15px' align='left'>ルーム数：<label id='tab
 echo "<table id='Table' border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo padding='0px'>";
 
 //表头
-$thstr = "<th>" . implode("</th><th>", $dbcolarray) . " </th>";
+$thstr = "<th width='20'>" . implode("</th><th>", $dbcolarray) . " </th>";
 echo $thstr;
 echo "<th><input type='button' value='Add' onclick='addFun()' /> </th>";
 
@@ -63,7 +63,7 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC))//与$row=mysql_fetch_assoc(
     $tdstr = "";
     $index = 0;
     foreach ($dbcolarray as $td) {
-        $tdstr .= "<td>$row[$td]</td>";
+        $tdstr .= "<td width='20'>$row[$td]</td>";
         $index = $index + 1;
     }
     echo $tdstr;
@@ -88,11 +88,11 @@ mysql_close($conn);
 <table id="editItem" border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo padding='0px'>
     <th>id</th><th>roomid</th><th>roomname</th><th>visible</th><th>Action</th>
     <tr>
-        <td><input  style="width:20px"  type=text id="editdiv_id" size="1" readonly="true" /></td>
-        <td><input type=text id="editdiv_roomid" size="15"/></td>
-        <td><input type=text id="editdiv_roomname" size="45"/></td>
-        <td><input type=text id="editdiv_visible" size="45"/></td>
-        <td><input type=button name="Update" value="Update" onclick="updateFunRoom()" /></td>
+        <td width="20"><input  style="width:20px"  type=text id="editdiv_id" size="1" readonly="true" /></td>
+        <td width="20"><input type=text id="editdiv_roomid" size="15"/></td>
+        <td width="20"><input type=text id="editdiv_roomname" size="45"/></td>
+        <td width="20"><input type=text id="editdiv_visible" size="45"/></td>
+        <td width="20"><input type=button name="Update" value="Update" onclick="updateFunRoom()" /></td>
     </tr>
 </table>
 </div>
@@ -100,11 +100,11 @@ mysql_close($conn);
     <table id="editItem" border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo padding='0px'>
         <th>id</th><th>roomid</th><th>roomname</th><th>visible</th><th>Action</th>
         <tr>
-            <td class="cellid">Auto</td>
-            <td><input type=text id="adddiv_roomid" size="15"/></td>
-            <td><input type=text id="adddiv_roomname" size="45"/></td>
-            <td><input type=text id="adddiv_visible" size="45"/></td>
-            <td><input type=button name="Insert" value="Insert" onclick="insertFunRoom()" /></td>
+            <td width="20" class="cellid">Auto</td>
+            <td width="20"><input type=text id="adddiv_roomid" size="15"/></td>
+            <td width="20"><input type=text id="adddiv_roomname" size="45"/></td>
+            <td width="20"><input type=text id="adddiv_visible" size="45"/></td>
+            <td width="20"><input type=button name="Insert" value="Insert" onclick="insertFunRoom()" /></td>
         </tr>
     </table>
 </div>
