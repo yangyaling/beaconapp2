@@ -52,7 +52,7 @@ echo "<caption style='font-size:15px' align='left'>ルーム数：<label id='tab
 echo "<table id='Table' border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo padding='0px'>";
 
 //表头
-$thstr = "<th width='150'>" . implode("</th><th width='100'>", $dbcolarray) . " </th>";
+$thstr = "<th width='150'>" . implode("</th><th width='150'>", $dbcolarray) . " </th>";
 echo $thstr;
 echo "<th width='150'><input type='button' value='Add' onclick='addFun()' /> </th>";
 
