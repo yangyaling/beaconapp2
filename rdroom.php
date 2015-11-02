@@ -63,7 +63,7 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC))//与$row=mysql_fetch_assoc(
     $tdstr = "";
     $index = 0;
     foreach ($dbcolarray as $td) {
-        $tdstr .= "<td width='20'>$row[$td]</td>";
+        $tdstr .= "<td width='40'>$row[$td]</td>";
         $index = $index + 1;
     }
     echo $tdstr;
@@ -88,11 +88,11 @@ mysql_close($conn);
 <table id="editItem" border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo padding='0px'>
     <th>id</th><th>roomid</th><th>roomname</th><th>visible</th><th>Action</th>
     <tr>
-        <td width="20"><input  style="width:20px"  type=text id="editdiv_id" size="1" readonly="true" /></td>
-        <td width="20"><input type=text id="editdiv_roomid" size="15"/></td>
-        <td width="20"><input type=text id="editdiv_roomname" size="45"/></td>
-        <td width="20"><input type=text id="editdiv_visible" size="45"/></td>
-        <td width="20"><input type=button name="Update" value="Update" onclick="updateFunRoom()" /></td>
+        <td width="40"><input  style="width:20px"  type=text id="editdiv_id" size="1" readonly="true" /></td>
+        <td width="40"><input type=text id="editdiv_roomid" size="15"/></td>
+        <td width="40"><input type=text id="editdiv_roomname" size="35"/></td>
+        <td width="40"><input type=text id="editdiv_visible" size="35"/></td>
+        <td width="40"><input type=button name="Update" value="Update" onclick="updateFunRoom()" /></td>
     </tr>
 </table>
 </div>
@@ -100,11 +100,11 @@ mysql_close($conn);
     <table id="editItem" border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo padding='0px'>
         <th>id</th><th>roomid</th><th>roomname</th><th>visible</th><th>Action</th>
         <tr>
-            <td width="20" class="cellid">Auto</td>
-            <td width="20"><input type=text id="adddiv_roomid" size="15"/></td>
-            <td width="20"><input type=text id="adddiv_roomname" size="45"/></td>
-            <td width="20"><input type=text id="adddiv_visible" size="45"/></td>
-            <td width="20"><input type=button name="Insert" value="Insert" onclick="insertFunRoom()" /></td>
+            <td width="40" class="cellid">Auto</td>
+            <td width="40"><input type=text id="adddiv_roomid" size="15"/></td>
+            <td width="40"><input type=text id="adddiv_roomname" size="35"/></td>
+            <td width="40"><input type=text id="adddiv_visible" size="35"/></td>
+            <td width="40"><input type=button name="Insert" value="Insert" onclick="insertFunRoom()" /></td>
         </tr>
     </table>
 </div>
