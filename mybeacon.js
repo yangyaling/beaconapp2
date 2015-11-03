@@ -165,12 +165,12 @@ function insertFun()
     var roomid = $("#adddiv_roomid").val();
     if (locationname == "" || uuid == "" || major == "" || minor == "" || roomid == "")
     {
-        alert("信息不完整!");
+        alert("入力不正");
         return ;
     }
     if (!checkuuid(uuid))
     {
-        alert("uuid的格式不正确");
+        alert("uuidが不正");
         return ;
     }
     //submit to server 返回插入数据的id
@@ -190,7 +190,7 @@ function insertFun()
 }
 function deleteFun(id)
 {
-    if (confirm(id+" 确认删除?"))
+    if (confirm(id+" を削除しますか?"))
     {
         //submit to server
         $.post("mydelete.php", {id:id}, function(data){
@@ -215,12 +215,12 @@ function updateFun()
     var roomid = $("#editdiv_roomid").val();
     if (locationname == "" || uuid == "" || major == "" || minor == "" || roomid == "")
     {
-        alert("信息不完整!");
+        alert("入力不正!");
         return ;
     }
     if (!checkuuid(uuid))
     {
-        alert("uuid的格式不正确");
+        alert("uuidが不正");
         return ;
     }
     //submit to server
@@ -327,7 +327,7 @@ function insertFunRoom()
 
     if (roomid == "" || roomname == ""  || visible == "")
     {
-        alert("信息不完整!");
+        alert("入力不正!");
         return ;
     }
 
@@ -348,7 +348,7 @@ function insertFunRoom()
 }
 function deleteFunRoom(id)
 {
-    if (confirm(id+" 确认删除?"))
+    if (confirm(id+" を削除しますか?"))
     {
         //submit to server
         $.post("mydeleteroom.php", {id:id}, function(data){
@@ -372,7 +372,7 @@ function updateFunRoom()
 
     if (roomid == "" || roomname == "" || visible == "")
     {
-        alert("Room信息不完整!");
+        alert("入力不正!");
         return ;
     }
     //submit to server
