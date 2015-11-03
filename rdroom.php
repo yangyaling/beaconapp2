@@ -52,9 +52,9 @@ echo "<caption style='font-size:15px' align='left'>ルーム数：<label id='tab
 echo "<table id='Table' border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo padding='0px'>";
 
 //表头
-$thstr = "<th width='150'>" . implode("</th><th width='150'>", $dbcolarray) . " </th>";
+$thstr = "<th>" . implode("</th><th>", $dbcolarray) . " </th>";
 echo $thstr;
-echo "<th width='150'><input type='button' value='Add' onclick='addFun()' /> </th>";
+echo "<th><input type='button' value='Add' onclick='addFun()' /> </th>";
 
 //表中的内容
 while ($row=mysql_fetch_array($result, MYSQL_ASSOC))//与$row=mysql_fetch_assoc($result)等价
@@ -86,7 +86,7 @@ mysql_close($conn);
 
 <div id="editdiv" style="display:none;color:red;" padding='0px''>
 <table id="editItem" border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo padding='0px'>
-    <th width='100'>id</th><th width='100'>roomid</th><th width='100'>roomname</th><th width='100'>visible</th><th width='100'>Action</th>
+    <th>id</th><th>roomid</th><th>roomname</th><th>visible</th><th>Action</th>
     <tr>
         <td><input  style="width:20px"  type=text id="editdiv_id" size="1" readonly="true" /></td>
         <td><input type=text id="editdiv_roomid"/></td>
@@ -108,6 +108,8 @@ mysql_close($conn);
         </tr>
     </table>
 </div>
+<br>
+<br>
 
 <a href='mybeacon.php'>RDBEACONINFO(Beacon管理)画面へ</a>
 </div>

@@ -111,6 +111,8 @@ mysql_close($conn);
     </tr>
 </table>
 </div>
+<br>
+<br>
 
 <a href='rdroom.php'>RDROOM(場所管理)画面へ</a>
 </div>
