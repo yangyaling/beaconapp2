@@ -85,7 +85,8 @@ mysql_close($conn);
 
 
 <div id="editdiv" style="display:none;color:red;" padding='0px''>
-
+<table id="editItem" border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo padding='0px'>
+    <th>id</th><th>roomid</th><th>roomname</th><th>visible</th><th>Action</th>
     <tr>
         <td><input size="3" type=text id="editdiv_id" size="1" readonly="true" /></td>
         <td><input size="3" type=text id="editdiv_roomid"/></td>
@@ -93,11 +94,11 @@ mysql_close($conn);
         <td><input size="3" type=text id="editdiv_visible"/></td>
         <td><input type=button name="Update" value="Update" onclick="updateFunRoom()" /></td>
     </tr>
-
+</table>
 </div>
 <div id="adddiv" style="display:none;color:green;" padding='0px'>
-
-
+    <table id="editItem" border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo padding='0px'>
+        <th>id</th><th>roomid</th><th>roomname</th><th>visible</th><th>Action</th>
         <tr>
             <td class="cellid">Auto</td>
             <td><input size="3" type=text id="adddiv_roomid" /></td>
@@ -105,7 +106,7 @@ mysql_close($conn);
             <td><input size="3" type=text id="adddiv_visible"/></td>
             <td><input type=button name="Insert" value="Insert" onclick="insertFunRoom()" /></td>
         </tr>
-
+    </table>
 </div>
 </table>
 <br>
