@@ -91,7 +91,7 @@ mysql_close($conn);
         <td><input  style="width:20px"  type=text id="editdiv_id" size="1" readonly="true" /></td>
         <td><input type=text id="editdiv_roomid"/></td>
         <td><input type=text id="editdiv_roomname"/></td>
-        <td><input type=text id="editdiv_visible"/></td>
+        <td><input type=checkbox id="editdiv_visible"/></td>
         <td><input type=button name="Update" value="Update" onclick="updateFunRoom()" /></td>
     </tr>
 </table>
@@ -103,7 +103,7 @@ mysql_close($conn);
             <td class="cellid">Auto</td>
             <td><input type=text id="adddiv_roomid" /></td>
             <td><input type=text id="adddiv_roomname" /></td>
-            <td><input type=text id="adddiv_visible"/></td>
+            <td><input type=checkbox id="adddiv_visible"/></td>
             <td><input type=button name="Insert" value="Insert" onclick="insertFunRoom()" /></td>
         </tr>
     </table>
