@@ -59,7 +59,7 @@ echo   "<div  align='center'>
             </script>";
 
 
-echo "<th>" . implode("</th><th>", $dbcolarray) . " </th>";
+echo "<th style='display: none'>roomid</th><th>ルームネーム</th><th>状態</th>";
 
 while ($row=mysql_fetch_array($result, MYSQL_ASSOC)) {
     echo "<tr>";
@@ -72,7 +72,7 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC)) {
     }else{
         $inhtm ="<img src='close.png'>";
     }
-    $thstr = "<td>$roomid</td><td>$roomname</td><td>$inhtm</td>";
+    $thstr = "<td style='display: none'>$roomid</td><td>$roomname</td><td>$inhtm</td>";
     echo $thstr;
     echo "</tr>";
 }
