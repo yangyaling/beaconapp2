@@ -76,7 +76,7 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC))//与$row=mysql_fetch_assoc(
     echo '</td>';
     echo "</tr>";
 }
-//echo "</table>";
+echo "</table>";
 
 
 mysql_free_result($result);
@@ -108,7 +108,7 @@ mysql_close($conn);
         </tr>
     </table>
 </div>
-</table>
+
 <br>
 <br>
 
