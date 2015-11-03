@@ -88,10 +88,10 @@ mysql_close($conn);
 <table id="editItem" border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo padding='0px'>
     <th>id</th><th>roomid</th><th>roomname</th><th>visible</th><th>Action</th>
     <tr>
-        <td><input size="3" type=text id="editdiv_id" size="1" readonly="true" /></td>
-        <td><input size="3" type=text id="editdiv_roomid"/></td>
+        <td><input size="0" type=text id="editdiv_id" size="1" readonly="true" /></td>
+        <td><input size="0" type=text id="editdiv_roomid"/></td>
         <td><input size="15" type=text id="editdiv_roomname"/></td>
-        <td><input size="3" type=text id="editdiv_visible"/></td>
+        <td><input size="0" type=text id="editdiv_visible"/></td>
         <td><input type=button name="Update" value="Update" onclick="updateFunRoom()" /></td>
     </tr>
 </table>
