@@ -253,11 +253,7 @@ function editFunRoom(id)
     $("#editdiv_roomid").val($("#Table tr:eq(" + i + ") td:eq(1)").html());
     $("#editdiv_roomname").val($("#Table tr:eq(" + i + ") td:eq(2)").html());
     $("#editdiv_visible").val($("#Table tr:eq(" + i + ") td:eq(3)").html());
-    if($("#Table tr:eq(" + i + ") td:eq(3)").html() == 0){
-        $("#editdiv_visible").html("<input type='checkbox'>");
-    }else{
-        $("#editdiv_visible").html("<input type='checkbox' checked>");
-    }
+
 }
 //响应add按钮
 function addFunRoom()
@@ -326,14 +322,8 @@ function insertFunRoom()
 {
     var roomid = $("#adddiv_roomid").val();
     var roomname = $("#adddiv_roomname").val();
-    var visibles = $("#editdiv_visible").val();
-    var visible = 0;
-    for(i=0;i<visibles.length;i++){
-        if (visibles[i].checked){
-            visible=1;
-            break;
-        }
-    }
+    var visible = $("#editdiv_visible").val();
+
 
     if (roomid == "" || roomname == ""  || visible == "")
     {
@@ -378,14 +368,7 @@ function updateFunRoom()
     var id = $("#editdiv_id").val();
     var roomid = $("#editdiv_roomid").val();
     var roomname = $("#editdiv_roomname").val();
-    var visibles = $("#editdiv_visible").val();
-    var visible = 0;
-    for(i=0;i<visibles.length;i++){
-        if (visibles[i].checked){
-            visible=1;
-            break;
-        }
-    }
+    var visible = $("#editdiv_visible").val();
 
     if (roomid == "" || roomname == "" || visible == "")
     {
