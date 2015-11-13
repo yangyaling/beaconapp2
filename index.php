@@ -25,6 +25,7 @@
     <script type="text/javascript" src="mybeacon.js"></script>
 
     <title>次世代Ｒ＆Ｄ室</title>
+
 </head>
 <body onload="init()">
 <?php
