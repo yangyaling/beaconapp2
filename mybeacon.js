@@ -15,7 +15,7 @@ function updateStatusInTable(roomid, num)
 {
     var i = SearchIdInTable($("#Table tr"), roomid);
     var myDate = new Date();
-    document.getElementById("updatetime").innerHTML ='更新時間：'+myDate.toLocaleString();
+    document.getElementById("updatetime").innerHTML ='※更新時間：'+myDate.toLocaleString();
     if (i != -1)
     {
         if(num >0){

@@ -75,10 +75,10 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC)) {
 echo "</table>";
 //echo "<br/><a href='login.html'>■管理画面へ</a>";
 //echo "<br/><a href='mybeacon.php'>■Beacon管理</a>";
-echo "※<div id='updatetime'>
+echo "<div id='updatetime'>
             <script type='text/javascript'>
                 var myDate = new Date();
-                document.write('更新時間：'+ myDate.toLocaleString())
+                document.write('※更新時間：'+ myDate.toLocaleString())
             </script>";
 echo "</div>";
 
