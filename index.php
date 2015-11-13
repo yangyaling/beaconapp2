@@ -24,7 +24,7 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="mybeacon.js"></script>
 
-    <title>在席情報</title>
+    <title>次世代Ｒ＆Ｄ室</title>
 </head>
 <body onload="init()">
 <?php
@@ -50,13 +50,7 @@ $result = mysql_query($sql, $conn);
 $dbcolarray = array(0=>'ルームID',1=>'ルームネーム',2=>'状態');
 
 echo   "<div  align='center'>
-        <table id='Table' border=1 cellpadding=10 cellspacing=1 bordercolor=#408080 width='50%'>
-        <h1>【R＆D室要員在席情報一覧】</h1>
-※更新時間： <div id='updatetime'>
-            <script type='text/javascript'>
-                var myDate = new Date();
-                document.write(myDate.toLocaleString())
-            </script>";
+        <table id='Table' border=1 cellpadding=10 cellspacing=1 bordercolor=#408080 width='50%'>";
 
 
 echo "<th style='display: none'>roomid</th><th>ルームネーム</th><th>状態</th>";
@@ -79,6 +73,11 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC)) {
 echo "</table>";
 //echo "<br/><a href='login.html'>■管理画面へ</a>";
 //echo "<br/><a href='mybeacon.php'>■Beacon管理</a>";
+echo "※更新時間： <div id='updatetime'>
+            <script type='text/javascript'>
+                var myDate = new Date();
+                document.write(myDate.toLocaleString())
+            </script>";
 echo "</div>";
 
 
