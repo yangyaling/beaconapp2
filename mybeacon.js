@@ -433,13 +433,13 @@ function updateFunRoom()
     });
 }
 
-function updateFunRoom()
+function updateFunUser()
 {
     var id = $("#editdiv_id").val();
     var userid = $("#editdiv_userid").val();
     var username = $("#editdiv_username").val();
     var visible = $("#editdiv_visible").val();
-    var listindex = $("#editdiv_visible").val();
+    var listindex = $("#editdiv_listindex").val();
 
     if (isNaN(visible.value) || isNaN(listindex.value) )
     {
