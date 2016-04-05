@@ -19,11 +19,11 @@ function updateStatusInTable(roomid, num)
     if (i != -1)
     {
         if(num >0){
-            var inhtm ="<img src='open.png'>";
+            var inhtm ="在席";//"<img src='open.png'>";
             $("#Table tr:eq(" + i + ") td:eq(2)").html(inhtm);
 
         }else{
-            var inhtm ="<img src='close.png'>";
+            var inhtm ="不在";//"<img src='close.png'>";
             $("#Table tr:eq(" + i + ") td:eq(2)").html(inhtm);
 
         }
