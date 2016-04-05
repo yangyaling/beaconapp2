@@ -25,7 +25,7 @@ if($_SESSION["admin"] == null)
     echo "<a href='logout.php'>サインアウト</a>";
 }
 
-$dbcolarray = array('id', 'userid', 'username', 'visible', 'listindex');
+$dbcolarray = array('id', 'uuid', 'username', 'visible', 'listindex');
 $conn = @mysql_connect(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS);
 mysql_select_db(SAE_MYSQL_DB,$conn);
 $sql = sprintf("select count(*) from %s", "RDUSERINFO");
