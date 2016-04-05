@@ -89,7 +89,7 @@ mysql_close($conn);
     <th>id</th><th>userid</th><th>username</th><th>visible</th><th>listindex</th><th>Action</th>
     <tr>
         <td><input size="3" type=text id="editdiv_id" size="1" readonly="true" /></td>
-        <td><input size="3" type=text id="editdiv_userid"/></td>
+        <td><input size="3" type=text id="editdiv_userid"  readonly="true"/></td>
         <td><input size="15" type=text id="editdiv_username"/></td>
         <td><input size="3" type=text id="editdiv_visible"/></td>
         <td><input size="3" type=text id="editdiv_listindex"/></td>

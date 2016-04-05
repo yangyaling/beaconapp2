@@ -255,6 +255,18 @@ function editFunRoom(id)
     $("#editdiv_visible").val($("#Table tr:eq(" + i + ") td:eq(3)").html());
 
 }
+
+//响应edit按钮
+function editFunUser(id)
+{
+    var i = SearchIdInTable($("#Table tr"), id);
+    $("#editdiv").show();
+    $("#editdiv_id").val(id);
+    $("#editdiv_userid").val($("#Table tr:eq(" + i + ") td:eq(1)").html());
+    $("#editdiv_username").val($("#Table tr:eq(" + i + ") td:eq(2)").html());
+    $("#editdiv_visible").val($("#Table tr:eq(" + i + ") td:eq(3)").html());
+    $("#editdiv_listindex").val($("#Table tr:eq(" + i + ") td:eq(4)").html());
+}
 //响应add按钮
 function addFunRoom()
 {
@@ -301,6 +313,21 @@ function updataRowInTableRoom(id, roomid, roomname,visible)
         $("#Table tr:eq(" + i + ") td:eq(2)").html(roomname != "" ? roomname : " ");
         $("#Table tr:eq(" + i + ") td:eq(3)").html(visible != "" ? visible : " ");
 
+        //$("#Table tr:eq(" + i + ") td:eq(3)").html(visible != "" ? visible : " ");
+        $("#editdiv").hide();
+    }
+}
+
+//修改某一行
+function updataRowInTableUser(id, userid, username,visible,listindex)
+{
+    var i = SearchIdInTable($("#Table tr"), id);
+    if (i != -1)
+    {
+        //$("#Table tr:eq(" + i + ") td:eq(1)").html(roomid != "" ? roomid : " ");
+        $("#Table tr:eq(" + i + ") td:eq(2)").html(username != "" ? username : " ");
+        $("#Table tr:eq(" + i + ") td:eq(3)").html(visible != "" ? visible : " ");
+        $("#Table tr:eq(" + i + ") td:eq(4)").html(listindex != "" ? listindex : " ");
         //$("#Table tr:eq(" + i + ") td:eq(3)").html(visible != "" ? visible : " ");
         $("#editdiv").hide();
     }
@@ -363,6 +390,24 @@ function deleteFunRoom(id)
         });
     }
 }
+
+function deleteFunUser(id)
+{
+    if (confirm(id+" を削除しますか?"))
+    {
+        //submit to server
+        $.post("mydeleteuser.php", {id:id}, function(data){
+            if (data == "f")
+            {
+                alert("delete date failed");
+            }
+            else
+            {
+                deleteRowInTableRoom(id);
+            }
+        });
+    }
+}
 function updateFunRoom()
 {
     var id = $("#editdiv_id").val();
@@ -384,6 +429,32 @@ function updateFunRoom()
         else
         {
             updataRowInTableRoom(id,  roomid, roomname,visible);
+        }
+    });
+}
+
+function updateFunRoom()
+{
+    var id = $("#editdiv_id").val();
+    var userid = $("#editdiv_userid").val();
+    var username = $("#editdiv_username").val();
+    var visible = $("#editdiv_visible").val();
+    var listindex = $("#editdiv_visible").val();
+
+    if (isNaN(visible.value) || isNaN(listindex.value) )
+    {
+        alert("入力不正!");
+        return ;
+    }
+    //submit to server
+    $.post("myupdateuser.php", {id:id, userid:userid, username:username,visible:visible,listindex:listindex}, function(data){
+        if (data == "f")
+        {
+            alert("Updata date failed");
+        }
+        else
+        {
+            updataRowInTableUser(id,  userid, username,visible,listindex);
         }
     });
 }
