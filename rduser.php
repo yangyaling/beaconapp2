@@ -8,7 +8,7 @@
     <title>RDROOM</title>
 </head>
 <body>
-<h1>テーブルネーム：RDROOM</h1>
+<h1>テーブルネーム：RDUSERINFO</h1>
 <?php
 
 define("SAE_MYSQL_HOST_M",     "ja-cdbr-azure-east-a.cloudapp.net");
@@ -25,10 +25,10 @@ if($_SESSION["admin"] == null)
     echo "<a href='logout.php'>サインアウト</a>";
 }
 
-$dbcolarray = array('id', 'roomid', 'roomname', 'visible');
+$dbcolarray = array('id', 'userid', 'username', 'visible', 'listindex');
 $conn = @mysql_connect(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS);
 mysql_select_db(SAE_MYSQL_DB,$conn);
-$sql = sprintf("select count(*) from %s", "RDROOM");
+$sql = sprintf("select count(*) from %s", "RDUSERINFO");
 $result = mysql_query($sql, $conn);
 if ($result)
 {
@@ -40,7 +40,7 @@ else
 {
     die("query failed");
 }
-$tpl_db_tablename = 'RDROOM';
+$tpl_db_tablename = 'RDUSERINFO';
 $tpl_db_coltitle = $dbcolarray;
 //表中内容
 $tpl_db_rows = array();
@@ -48,13 +48,13 @@ $sql = sprintf("select %s from %s", implode(",",$dbcolarray), $tpl_db_tablename)
 $result = mysql_query($sql, $conn);
 echo "<div  align='center' width='380px'>";
 
-echo "<caption style='font-size:15px' align='left'>ルーム数：<label id='tableRowCount'>".$dbcount[0]."</label></caption>";
+echo "<caption style='font-size:15px' align='left'>ユーザ数：<label id='tableRowCount'>".$dbcount[0]."</label></caption>";
 echo "<table id='Table' border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo padding='0px'>";
 
 //表头
 $thstr = "<th>" . implode("</th><th>", $dbcolarray) . " </th>";
 echo $thstr;
-echo "<th><input type='button' value='Add' onclick='addFun()' /> </th>";
+echo "<th> </th>";
 
 //表中的内容
 while ($row=mysql_fetch_array($result, MYSQL_ASSOC))//与$row=mysql_fetch_assoc($result)等价
@@ -69,9 +69,9 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC))//与$row=mysql_fetch_assoc(
     echo $tdstr;
 
     echo "<td>";
-    $functionstr = "'editFunRoom(".$row[$dbcolarray[0]].")'";
+    $functionstr = "'editFunUser(".$row[$dbcolarray[0]].")'";
     echo "<input type='button' value='Edit' onclick=".$functionstr."/>";
-    $functionstr="'deleteFunRoom(".$row[$dbcolarray[0]].")'";
+    $functionstr="'deleteFunUser(".$row[$dbcolarray[0]].")'";
     echo    "<input type='button' value='Delete' onclick=".$functionstr."/>";
     echo '</td>';
     echo "</tr>";
@@ -86,34 +86,23 @@ mysql_close($conn);
 
 <div id="editdiv" style="display:none;color:red;" padding='0px''>
 <table id="editItem" border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo padding='0px'>
-    <th>id</th><th>roomid</th><th>roomname</th><th>visible</th><th>Action</th>
+    <th>id</th><th>userid</th><th>username</th><th>visible</th><th>listindex</th><th>Action</th>
     <tr>
         <td><input size="3" type=text id="editdiv_id" size="1" readonly="true" /></td>
-        <td><input size="3" type=text id="editdiv_roomid"/></td>
-        <td><input size="15" type=text id="editdiv_roomname"/></td>
+        <td><input size="3" type=text id="editdiv_userid"/></td>
+        <td><input size="15" type=text id="editdiv_username"/></td>
         <td><input size="3" type=text id="editdiv_visible"/></td>
-        <td><input type=button name="Update" value="Update" onclick="updateFunRoom()" /></td>
+        <td><input size="3" type=text id="editdiv_listindex"/></td>
+        <td><input type=button name="Update" value="Update" onclick="updateFunUser()" /></td>
     </tr>
 </table>
-</div>
-<div id="adddiv" style="display:none;color:green;" padding='0px'>
-    <table id="editItem" border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo padding='0px'>
-        <th>id</th><th>roomid</th><th>roomname</th><th>visible</th><th>Action</th>
-        <tr>
-            <td class="cellid">Auto</td>
-            <td><input size="3" type=text id="adddiv_roomid" /></td>
-            <td><input size="15" type=text id="adddiv_roomname" /></td>
-            <td><input size="3" type=text id="adddiv_visible"/></td>
-            <td><input type=button name="Insert" value="Insert" onclick="insertFunRoom()" /></td>
-        </tr>
-    </table>
 </div>
 
 <br>
 <br>
 
 <a href='mybeacon.php'>RDBEACONINFO(Beacon管理)画面へ</a>
-<a href='rduser.php'>RDUSERINFO(ユーザ管理)画面へ</a>
+<a href='rdroom.php'>RDROOM(場所管理)画面へ</a>
 </div>
 </body>
 </html> 
