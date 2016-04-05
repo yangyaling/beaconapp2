@@ -76,9 +76,9 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC)) {
     $num=$row['num'];
     $inhtm = '';
     if($num >0){
-        $inhtm ="<img src='open.png'>";
+        $inhtm ="在席";//"<img src='open.png'>";
     }else{
-        $inhtm ="<img src='close.png'>";
+        $inhtm ="不在";//"<img src='close.png'>";
     }
     $thstr = "<td style='display: none'>$uuid</td><td>$username</td><td>$inhtm</td>";
     echo $thstr;
