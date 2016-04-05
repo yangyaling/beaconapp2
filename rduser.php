@@ -102,6 +102,7 @@ mysql_close($conn);
 <br>
 
 <a href='mybeacon.php'>RDBEACONINFO(Beacon管理)画面へ</a>
+<br>
 <a href='rdroom.php'>RDROOM(場所管理)画面へ</a>
 </div>
 </body>
