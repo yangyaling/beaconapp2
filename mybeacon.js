@@ -19,7 +19,7 @@ function updateStatusInTable(userid, num,status2)
     if (i != -1)
     {
         if(num >0){
-            if(status2){
+            if(status2=='1'){
                 var inhtm ="在席[busy]";//"<img src='open.png'>";
             }else{
                 var inhtm ="在席";//"<img src='open.png'>";

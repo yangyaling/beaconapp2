@@ -76,7 +76,7 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC)) {
     $inhtm = '';
     $status2= $row['status2'];
     if($num >0){
-        if($status2){
+        if($status2=='1'){
             $inhtm ="在席[busy]";//"<img src='open.png'>";
         }else{
             $inhtm ="在席";//"<img src='open.png'>";
