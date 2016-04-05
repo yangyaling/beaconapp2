@@ -18,7 +18,7 @@ $id = $_POST['id'];
 
 $userid = $_POST['userid'];
 
-$username = $_POST['roomname'];
+$username = $_POST['username'];
 
 $visible = $_POST['visible'];
 
