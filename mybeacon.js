@@ -11,7 +11,7 @@ function SearchIdInTable(tablerow, findid)
             return i;
     return -1;
 }
-function updateStatusInTable(roomid, num)
+function updateStatusInTable(userid, num,status2)
 {
     var i = SearchIdInTable($("#Table tr"), roomid);
     var myDate = new Date();
@@ -19,7 +19,12 @@ function updateStatusInTable(roomid, num)
     if (i != -1)
     {
         if(num >0){
-            var inhtm ="在席";//"<img src='open.png'>";
+            if(status2){
+                var inhtm ="在席[busy]";//"<img src='open.png'>";
+            }else{
+                var inhtm ="在席";//"<img src='open.png'>";
+            }
+
             $("#Table tr:eq(" + i + ") td:eq(2)").html(inhtm);
 
         }else{

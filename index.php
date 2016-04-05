@@ -47,7 +47,7 @@ if ($row=mysql_fetch_array($result, MYSQL_ASSOC)){
 }
 
 //表中的内容
-$sql = "SELECT u.uuid,u.username,count(rm.roomid) as num
+$sql = "SELECT u.uuid,u.username,count(rm.roomid) as num,u.status2
 FROM rduserinfo u
 left join rduserstatus us on u.uuid = us.useruuid and date_format(us.updatetime,'%Y-%m-%d') = date_format(now(),'%Y-%m-%d')
 left join rdbeaconinfo b on b.uuid = us.uuid
@@ -74,8 +74,14 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC)) {
     $username=$row['username'];
     $num=$row['num'];
     $inhtm = '';
+    $status2= $row['status2'];
     if($num >0){
-        $inhtm ="在席";//"<img src='open.png'>";
+        if($status2){
+            $inhtm ="在席[busy]";//"<img src='open.png'>";
+        }else{
+            $inhtm ="在席";//"<img src='open.png'>";
+        }
+
     }else{
         $inhtm ="不在";//"<img src='close.png'>";
     }
@@ -109,8 +115,8 @@ mysql_close($conn);
             var uuid = data.uuid;
             var username = data.username;
             var num= data.num;
-
-            updateStatusInTable(uuid,num);
+            var status2 =  data.status2;
+            updateStatusInTable(uuid,num,status2);
 
         },false);
     }

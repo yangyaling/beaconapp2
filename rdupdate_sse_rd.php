@@ -16,7 +16,7 @@ define("SAE_MYSQL_DB",     "rdbeacoAd7N1JMXE");
 
 $conn = @mysql_connect(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS);
 mysql_select_db(SAE_MYSQL_DB,$conn);
-$sql = "SELECT u.uuid,u.username,count(rm.roomid) as num
+$sql = "SELECT u.uuid,u.username,count(rm.roomid) as num,u.status2
 FROM rduserinfo u
 left join rduserstatus us on u.uuid = us.useruuid and date_format(us.updatetime,'%Y-%m-%d') = date_format(now(),'%Y-%m-%d')
 left join rdbeaconinfo b on b.uuid = us.uuid
@@ -30,7 +30,7 @@ order by u.listindex asc";
 
 $result = mysql_query($sql, $conn);
 while ($row=mysql_fetch_row($result)) {
-    $d = array("uuid"=>$row[0],"username"=>$row[1],"num"=>$row[2]);
+    $d = array("uuid"=>$row[0],"username"=>$row[1],"num"=>$row[2],"status2"=>$row[3]);
     echo "data:".json_encode($d)."\n\n";
 
     @ob_flush();
