@@ -39,28 +39,40 @@ define("SAE_MYSQL_DB",     "rdbeacoAd7N1JMXE");
 $conn = @mysql_connect(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS);
 mysql_select_db(SAE_MYSQL_DB,$conn);
 
+$sql = "select roomname from rdroom where visible=1";
+$result = mysql_query($sql, $conn);
+$displayname='ルーム未設定';
+if ($row=mysql_fetch_array($result, MYSQL_ASSOC)){
+    $displayname=$row['roomname'];
+}
+
 //表中的内容
-$sql = "SELECT r.roomid,r.roomname,ifnull(count(us.useruuid),0) as num FROM rdroom r
-        left join rdbeaconinfo b on b.roomid = r.roomid
-        left join rduserstatus us on b.uuid=us.uuid and b.major=us.major and b.minor=us.minor
-        and date_format(us.updatetime,'%Y-%m-%d') = date_format(now(),'%Y-%m-%d')
-        where r.visible > 0
-        group by r.roomid ";
+$sql = "SELECT u.uuid,u.username,rm2.roomname,count(rm.roomid) as num
+FROM rduserinfo u
+left join rduserstatus us on u.uuid = us.useruuid and date_format(us.updatetime,'%Y-%m-%d') = date_format(now(),'%Y-%m-%d')
+left join rdbeaconinfo b on b.uuid = us.uuid
+						and b.major = us.major
+                        and b.minor = us.minor
+left join rdroom rm on rm.roomid = b.roomid and rm.visible = 1
+right join rdroom rm2 on rm2.visible = 1
+where u.visible = 1
+group by u.uuid
+order by u.listindex asc";
 
 $result = mysql_query($sql, $conn);
 
-$dbcolarray = array(0=>'ルームID',1=>'ルームネーム',2=>'状態');
+//$dbcolarray = array(0=>'ユーザID',1=>'ユーザネーム',2=>$displayname);
 
 echo   "<div  align='center'>
         <table id='Table' border=1 cellpadding=10 cellspacing=1 bordercolor=#408080 width='50%'>";
 
 
-echo "<th style='display: none'>roomid</th><th>ルームネーム</th><th>状態</th>";
+echo "<th style='display: none'>uuid</th><th>メンバー</th><th>$displayname</th>";
 
 while ($row=mysql_fetch_array($result, MYSQL_ASSOC)) {
     echo "<tr>";
-    $roomid= $row['roomid'];
-    $roomname=$row['roomname'];
+    $uuid= $row['uuid'];
+    $username=$row['username'];
     $num=$row['num'];
     $inhtm = '';
     if($num >0){
@@ -68,7 +80,7 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC)) {
     }else{
         $inhtm ="<img src='close.png'>";
     }
-    $thstr = "<td style='display: none'>$roomid</td><td>$roomname</td><td>$inhtm</td>";
+    $thstr = "<td style='display: none'>$uuid</td><td>$username</td><td>$inhtm</td>";
     echo $thstr;
     echo "</tr>";
 }

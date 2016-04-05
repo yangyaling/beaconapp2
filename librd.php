@@ -142,28 +142,10 @@ function updatestatus($useruuid,$uuid,$major,$minor,$status){
     date_default_timezone_set('Asia/Tokyo');
     if($conn){
         mysql_select_db(SAE_MYSQL_DB,$conn);
-        $sqlstr1 ="INSERT INTO RDMONITOR (id, useruuid, uuid,major,minor,updatetime, status) VALUES (NULL,'";
 
-        $sqlinsert =$sqlstr1.$useruuid."', '".$uuid."', '".$major."', '".$minor."','". date('Y-m-d H:i:s')."','".$status."')";
+        $sqlinsert ="INSERT INTO RDMONITOR (id, useruuid, uuid,major,minor,updatetime, status) VALUES (NULL,'".$useruuid."', '".$uuid."', '".$major."', '".$minor."','". date('Y-m-d H:i:s')."','".$status."')";
 
-        $sqlselect ="select * from RDUSERSTATUS WHERE useruuid='" . $useruuid ."' AND uuid='".$uuid."' AND major='" .$major."' AND minor='".$minor."' ";
-        //$sqlupdate ="update RDMONITOR set updatetime='".date('Y-m-d H:i:s')."' WHERE useruuid='" . $useruuid ."' AND uuid='".$uuid."' AND major='" .$major."' AND minor='".$minor."' AND status='".$status."'";
-
-        $result = mysql_query($sqlselect);
-
-        //if ($row=mysql_fetch_row($result)){
-        //    $result = mysql_query($sqlupdate);
-        //}else{
-            if ($status == '0' ){
-            	$result = mysql_query($sqlinsert);
-        	}
-            if ($status == '1' ){
-                if (!($row=mysql_fetch_row($result))){
-                    $result = mysql_query($sqlinsert);
-                }
-            	
-        	}
-        //}
+        $result = mysql_query($sqlinsert);
 
         $sqlstsins="INSERT INTO RDUSERSTATUS (id, useruuid, uuid, major,minor,updatetime) VALUES (NULL, '".$useruuid."', '".$uuid."', '".$major."', '".$minor."', '". date('Y-m-d H:i:s')."')";
         $sqlstsdel="DELETE FROM RDUSERSTATUS WHERE useruuid='".$useruuid."' AND uuid='".$uuid."' AND major='".$major."' AND minor='".$minor."'";
