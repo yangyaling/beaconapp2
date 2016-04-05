@@ -441,7 +441,7 @@ function updateFunUser()
     var visible = $("#editdiv_visible").val();
     var listindex = $("#editdiv_listindex").val();
 
-    if (isNaN(visible.value) || isNaN(listindex.value) )
+    if (isNaN(visible) || isNaN(listindex) )
     {
         alert("入力不正!");
         return ;
