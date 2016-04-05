@@ -47,14 +47,13 @@ if ($row=mysql_fetch_array($result, MYSQL_ASSOC)){
 }
 
 //表中的内容
-$sql = "SELECT u.uuid,u.username,rm2.roomname,count(rm.roomid) as num
+$sql = "SELECT u.uuid,u.username,count(rm.roomid) as num
 FROM rduserinfo u
 left join rduserstatus us on u.uuid = us.useruuid and date_format(us.updatetime,'%Y-%m-%d') = date_format(now(),'%Y-%m-%d')
 left join rdbeaconinfo b on b.uuid = us.uuid
 						and b.major = us.major
                         and b.minor = us.minor
 left join rdroom rm on rm.roomid = b.roomid and rm.visible = 1
-right join rdroom rm2 on rm2.visible = 1
 where u.visible = 1
 group by u.uuid
 order by u.listindex asc";
@@ -104,14 +103,14 @@ mysql_close($conn);
 <script>
     if(typeof(EventSource)!=="undefined"){
 
-        var es = new EventSource("rdupdate_sse_new.php");
+        var es = new EventSource("rdupdate_sse_rd.php");
         es.addEventListener("message",function(e){
             var data = JSON.parse(e.data);
-            var roomid = data.roomid;
-            var rommname = data.roomname;
+            var uuid = data.uuid;
+            var username = data.username;
             var num= data.num;
 
-            updateStatusInTable(roomid,num);
+            updateStatusInTable(uuid,num);
 
         },false);
     }
