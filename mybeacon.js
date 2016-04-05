@@ -13,7 +13,7 @@ function SearchIdInTable(tablerow, findid)
 }
 function updateStatusInTable(userid, num,status2)
 {
-    var i = SearchIdInTable($("#Table tr"), roomid);
+    var i = SearchIdInTable($("#Table tr"), userid);
     var myDate = new Date();
     document.getElementById("updatetime").innerHTML ='※更新時間：'+myDate.toLocaleString();
     if (i != -1)
