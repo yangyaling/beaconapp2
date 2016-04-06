@@ -77,13 +77,13 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC)) {
     $status2= $row['status2'];
     if($num >0){
         if($status2=='1'){
-            $inhtm ="<font color='#FF0000'>在席[busy]</font>";//"<img src='open.png'>";
+            $inhtm ="<strong>在席[busy]</strong>";//"<img src='open.png'>";
         }else{
-            $inhtm ="<font color='#00FF00'>在席</font>";//"<img src='open.png'>";
+            $inhtm ="<strong>在席</strong>";//"<img src='open.png'>";
         }
 
     }else{
-        $inhtm ="<font color='#C0C0C0'>不在</font>";//"<img src='close.png'>";
+        $inhtm ="<strong>不在</strong>";//"<img src='close.png'>";
     }
     $thstr = "<td style='display: none'>$uuid</td><td>$username</td><td>$inhtm</td>";
     echo $thstr;
