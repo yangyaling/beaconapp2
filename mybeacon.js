@@ -20,15 +20,15 @@ function updateStatusInTable(userid, num,status2)
     {
         if(num >0){
             if(status2=='1'){
-                var inhtm ="在席[busy]";//"<img src='open.png'>";
+                var inhtm ="<font color='#FF0000'>在席[busy]</font>";//"<img src='open.png'>";
             }else{
-                var inhtm ="在席";//"<img src='open.png'>";
+                var inhtm ="<font color='#00FF00'>在席</font>";//"<img src='open.png'>";
             }
 
             $("#Table tr:eq(" + i + ") td:eq(2)").html(inhtm);
 
         }else{
-            var inhtm ="不在";//"<img src='close.png'>";
+            var inhtm ="<font color='#C0C0C0'>不在</font>";//"<img src='close.png'>";
             $("#Table tr:eq(" + i + ") td:eq(2)").html(inhtm);
 
         }

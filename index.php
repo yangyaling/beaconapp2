@@ -83,7 +83,7 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC)) {
         }
 
     }else{
-        $inhtm ="<font color='#00FFFF'>不在</font>";//"<img src='close.png'>";
+        $inhtm ="<font color='#C0C0C0'>不在</font>";//"<img src='close.png'>";
     }
     $thstr = "<td style='display: none'>$uuid</td><td>$username</td><td>$inhtm</td>";
     echo $thstr;
