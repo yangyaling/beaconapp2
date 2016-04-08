@@ -7,14 +7,14 @@
  */
 include 'librd.php';
 
-$useruuid = $_GET["useruuid"];
-$uuid = $_GET["uuid"];
-$major = $_GET["major"];
-$minor = $_GET["minor"];
-$status = $_GET["status"];
-$updatetime = $_GET["updatetime"];
+$useruuid = $_POST["useruuid"];
+$uuid = $_POST["uuid"];
+$major = $_POST["major"];
+$minor = $_POST["minor"];
+$status = $_POST["status"];
+$updatetime = $_POST["updatetime"];
 
-$username = $_GET["username"];
+$username = $_POST["username"];
 
 sendResponse(json_encode( reupdatestatus($useruuid,$uuid,$major,$minor,$status,$updatetime)));
 ?>
