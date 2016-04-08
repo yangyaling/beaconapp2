@@ -159,6 +159,29 @@ function updatestatus($useruuid,$uuid,$major,$minor,$status){
     return $ret;
 }
 
+function reupdatestatus($useruuid,$uuid,$major,$minor,$status,$updatetime){
+    $ret=array();
+    $conn = @mysql_connect(SAE_MYSQL_HOST_M,SAE_MYSQL_USER,SAE_MYSQL_PASS);
+    date_default_timezone_set('Asia/Tokyo');
+    if($conn){
+        mysql_select_db(SAE_MYSQL_DB,$conn);
+
+        $sqlinsert ="INSERT INTO RDMONITOR (id, useruuid, uuid,major,minor,updatetime, status) VALUES (NULL,'".$useruuid."', '".$uuid."', '".$major."', '".$minor."','". $updatetime."','".$status."')";
+
+        $result = mysql_query($sqlinsert);
+
+        $sqlstsins="INSERT INTO RDUSERSTATUS (id, useruuid, uuid, major,minor,updatetime) VALUES (NULL, '".$useruuid."', '".$uuid."', '".$major."', '".$minor."', '". $updatetime."')";
+        $sqlstsdel="DELETE FROM RDUSERSTATUS WHERE useruuid='".$useruuid."' AND uuid='".$uuid."' AND major='".$major."' AND minor='".$minor."'";
+        if($status=='1'){
+            $result = mysql_query($sqlstsins);
+        }else{
+            $result = mysql_query($sqlstsdel);
+        }
+    }
+    mysql_close($conn);
+    return $ret;
+}
+
 function getlocation(){
     //多条数据需要遍历
     //header('Content-type: text/json; charset=UTF-8');
