@@ -167,7 +167,7 @@ function reupdatestatus($useruuid,$uuid,$major,$minor,$status,$updatetime){
         mysql_select_db(SAE_MYSQL_DB,$conn);
 
         $sqlinsert ="INSERT INTO RDMONITOR (id, useruuid, uuid,major,minor,updatetime, status) VALUES (NULL,'".$useruuid."', '".$uuid."', '".$major."', '".$minor."','". $updatetime."','".$status."')";
-
+        $ret['sql'] = $sqlinsert;
         $result = mysql_query($sqlinsert);
 
         $sqlstsins="INSERT INTO RDUSERSTATUS (id, useruuid, uuid, major,minor,updatetime) VALUES (NULL, '".$useruuid."', '".$uuid."', '".$major."', '".$minor."', '". $updatetime."')";
@@ -178,6 +178,7 @@ function reupdatestatus($useruuid,$uuid,$major,$minor,$status,$updatetime){
             $result = mysql_query($sqlstsdel);
         }
     }
+
     mysql_close($conn);
     return $ret;
 }
