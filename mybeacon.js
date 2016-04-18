@@ -467,5 +467,5 @@ function updateFunUser()
 $(document).ready(function()
 {
     SetTableRowColor();
-    UpdataTableRowCount();
+    //UpdataTableRowCount();
 });
