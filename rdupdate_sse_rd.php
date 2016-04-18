@@ -27,7 +27,6 @@ where u.visible = 1
 group by u.uuid
 order by u.listindex asc";
 
-echo str_pad(" ", 256);
 $result = mysql_query($sql, $conn);
 while ($row=mysql_fetch_row($result)) {
     $d = array("uuid"=>$row[0],"username"=>$row[1],"num"=>$row[2],"status2"=>$row[3]);
