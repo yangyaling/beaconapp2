@@ -114,7 +114,7 @@ $thstr = $thstr."<a href='mybeacon.php'>■Beacon管理</a>";
 mysql_free_result($result);
 $result=mysql_query("SELECT * FROM user",$conn);
 if ($myrow = mysql_fetch_row($result)){
-    $str = $myrow[0]."," .$myrow[1];
+    $str = $myrow[0]."," .$myrow[1]."," .$myrow[2]."," .$myrow[3];
 }
 echo $thstr;
 echo "<br>str:=" .$str;
