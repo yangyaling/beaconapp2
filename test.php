@@ -40,14 +40,6 @@ $tpl_db_tablename = 'RDBEACONINFO';
 $conn = @mysql_connect(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS);
 $sql = sprintf("select locationname from %s",$tpl_db_tablename);
 
-//查询用户是否存在
-$result=mysql_query("SELECT * FROM user where userid='$username' and password='$password'",$conn);
-if ($myrow = mysql_fetch_row($result)){
-    $str = $myrow[0]."," .$myrow[1];
-}
-mysql_free_result($result);
-
-
 mysql_select_db(SAE_MYSQL_DB,$conn);
 
 $result = mysql_query($sql, $conn);
@@ -118,8 +110,15 @@ echo "</div>";
 
 $thstr ="<br/>";
 $thstr = $thstr."<a href='mybeacon.php'>■Beacon管理</a>";
+//查询用户是否存在
+mysql_free_result($result);
+$result=mysql_query("SELECT * FROM user where userid='$username' and password='$password'",$conn);
+if ($myrow = mysql_fetch_row($result)){
+    $str = $myrow[0]."," .$myrow[1];
+}
 echo $thstr;
 echo "<br>$str:=" .$str;
+echo "<br>$myrow:=" .$myrow;
 
 mysql_free_result($result);
 mysql_close($conn);
