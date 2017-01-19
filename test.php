@@ -40,6 +40,12 @@ $tpl_db_tablename = 'RDBEACONINFO';
 $conn = @mysql_connect(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS);
 $sql = sprintf("select locationname from %s",$tpl_db_tablename);
 
+//查询用户是否存在
+$result=mysql_query("SELECT * FROM user where userid='$username' and password='$password'",$conn);
+if ($myrow = mysql_fetch_row($result)){
+    echo "myrow:" . $myrow;
+}
+
 
 mysql_select_db(SAE_MYSQL_DB,$conn);
 
