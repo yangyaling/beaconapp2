@@ -112,13 +112,13 @@ $thstr ="<br/>";
 $thstr = $thstr."<a href='mybeacon.php'>■Beacon管理</a>";
 //查询用户是否存在
 mysql_free_result($result);
-$result=mysql_query("SELECT * FROM user where userid='$username' and password='$password'",$conn);
+$result=mysql_query("SELECT * FROM user",$conn);
 if ($myrow = mysql_fetch_row($result)){
     $str = $myrow[0]."," .$myrow[1];
 }
 echo $thstr;
-echo "<br>$str:=" .$str;
-echo "<br>$myrow:=" .$myrow;
+echo "<br>str:=" .$str;
+echo "<br>myrow:=" .$myrow;
 
 mysql_free_result($result);
 mysql_close($conn);
