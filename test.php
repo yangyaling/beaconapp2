@@ -45,6 +45,7 @@ $result=mysql_query("SELECT * FROM user where userid='$username' and password='$
 if ($myrow = mysql_fetch_row($result)){
     echo "myrow:" . $myrow;
 }
+mysql_free_result($result);
 
 
 mysql_select_db(SAE_MYSQL_DB,$conn);
@@ -118,6 +119,7 @@ echo "</div>";
 $thstr ="<br/>";
 $thstr = $thstr."<a href='mybeacon.php'>■Beacon管理</a>";
 echo $thstr;
+echo "myrow:=" .$myrow;
 
 mysql_free_result($result);
 mysql_close($conn);
