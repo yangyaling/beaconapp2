@@ -99,9 +99,9 @@ mysql_close($conn);
 <br>
 <br>
 
-<a href='mybeacon.php'>RDBEACONINFO(Beacon管理)画面へ</a>
+<a href='mybeacon.php'>BEACON信息 -></a>
 <br>
-<a href='rdroom.php'>RDROOM(場所管理)画面へ</a>
+<a href='rdroom.php'>房间信息 -></a>
 </div>
 </body>
 </html> 

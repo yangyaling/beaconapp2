@@ -8,7 +8,7 @@
     <title>BEACON情报</title>
 </head>
 <body>
-<h1>BEACON情报</h1>
+<h1>BEACON信息</h1>
 
 <?php
 
