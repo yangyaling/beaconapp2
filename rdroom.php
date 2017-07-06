@@ -5,16 +5,25 @@
     <link href="mybeacon.css" rel="stylesheet" type="text/css" media="all" />
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="mybeacon.js"></script>
-    <title>RDROOM</title>
+    <title>ROOM</title>
 </head>
 <body>
-<h1>テーブルネーム：RDROOM</h1>
+<h1>ROOM</h1>
 <?php
 
-define("SAE_MYSQL_HOST_M",     "ja-cdbr-azure-east-a.cloudapp.net");
-define("SAE_MYSQL_USER",     "b5b35eecdcd068");
-define("SAE_MYSQL_PASS",     "b5074189");
-define("SAE_MYSQL_DB",     "rdbeacoAd7N1JMXE");
+include 'librd.php';
+
+//define("SAE_MYSQL_HOST_M",     "ja-cdbr-azure-east-a.cloudapp.net");
+//define("SAE_MYSQL_USER",     "b5b35eecdcd068");
+//define("SAE_MYSQL_PASS",     "b5074189");
+//define("SAE_MYSQL_DB",     "rdbeacoAd7N1JMXE");
+
+// 东忠yangyl创建的mysql服务器
+//define("SAE_MYSQL_HOST_M", "beacon.mysqldb.chinacloudapi.cn");
+//define("SAE_MYSQL_USER", "beacon%yangyl");
+//define("SAE_MYSQL_PASS", "Passw0rd");
+//define("SAE_MYSQL_DB", "beacondb");
+
 session_start();
 if($_SESSION["admin"] == null)
 {

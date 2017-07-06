@@ -5,10 +5,10 @@
     <link href="mybeacon.css" rel="stylesheet" type="text/css" media="all" />
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="mybeacon.js"></script>
-    <title>RDBEACONINFO</title>
+    <title>BEACONINFO</title>
 </head>
 <body>
-<h1>RDBEACONINFO</h1>
+<h1>BEACONINFO</h1>
 
 <?php
 
@@ -56,7 +56,7 @@ $sql = sprintf("select %s from %s", implode(",",$dbcolarray), $tpl_db_tablename)
 $result = mysql_query($sql, $conn);
 echo "<div  align='center' width='480px'>";
 echo "<div padding='0px'>";
-echo "<caption style='font-size:15px' align='left'>ロケーション数：<label id='tableRowCount'>".$dbcount[0]."</label></caption>";
+echo "<caption style='font-size:15px' align='left'>数量：<label id='tableRowCount'>".$dbcount[0]."</label></caption>";
 echo "<table id='Table' border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo padding='0px'>";
 
 //表头
