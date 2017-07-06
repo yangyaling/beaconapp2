@@ -8,22 +8,28 @@
     <title>RDBEACONINFO</title>
 </head>
 <body>
-<h1>テーブルネーム：RDBEACONINFO</h1>
+<h1>RDBEACONINFO</h1>
 
 <?php
 
-define("SAE_MYSQL_HOST_M",     "ja-cdbr-azure-east-a.cloudapp.net");
-define("SAE_MYSQL_USER",     "b5b35eecdcd068");
-define("SAE_MYSQL_PASS",     "b5074189");
-define("SAE_MYSQL_DB",     "rdbeacoAd7N1JMXE");
+//define("SAE_MYSQL_HOST_M",     "ja-cdbr-azure-east-a.cloudapp.net");
+//define("SAE_MYSQL_USER",     "b5b35eecdcd068");
+//define("SAE_MYSQL_PASS",     "b5074189");
+//define("SAE_MYSQL_DB",     "rdbeacoAd7N1JMXE");
+// 东忠yangyl创建的mysql服务器
+define("SAE_MYSQL_HOST_M", "beacon.mysqldb.chinacloudapi.cn");
+define("SAE_MYSQL_USER", "beacon%yangyl");
+define("SAE_MYSQL_PASS", "Passw0rd");
+define("SAE_MYSQL_DB", "beacondb");
+
 session_start();
 if($_SESSION["admin"] == null)
 {
     header("location:login.html");
     exit();
 } else {
-    echo "管理者：".$_SESSION['admin']."<br>";
-    echo "<a href='logout.php'>サインアウト</a>";
+    echo "管理员：".$_SESSION['admin']."<br>";
+    echo "<a href='logout.php'>登出</a>";
 }
 
 
@@ -114,9 +120,9 @@ mysql_close($conn);
 <br>
 <br>
 
-<a href='rdroom.php'>RDROOM(場所管理)画面へ</a>
+<a href='rdroom.php'>ROOMINFO GO -> </a>
 <br>
-<a href='rduser.php'>RDUSERINFO(ユーザ管理)画面へ</a>
+<a href='rduser.php'>USERINFO GO -> </a>
 </div>
 </body>
 </html> 

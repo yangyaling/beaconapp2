@@ -37,7 +37,7 @@ if ($myrow = mysql_fetch_row($result)){
 }else{
     $_SESSION["admin"] = null;
     header("Content-type: text/html; charset=utf-8");
-    echo "ユーザID　または　パスワードが不正";
+    echo "用户名或者密码不正确";
     header("location:login.html");
 }
 ?>
