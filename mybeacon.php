@@ -5,22 +5,14 @@
     <link href="mybeacon.css" rel="stylesheet" type="text/css" media="all" />
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="mybeacon.js"></script>
-    <title>BEACONINFO</title>
+    <title>BEACON情报</title>
 </head>
 <body>
-<h1>BEACONINFO</h1>
+<h1>BEACON情报</h1>
 
 <?php
 
-//define("SAE_MYSQL_HOST_M",     "ja-cdbr-azure-east-a.cloudapp.net");
-//define("SAE_MYSQL_USER",     "b5b35eecdcd068");
-//define("SAE_MYSQL_PASS",     "b5074189");
-//define("SAE_MYSQL_DB",     "rdbeacoAd7N1JMXE");
-// 东忠yangyl创建的mysql服务器
-define("SAE_MYSQL_HOST_M", "beacon.mysqldb.chinacloudapi.cn");
-define("SAE_MYSQL_USER", "beacon%yangyl");
-define("SAE_MYSQL_PASS", "Passw0rd");
-define("SAE_MYSQL_DB", "beacondb");
+include 'lib.php';
 
 session_start();
 if($_SESSION["admin"] == null)
@@ -34,8 +26,7 @@ if($_SESSION["admin"] == null)
 
 
 $dbcolarray = array('id', 'locationname', 'uuid', 'major', 'minor','roomid');
-$conn = @mysql_connect(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS);
-mysql_select_db(SAE_MYSQL_DB,$conn);
+
 $sql = sprintf("select count(*) from %s", "RDBEACONINFO");
 $result = mysql_query($sql, $conn);
 if ($result)
