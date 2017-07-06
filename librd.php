@@ -205,8 +205,13 @@ function getlocation()
         //在html里设置utf8避免乱码
         mysql_select_db(SAE_MYSQL_DB, $conn);
         $result = mysql_query("SELECT locationname,uuid,major,minor FROM RDBEACONINFO");
-        while ($row = mysql_fetch_row($result)) {
-            $arrayReturn[$row[0]] = array('uuid' => $row[1], 'major' => $row[2], 'minor' => $row[3]);
+        if ($result) {
+            $arrayReturn['yyy'] = 'OI';
+            while ($row = mysql_fetch_row($result)) {
+                $arrayReturn[$row[0]] = array('uuid' => $row[1], 'major' => $row[2], 'minor' => $row[3]);
+            }
+        } else {
+            $arrayReturn['yyy'] = mysql_error();
         }
     } else {
         $arrayReturn['yyy'] = mysql_error();
