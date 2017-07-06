@@ -9,13 +9,8 @@
 header('Content-Type: text/event-stream');
 header('Cache-Control: no-cache');
 
-define("SAE_MYSQL_HOST_M",     "ja-cdbr-azure-east-a.cloudapp.net");
-define("SAE_MYSQL_USER",     "b5b35eecdcd068");
-define("SAE_MYSQL_PASS",     "b5074189");
-define("SAE_MYSQL_DB",     "rdbeacoAd7N1JMXE");
+include 'lib.php';
 
-$conn = @mysql_connect(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS);
-mysql_select_db(SAE_MYSQL_DB,$conn);
 $sql = "SELECT U.username, IF( ISNULL( B.locationname ) ,  '', B.locationname ) AS locationname, U.status2, U.comment FROM RDUSERINFO U ";
 $sql = $sql."LEFT JOIN (SELECT M. *  FROM RDUSERSTATUS M WHERE M.updatetime = (  SELECT MAX( MM.updatetime )  FROM RDUSERSTATUS MM ";
 $sql = $sql."WHERE M.useruuid = MM.useruuid ) GROUP BY M.useruuid) AS M ON U.uuid = M.useruuid LEFT JOIN RDBEACONINFO B ON M.uuid = B.uuid ";

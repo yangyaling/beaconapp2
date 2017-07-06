@@ -111,9 +111,9 @@ mysql_close($conn);
 <br>
 <br>
 
-<a href='rdroom.php'>ROOMINFO GO -> </a>
+<a href='rdroom.php'>房间信息 -> </a>
 <br>
-<a href='rduser.php'>USERINFO GO -> </a>
+<a href='rduser.php'>用户信息 -> </a>
 </div>
 </body>
 </html> 
