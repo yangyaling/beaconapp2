@@ -5,10 +5,10 @@
     <link href="mybeacon.css" rel="stylesheet" type="text/css" media="all" />
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="mybeacon.js"></script>
-    <title>RDROOM</title>
+    <title>用户信息</title>
 </head>
 <body>
-<h1>テーブルネーム：RDUSERINFO</h1>
+<h1>用户信息</h1>
 <?php
 
 include 'lib.php';
@@ -20,7 +20,7 @@ if($_SESSION["admin"] == null)
     exit();
 } else {
     echo "管理者：" . $_SESSION['admin'] . "<br>";
-    echo "<a href='logout.php'>サインアウト</a>";
+    echo "<a href='logout.php'>登出</a>";
 }
 
 $dbcolarray = array('id', 'uuid', 'username', 'visible', 'listindex');
@@ -46,7 +46,7 @@ $sql = sprintf("select %s from %s", implode(",",$dbcolarray), $tpl_db_tablename)
 $result = mysql_query($sql, $conn);
 echo "<div  align='center' width='380px'>";
 
-echo "<caption style='font-size:15px' align='left'>ユーザ数：<label id='tableRowCount'>".$dbcount[0]."</label></caption>";
+echo "<caption style='font-size:15px' align='left'>数量：<label id='tableRowCount'>".$dbcount[0]."</label></caption>";
 echo "<table id='Table' border=1 cellpadding=10 cellspacing=2 bordercolor=#ffaaoo padding='0px'>";
 
 //表头
