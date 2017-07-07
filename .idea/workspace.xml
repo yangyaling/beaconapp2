@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7aae7f51-ac83-46fb-a069-40ab1709ffc6" name="Default" comment="adsa">
+    <list default="true" id="7aae7f51-ac83-46fb-a069-40ab1709ffc6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mydeleteuser.php" afterPath="$PROJECT_DIR$/mydeleteuser.php" />
     </list>
@@ -40,11 +40,9 @@
       <file leaf-file-name="mydeleteuser.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mydeleteuser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31637716">
-              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-              <folding>
-                <marker date="1499398049171" expanded="true" signature="142:168" placeholder="delete from ..." />
-              </folding>
+            <state vertical-scroll-proportion="0.3585608">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -311,7 +309,13 @@
       <option name="project" value="LOCAL" />
       <updated>1499397905714</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="adsa">
+      <created>1499398057514</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1499398057514</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -771,11 +775,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mydeleteuser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31637716">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-          <folding>
-            <marker date="1499398049171" expanded="true" signature="142:168" placeholder="delete from ..." />
-          </folding>
+        <state vertical-scroll-proportion="0.3585608">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
