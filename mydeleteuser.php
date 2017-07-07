@@ -3,7 +3,7 @@
 include 'lib.php';
 //params
 
-$id = $_POST['id'];
+$id = $GET['id'];
 
 //delete row in db
 
