@@ -7,18 +7,19 @@ $id = $_POST['id'];
 
 //delete row in db
 
-$sql = sprintf("delete from %s where id=%d", 'RDUSERINFO', $id);
 
-$result = mysql_query($sql, $conn);
+if ($conn) {
+    $sql = sprintf("delete from %s where id=%d", 'RDUSERINFO', $id);
+    $result = query_sql($sql, $conn);
 
-mysql_close($conn);
+    if ($result)
 
-if ($result)
+        echo "t";
 
-    echo "t";
+    else
 
-else
-
-    echo "f";
+        echo "f";
+}
+closeConnection($conn);
 
 ?>
