@@ -3,17 +3,13 @@
 include 'lib.php';
 
 
-//params
-
 $id = $_POST['id'];
-
-//delete row in db
 
 $sql = sprintf("delete from %s where id=%d", 'RDROOM', $id);
 
-$result = mysql_query($sql, $conn);
+$result = query_sql($sql, $conn, $code, $errors);
 
-mysql_close($conn);
+closeConnection($conn);
 
 if ($result)
 

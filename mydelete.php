@@ -2,17 +2,12 @@
 
 include 'lib.php';
 
-//params
-
 $id = $_POST['id'];
 
-//delete row in db
 
 $sql = sprintf("delete from %s where id=%d", 'RDBEACONINFO', $id);
-
-$result = mysql_query($sql, $conn);
-
-mysql_close($conn);
+$result = query_sql($sql, $conn, $code, $errors);
+closeConnection($conn);
 
 if ($result)
 

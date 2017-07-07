@@ -28,7 +28,7 @@ if($_SESSION["admin"] == null)
 $dbcolarray = array('id', 'locationname', 'uuid', 'major', 'minor','roomid');
 
 $sql = sprintf("select count(*) from %s", "RDBEACONINFO");
-$result = mysql_query($sql, $conn);
+$result = query_sql($sql, $conn, $code, $errors);
 if ($result)
 {
     
@@ -44,7 +44,8 @@ $tpl_db_coltitle = $dbcolarray;
 //表中内容
 $tpl_db_rows = array();
 $sql = sprintf("select %s from %s", implode(",",$dbcolarray), $tpl_db_tablename);
-$result = mysql_query($sql, $conn);
+//$result = mysql_query($sql, $conn);
+$result = query_sql($sql, $conn, $code, $errors);
 echo "<div  align='center' width='480px'>";
 echo "<div padding='0px'>";
 echo "<caption style='font-size:15px' align='left'>数量：<label id='tableRowCount'>".$dbcount[0]."</label></caption>";
@@ -76,7 +77,8 @@ echo "</table>";
 echo "</div>";
 
 mysql_free_result($result);
-mysql_close($conn);
+//mysql_close($conn);
+closeConnection($conn)
 ?>
 
 
