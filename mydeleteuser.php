@@ -6,13 +6,13 @@ include 'lib.php';
 $id = $_POST['id'];
 
 //delete row in db
+$errors = array();
+$code = '200';
 
 if ($conn) {
     $sql = sprintf("delete from %s where id=%d", 'RDUSERINFO', $id);
 
-    $result = mysql_query($sql, $conn);
-
-    mysql_close($conn);
+    $result = query_sql($sql, $conn, $code, $errors);
 
     if ($result)
 
@@ -22,4 +22,7 @@ if ($conn) {
 
         echo "f";
 }
+
+closeConnection($conn);
+
 ?>
