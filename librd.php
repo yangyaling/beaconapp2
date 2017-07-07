@@ -35,42 +35,42 @@ include 'lib.php';
 //    return $arrayReturn;
 //}
 
-//function getalluserinfo()
-//{
-//    //多条数据需要遍历
-//    $arrayReturn = array();
-//    $conn = @mysql_connect(SAE_MYSQL_HOST_M, SAE_MYSQL_USER, SAE_MYSQL_PASS);
-//    if ($conn) {
-//        //mysql_query("SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'", $conn);
-//        //在html里设置utf8避免乱码
-//        mysql_select_db(SAE_MYSQL_DB, $conn);
-//
-//        $str1 = " SELECT U.uuid, U.username, if(IsNull( B.locationname ),'',B.locationname )AS locationname, ";
-//        $str2 = " if(IsNull( M.updatetime ),'',M.updatetime ) AS updatetime, count( M.updatetime ) ,U.status2  ";
-//        $str3 = " FROM RDUSERINFO U LEFT JOIN ( ";
-//        $str4 = " SELECT M . * ";
-//        $str5 = " FROM RDUSERSTATUS M ";
-//        $str6 = " WHERE M.updatetime = ( ";
-//        $str7 = " SELECT MAX( MM.updatetime ) ";
-//        $str8 = " FROM RDUSERSTATUS MM ";
-//        $str9 = " WHERE M.useruuid = MM.useruuid ) ";
-//        $str10 = " GROUP BY M.useruuid ";
-//        $str11 = " ) AS M ON U.uuid = M.useruuid ";
-//        $str12 = " LEFT JOIN RDBEACONINFO B ON M.uuid = B.uuid ";
-//        $str13 = " AND M.major = B.major ";
-//        $str14 = " AND M.minor = B.minor ";
-//        $str15 = " GROUP BY U.uuid ";
-//
-//        $strquery = $str1 . $str2 . $str3 . $str4 . $str5 . $str6 . $str7 . $str8 . $str9 . $str10 . $str11 . $str12 . $str13 . $str14 . $str15;
-//        $result = mysql_query($strquery);
-//        $index = 0;
-//        while ($row = mysql_fetch_row($result)) {
-//            $arrayReturn[$row[0]] = array('username' => $row[1], 'locationname' => $row[2], 'lasttime' => $row[3], 'status' => $row[4], 'status2' => $row[5]);
-//        }
-//    }
-//    //print_r($arrayReturn);
-//    return $arrayReturn;
-//}
+function getalluserinfo()
+{
+    //多条数据需要遍历
+    $arrayReturn = array();
+    $conn = @mysql_connect(SAE_MYSQL_HOST_M, SAE_MYSQL_USER, SAE_MYSQL_PASS);
+    if ($conn) {
+        //mysql_query("SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'", $conn);
+        //在html里设置utf8避免乱码
+        mysql_select_db(SAE_MYSQL_DB, $conn);
+
+        $str1 = " SELECT U.uuid, U.username, if(IsNull( B.locationname ),'',B.locationname )AS locationname, ";
+        $str2 = " if(IsNull( M.updatetime ),'',M.updatetime ) AS updatetime, count( M.updatetime ) ,U.status2  ";
+        $str3 = " FROM RDUSERINFO U LEFT JOIN ( ";
+        $str4 = " SELECT M . * ";
+        $str5 = " FROM RDUSERSTATUS M ";
+        $str6 = " WHERE M.updatetime = ( ";
+        $str7 = " SELECT MAX( MM.updatetime ) ";
+        $str8 = " FROM RDUSERSTATUS MM ";
+        $str9 = " WHERE M.useruuid = MM.useruuid ) ";
+        $str10 = " GROUP BY M.useruuid ";
+        $str11 = " ) AS M ON U.uuid = M.useruuid ";
+        $str12 = " LEFT JOIN RDBEACONINFO B ON M.uuid = B.uuid ";
+        $str13 = " AND M.major = B.major ";
+        $str14 = " AND M.minor = B.minor ";
+        $str15 = " GROUP BY U.uuid ";
+
+        $strquery = $str1 . $str2 . $str3 . $str4 . $str5 . $str6 . $str7 . $str8 . $str9 . $str10 . $str11 . $str12 . $str13 . $str14 . $str15;
+        $result = mysql_query($strquery);
+        $index = 0;
+        while ($row = mysql_fetch_row($result)) {
+            $arrayReturn[$row[0]] = array('username' => $row[1], 'locationname' => $row[2], 'lasttime' => $row[3], 'status' => $row[4], 'status2' => $row[5]);
+        }
+    }
+    //print_r($arrayReturn);
+    return $arrayReturn;
+}
 
 function updateusercomment($useruuid, $comment)
 {
