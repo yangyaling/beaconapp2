@@ -24,10 +24,9 @@ if($_SESSION["admin"] == null)
 }
 
 $dbcolarray = array('id', 'uuid', 'username', 'visible', 'listindex');
-$conn = @mysql_connect(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS);
-mysql_select_db(SAE_MYSQL_DB,$conn);
+
 $sql = sprintf("select count(*) from %s", "RDUSERINFO");
-$result = mysql_query($sql, $conn);
+$result = query_sql($sql, $conn, $code, $errors);
 if ($result)
 {
 
@@ -43,7 +42,7 @@ $tpl_db_coltitle = $dbcolarray;
 //表中内容
 $tpl_db_rows = array();
 $sql = sprintf("select %s from %s", implode(",",$dbcolarray), $tpl_db_tablename);
-$result = mysql_query($sql, $conn);
+$result = query_sql($sql, $conn, $code, $errors);
 echo "<div  align='center' width='380px'>";
 
 echo "<caption style='font-size:15px' align='left'>数量：<label id='tableRowCount'>".$dbcount[0]."</label></caption>";
@@ -78,7 +77,7 @@ echo "</table>";
 
 
 mysql_free_result($result);
-mysql_close($conn);
+closeConnection($conn);
 ?>
 
 

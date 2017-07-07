@@ -19,7 +19,7 @@ $sql = "SELECT r.roomid,r.roomname,ifnull(count(us.useruuid),0) as num FROM rdro
         group by r.roomid";
 
 
-$result = mysql_query($sql, $conn);
+$result = query_sql($sql, $conn, $code, $errors);
 while ($row=mysql_fetch_row($result)) {
     $d = array("roomid"=>$row[0],"roomname"=>$row[1],"num"=>$row[2]);
     echo "data:".json_encode($d)."\n\n";
@@ -28,4 +28,4 @@ while ($row=mysql_fetch_row($result)) {
     flush();
     sleep(1);
 }
-mysql_close($conn);
+closeConnection($conn);

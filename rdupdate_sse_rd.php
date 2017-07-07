@@ -22,7 +22,7 @@ where u.visible = 1
 group by u.uuid
 order by u.listindex asc";
 
-$result = mysql_query($sql, $conn);
+$result = query_sql($sql, $conn, $code, $errors);
 while ($row=mysql_fetch_row($result)) {
     $d = array("uuid"=>$row[0],"username"=>$row[1],"num"=>$row[2],"status2"=>$row[3]);
     echo "data:".json_encode($d)."\n\n";
@@ -31,4 +31,4 @@ while ($row=mysql_fetch_row($result)) {
     flush();
     sleep(1);
 }
-mysql_close($conn);
+closeConnection($conn);
