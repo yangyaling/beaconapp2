@@ -23,7 +23,7 @@ function closeConnection($conn)
 function query_sql($sql, $conn, &$code, &$errors)
 {
 //    $result = sqlsrv_query($conn, $sql);
-    $result = mysql_query($conn, $sql);
+    $result = mysql_query($sql, $conn);
     if (!$result) {
         $code = '501';
 //        $errors = sqlsrv_errors();
