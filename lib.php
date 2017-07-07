@@ -26,7 +26,8 @@ function query_sql($sql, $conn, &$code, &$errors)
     $result = mysql_query($conn, $sql);
     if (!$result) {
         $code = '501';
-        $errors = sqlsrv_errors();
+//        $errors = sqlsrv_errors();
+        $errors = mysql_error();
     }
     return $result;
 }
