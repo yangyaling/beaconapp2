@@ -10,10 +10,9 @@ $errors = array();
 $code = '200';
 if ($conn) {
     $sql = sprintf("delete from %s where id=%d", 'RDUSERINFO', $id);
-    $result = query_sql($sql, $conn, $code, $errors);
-
-    echo $code . "<br/>" . print_r($errors);
-
+//    $result = query_sql($sql, $conn, $code, $errors);
+    $result = mysql_query($sql, $conn);
+    mysql_close($conn);
     if ($result)
 
         echo "t";
@@ -22,6 +21,6 @@ if ($conn) {
 
         echo "f";
 }
-closeConnection($conn);
+//closeConnection($conn);
 
 ?>
