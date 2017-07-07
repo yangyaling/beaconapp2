@@ -13,27 +13,26 @@
 
 include 'lib.php';
 
-
-//function getmonitorinfo($useruuid)
-//{
-//    //多条数据需要遍历
-//    $arrayReturn = array();
-//    $conn = @mysql_connect(SAE_MYSQL_HOST_M, SAE_MYSQL_USER, SAE_MYSQL_PASS);
-//    if ($conn) {
-//        //mysql_query("SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'", $conn);
-//        //在html里设置utf8避免乱码
-//        mysql_select_db(SAE_MYSQL_DB, $conn);
-//        $strquery = "SELECT U.username,B.locationname,M.updatetime,M.status FROM RDMONITOR M LEFT JOIN RDUSERINFO U ON M.useruuid = U.uuid LEFT JOIN RDBEACONINFO B ON M.uuid=B.UUID AND M.major=B.major AND M.minor = B.minor   WHERE M.useruuid ='" . $useruuid . "' ORDER BY M.updatetime desc LIMIT 10";
-//        $result = mysql_query($strquery);
-//        $index = 0;
-//        while ($row = mysql_fetch_row($result)) {
-//            $index = $index + 1;
-//            $arrayReturn[$row[0] . $row[2]] = array('location' => $row[1], 'updatetime' => $row[2], 'status' => $row[3]);
-//        }
-//    }
-//    //print_r($arrayReturn);
-//    return $arrayReturn;
-//}
+function getmonitorinfo($useruuid)
+{
+    //多条数据需要遍历
+    $arrayReturn = array();
+    $conn = @mysql_connect(SAE_MYSQL_HOST_M, SAE_MYSQL_USER, SAE_MYSQL_PASS);
+    if ($conn) {
+        //mysql_query("SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'", $conn);
+        //在html里设置utf8避免乱码
+        mysql_select_db(SAE_MYSQL_DB, $conn);
+        $strquery = "SELECT U.username,B.locationname,M.updatetime,M.status FROM RDMONITOR M LEFT JOIN RDUSERINFO U ON M.useruuid = U.uuid LEFT JOIN RDBEACONINFO B ON M.uuid=B.UUID AND M.major=B.major AND M.minor = B.minor   WHERE M.useruuid ='" . $useruuid . "' ORDER BY M.updatetime desc LIMIT 10";
+        $result = mysql_query($strquery);
+        $index = 0;
+        while ($row = mysql_fetch_row($result)) {
+            $index = $index + 1;
+            $arrayReturn[$row[0] . $row[2]] = array('location' => $row[1], 'updatetime' => $row[2], 'status' => $row[3]);
+        }
+    }
+    //print_r($arrayReturn);
+    return $arrayReturn;
+}
 
 function getalluserinfo()
 {
@@ -192,31 +191,31 @@ function reupdatestatus($useruuid, $uuid, $major, $minor, $status, $updatetime)
     return $ret;
 }
 
-//function getlocation()
-//{
-//    //多条数据需要遍历
-//    //header('Content-type: text/json; charset=UTF-8');
-//    $arrayReturn = array();
-//    $conn = @mysql_connect(SAE_MYSQL_HOST_M, SAE_MYSQL_USER, SAE_MYSQL_PASS);
-//    if ($conn) {
-//        //mysql_query("SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'", $conn);
-//        //在html里设置utf8避免乱码
-//        mysql_select_db(SAE_MYSQL_DB, $conn);
-//        $result = mysql_query("SELECT locationname,uuid,major,minor FROM RDBEACONINFO");
-//        if ($result) {
-//            //$arrayReturn['yyy'] = 'OI';
-//            while ($row = mysql_fetch_row($result)) {
-//                $arrayReturn[$row[0]] = array('uuid' => $row[1], 'major' => $row[2], 'minor' => $row[3]);
-//            }
-//        } else {
-//           // $arrayReturn['yyy'] = mysql_error();
-//        }
-//    } else {
-//        //$arrayReturn['yyy'] = mysql_error();
-//    }
-//    //print_r($arrayReturn);
-//    return $arrayReturn;
-//}
+function getlocation()
+{
+    //多条数据需要遍历
+    //header('Content-type: text/json; charset=UTF-8');
+    $arrayReturn = array();
+    $conn = @mysql_connect(SAE_MYSQL_HOST_M, SAE_MYSQL_USER, SAE_MYSQL_PASS);
+    if ($conn) {
+        //mysql_query("SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'", $conn);
+        //在html里设置utf8避免乱码
+        mysql_select_db(SAE_MYSQL_DB, $conn);
+        $result = mysql_query("SELECT locationname,uuid,major,minor FROM RDBEACONINFO");
+        if ($result) {
+            //$arrayReturn['yyy'] = 'OI';
+            while ($row = mysql_fetch_row($result)) {
+                $arrayReturn[$row[0]] = array('uuid' => $row[1], 'major' => $row[2], 'minor' => $row[3]);
+            }
+        } else {
+           // $arrayReturn['yyy'] = mysql_error();
+        }
+    } else {
+        //$arrayReturn['yyy'] = mysql_error();
+    }
+    //print_r($arrayReturn);
+    return $arrayReturn;
+}
 
 function sendResponse($body = '', $content_type = 'text/json')
 {
