@@ -6,9 +6,25 @@
  * Time: 11:55
  */
 
-include 'librd.php';
+include 'lib.php';
 
-$arrReturn = getlocation();
-sendResponse(json_encode($arrReturn));
+//$arrReturn = getlocation();
+
+$arrayReturn = array();
+if ($conn) {
+    $result = query_sql("SELECT locationname,uuid,major,minor FROM RDBEACONINFO");
+    if ($result) {
+        while ($row = mysql_fetch_row($result)) {
+            $arrayReturn[$row[0]] = array('uuid' => $row[1], 'major' => $row[2], 'minor' => $row[3]);
+        }
+    } else {
+    }
+} else {
+    //$arrayReturn['yyy'] = mysql_error();
+}
+//print_r($arrayReturn);
+//return $arrayReturn;
+
+sendResponse(json_encode($arrayReturn));
 
 ?>
