@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7aae7f51-ac83-46fb-a069-40ab1709ffc6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logintest.php" afterPath="$PROJECT_DIR$/logintest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib.php" afterPath="$PROJECT_DIR$/lib.php" />
     </list>
     <ignored path="rdbeacon.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,16 +25,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="lib.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="lib.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.076923">
-              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.44292805">
+              <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
               <folding>
                 <element signature="n#openConnection#0;n#!!top" expanded="false" />
                 <element signature="n#closeConnection#0;n#!!top" expanded="false" />
                 <element signature="n#query_sql#0;n#!!top" expanded="false" />
-                <element signature="n#fetch_single_row#0;n#!!top" expanded="false" />
                 <element signature="n#sendResponse#0;n#!!top" expanded="false" />
               </folding>
             </state>
@@ -53,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logintest.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="logintest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/logintest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.67493796">
-              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state vertical-scroll-proportion="-13.076923">
+              <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
               <folding>
                 <marker date="1499676927180" expanded="true" signature="408:464" placeholder="SELECT * FRO..." />
               </folding>
@@ -105,10 +104,10 @@
         <option value="$PROJECT_DIR$/rduser.php" />
         <option value="$PROJECT_DIR$/rdroom.php" />
         <option value="$PROJECT_DIR$/mybeacon.php" />
-        <option value="$PROJECT_DIR$/lib.php" />
         <option value="$PROJECT_DIR$/atest.php" />
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/logintest.php" />
+        <option value="$PROJECT_DIR$/lib.php" />
       </list>
     </option>
   </component>
@@ -238,12 +237,6 @@
       <created>1497945744191</created>
       <option name="number" value="Default" />
       <updated>1497945744191</updated>
-    </task>
-    <task id="LOCAL-00004" summary="adsa">
-      <created>1499306486644</created>
-      <option name="number" value="00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1499306486644</updated>
     </task>
     <task id="LOCAL-00005" summary="adsa">
       <created>1499307099219</created>
@@ -533,7 +526,13 @@
       <option name="project" value="LOCAL" />
       <updated>1499676882131</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="adsa">
+      <created>1499676934921</created>
+      <option name="number" value="00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1499676934940</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -601,13 +600,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/rdreupdatestatus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/librd.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -954,20 +946,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.076923">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding>
-            <element signature="n#openConnection#0;n#!!top" expanded="false" />
-            <element signature="n#closeConnection#0;n#!!top" expanded="false" />
-            <element signature="n#query_sql#0;n#!!top" expanded="false" />
-            <element signature="n#fetch_single_row#0;n#!!top" expanded="false" />
-            <element signature="n#sendResponse#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/librd.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48511165">
@@ -1007,10 +985,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/logintest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67493796">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state vertical-scroll-proportion="-13.076923">
+          <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
           <folding>
             <marker date="1499676927180" expanded="true" signature="408:464" placeholder="SELECT * FRO..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/sqlsrv.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34367245">
+          <caret line="1325" column="27" selection-start-line="1325" selection-start-column="9" selection-end-line="1325" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44292805">
+          <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+          <folding>
+            <element signature="n#openConnection#0;n#!!top" expanded="false" />
+            <element signature="n#closeConnection#0;n#!!top" expanded="false" />
+            <element signature="n#query_sql#0;n#!!top" expanded="false" />
+            <element signature="n#sendResponse#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>

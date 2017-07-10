@@ -34,7 +34,7 @@ function closeConnection($conn)
 // 执行查询处理
 function query_sql($sql, $conn, &$code, &$errors)
 {
-    $result = sqlsrv_query($sql, $conn);
+    $result = sqlsrv_query($conn, $sql);
 
     if (!$result) {
         $code = '501';
