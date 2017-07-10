@@ -6,13 +6,16 @@
  * Time: 15:45
  */
 
-// 东忠yangyl创建的mysql服务器
+// MySQL服务器
 define("SAE_MYSQL_HOST_M", "beacon.mysqldb.chinacloudapi.cn");
 define("SAE_MYSQL_USER", "beacon%yangyl");
 define("SAE_MYSQL_PASS", "Passw0rd");
 define("SAE_MYSQL_DB", "beacondb");
 
-$conn = @mysql_connect(SAE_MYSQL_HOST_M . ':' . SAE_MYSQL_PORT, SAE_MYSQL_USER, SAE_MYSQL_PASS) or die("connect failed" . mysql_error());
+//打开非持久的 MySQL 连接
+$conn = @mysql_connect(SAE_MYSQL_HOST_M . ':' . SAE_MYSQL_PORT, SAE_MYSQL_USER, SAE_MYSQL_PASS) or die("Could not connect:" . mysql_error());
+
+// 设置活动的 MySQL 数据库
 mysql_select_db(SAE_MYSQL_DB, $conn);
 
 
@@ -41,7 +44,7 @@ function query_sql($sql, $conn, &$code, &$errors)
     return $result;
 }
 
-//
+// 从结果集中取得一行作为关联数组，或数字数组，或二者兼有
 function fetch_single_row($result, $result_type = MYSQL_BOTH)
 {
     if ($result_type != null) {
