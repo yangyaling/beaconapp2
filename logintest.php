@@ -16,9 +16,9 @@ foreach ($posts as $key => $value) {
 $password = $posts["password"];
 $username = $posts["username"];
 
-$result = array();
-$result['username'] = $username;
-$result['password'] = $password;
+$returnArray = array();
+$returnArray['username'] = $username;
+$returnArray['password'] = $password;
 
 //查询用户是否存在
 $sql = sprintf("SELECT * FROM [user] where userid='%s' and password='%s'", $username, $password);
@@ -36,14 +36,15 @@ $result = query_sql($sql, $conn, $code, $errors);
 //}
 
 if ($result) {
-    $result['result'] = 'true';
+    $returnArray['result'] = 'true';
 } else {
-    $result['result'] = 'false';
+    $returnArray['result'] = 'false';
 }
-$result['code'] = $code;
-$result['errors'] = $errors;
+$returnArray['sql'] = $sql;
+$returnArray['code'] = $code;
+$returnArray['errors'] = $errors;
 
-sendResponse(json_encode($result));
+sendResponse(json_encode($returnArray));
 
 
 ?>
