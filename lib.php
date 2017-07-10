@@ -27,7 +27,6 @@ function openConnection()
 // 关闭连接
 function closeConnection($conn)
 {
-
     // sqldatabase
     sqlsrv_close($conn);
 }
@@ -50,6 +49,9 @@ function fetch_single_row($result)
 {
     return sqlsrv_fetch_array($result);
 }
+
+$code = '200';
+$error = array();
 
 $conn = openConnection();
 if (!$conn) {
