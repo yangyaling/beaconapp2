@@ -32,6 +32,8 @@ $result = query_sql($sql, $conn, $code, $errors);
 //}
 
 $arr = array();
+$arr[] = $username;
+$arr[] = $password;
 if ($myrow = fetch_single_row($result)) {
     $arr[] = $myrow;
 } else {
