@@ -8,13 +8,13 @@ include 'lib.php';
 //session_start();
 
 //  表单提交后...
-$posts = $_GET;
-//  清除一些空白符号
-foreach ($posts as $key => $value) {
-    $posts[$key] = trim($value);
-}
-$password = $posts["password"];
-$username = $posts["username"];
+//$posts = $_POST;
+////  清除一些空白符号
+//foreach ($posts as $key => $value) {
+//    $posts[$key] = trim($value);
+//}
+$password = $_POST["password"];
+$username = $_POST["username"];
 $result = array();
 $result['username'] = $username;
 $result['password'] = $password;
