@@ -17,7 +17,6 @@ $password = $posts["password"];
 $username = $posts["username"];
 
 //查询用户是否存在
-//$result=mysql_query("SELECT * FROM user where userid='$username' and password='$password'",$conn);
 $sql = sprintf("SELECT * FROM user where userid='%s' and password='%s'",$username,$password);
 $result = query_sql($sql, $conn, $code, $errors);
 
