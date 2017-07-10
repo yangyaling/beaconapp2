@@ -50,6 +50,14 @@ function fetch_single_row($result)
     return sqlsrv_fetch_array($result);
 }
 
+function sendResponse($body = '', $content_type = 'text/json')
+{
+    //$status_header = 'HTTP/1.1 ' . $status . ' ' . getStatusCodeMessage($status);
+    //header($status_header);
+    header('Content-type: ' . $content_type);
+    echo $body;
+}
+
 $code = '200';
 $error = array();
 

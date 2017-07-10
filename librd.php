@@ -216,11 +216,3 @@ function getlocation()
     //print_r($arrayReturn);
     return $arrayReturn;
 }
-
-function sendResponse($body = '', $content_type = 'text/json')
-{
-    //$status_header = 'HTTP/1.1 ' . $status . ' ' . getStatusCodeMessage($status);
-    //header($status_header);
-    header('Content-type: ' . $content_type);
-    echo $body;
-}
