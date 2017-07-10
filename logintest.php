@@ -40,6 +40,8 @@ if ($result) {
 } else {
     $result['result'] = 'false';
 }
+$result['code'] = $code;
+$result['errors'] = $errors;
 
 sendResponse(json_encode($result));
 

@@ -56,10 +56,10 @@
       <file leaf-file-name="logintest.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/logintest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.780397">
-              <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.67493796">
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding>
-                <marker date="1499676862030" expanded="true" signature="408:464" placeholder="SELECT * FRO..." />
+                <marker date="1499676927180" expanded="true" signature="408:464" placeholder="SELECT * FRO..." />
               </folding>
             </state>
           </provider>
@@ -238,12 +238,6 @@
       <created>1497945744191</created>
       <option name="number" value="Default" />
       <updated>1497945744191</updated>
-    </task>
-    <task id="LOCAL-00003" summary="adsa">
-      <created>1499306448471</created>
-      <option name="number" value="00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1499306448471</updated>
     </task>
     <task id="LOCAL-00004" summary="adsa">
       <created>1499306486644</created>
@@ -533,7 +527,13 @@
       <option name="project" value="LOCAL" />
       <updated>1499676804506</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="adsa">
+      <created>1499676882131</created>
+      <option name="number" value="00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1499676882131</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1007,10 +1007,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/logintest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.780397">
-          <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.67493796">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
-            <marker date="1499676862030" expanded="true" signature="408:464" placeholder="SELECT * FRO..." />
+            <marker date="1499676927180" expanded="true" signature="408:464" placeholder="SELECT * FRO..." />
           </folding>
         </state>
       </provider>
