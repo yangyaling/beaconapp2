@@ -24,22 +24,12 @@ $returnArray['password'] = $password;
 $sql = sprintf("SELECT * FROM [user] where userid='%s' and password='%s'", $username, $password);
 $result = query_sql($sql, $conn, $code, $errors);
 //
-//if ($myrow = fetch_single_row($result)){
-////以下为身份验证成功后的相关操作
-//    $_SESSION["admin"] = $username;
-//    header("location:mybeacon.php");
-//}else{
-//    $_SESSION["admin"] = null;
-//    header("Content-type: text/html; charset=utf-8");
-//    echo "用户名或者密码不正确";
-//    header("location:login.html");
-//}
-
-if ($result) {
-    $returnArray['result'] = 'true';
+if ($myrow = fetch_single_row($result)) {
+    $returnArray['result'] = $myrow;
 } else {
-    $returnArray['result'] = 'false';
+    $returnArray['result'] = $myrow;
 }
+
 $returnArray['sql'] = $sql;
 $returnArray['code'] = $code;
 $returnArray['errors'] = $errors;
