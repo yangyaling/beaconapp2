@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7aae7f51-ac83-46fb-a069-40ab1709ffc6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rdroom.php" afterPath="$PROJECT_DIR$/rdroom.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mybeacon.php" afterPath="$PROJECT_DIR$/mybeacon.php" />
     </list>
     <ignored path="rdbeacon.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,7 +24,22 @@
     <favorites_list name="rdbeacon" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="mybeacon.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mybeacon.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.77246654">
+              <caret line="117" column="7" selection-start-line="117" selection-start-column="7" selection-end-line="117" selection-end-column="7" />
+              <folding>
+                <marker date="1499649727468" expanded="true" signature="857:880" placeholder="select count..." />
+                <marker date="1499649727468" expanded="true" signature="1196:1213" placeholder="select %s fr..." />
+                <marker date="1499649727468" expanded="true" signature="1407:1421" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -50,12 +65,12 @@
         <option value="$PROJECT_DIR$/rdgetmonitorinfo.php" />
         <option value="$PROJECT_DIR$/lib.php" />
         <option value="$PROJECT_DIR$/login.php" />
-        <option value="$PROJECT_DIR$/mybeacon.php" />
         <option value="$PROJECT_DIR$/rdupdate_sse.php" />
         <option value="$PROJECT_DIR$/rdupdate_sse_new.php" />
         <option value="$PROJECT_DIR$/rdupdate_sse_rd.php" />
         <option value="$PROJECT_DIR$/rduser.php" />
         <option value="$PROJECT_DIR$/rdroom.php" />
+        <option value="$PROJECT_DIR$/mybeacon.php" />
       </list>
     </option>
   </component>
@@ -402,14 +417,20 @@
       <option name="project" value="LOCAL" />
       <updated>1499649735947</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="adsa">
+      <created>1499651211847</created>
+      <option name="number" value="00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1499651211847</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1525974" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1525974" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908458" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -687,18 +708,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mybeacon.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.9230769">
-          <caret line="45" column="81" selection-start-line="45" selection-start-column="81" selection-end-line="45" selection-end-column="81" />
-          <folding>
-            <marker date="1499649727468" expanded="true" signature="857:880" placeholder="select count..." />
-            <marker date="1499649727468" expanded="true" signature="1196:1213" placeholder="select %s fr..." />
-            <marker date="1499649727468" expanded="true" signature="1407:1421" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mydelete.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19502868">
@@ -902,6 +911,18 @@
         <state vertical-scroll-proportion="0.58508605">
           <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybeacon.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.77246654">
+          <caret line="117" column="7" selection-start-line="117" selection-start-column="7" selection-end-line="117" selection-end-column="7" />
+          <folding>
+            <marker date="1499649727468" expanded="true" signature="857:880" placeholder="select count..." />
+            <marker date="1499649727468" expanded="true" signature="1196:1213" placeholder="select %s fr..." />
+            <marker date="1499649727468" expanded="true" signature="1407:1421" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
