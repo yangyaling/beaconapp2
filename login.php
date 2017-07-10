@@ -17,17 +17,30 @@ $password = $posts["password"];
 $username = $posts["username"];
 
 //查询用户是否存在
-$sql = sprintf("SELECT * FROM [user] where userid='%s' and password='%s'",$username,$password);
+$sql = sprintf("SELECT * FROM [user] where userid='%s' and password='%s'", $username, $password);
 $result = query_sql($sql, $conn, $code, $errors);
 
-if ($myrow = fetch_single_row($result)){
-//以下为身份验证成功后的相关操作
-    $_SESSION["admin"] = $username;
-    header("location:mybeacon.php");
-}else{
-    $_SESSION["admin"] = null;
-    header("Content-type: text/html; charset=utf-8");
-    echo "用户名或者密码不正确";
-    header("location:mybeacon.php");
+//if ($myrow = fetch_single_row($result)) {
+////以下为身份验证成功后的相关操作
+//    $_SESSION["admin"] = $username;
+//    header("location:mybeacon.php");
+//} else {
+//    $_SESSION["admin"] = null;
+//    header("Content-type: text/html; charset=utf-8");
+//    echo "用户名或者密码不正确";
+//    header("location:mybeacon.php");
+//}
+
+$arr = array();
+if ($myrow = fetch_single_row($result)) {
+    $arr[] = $myrow;
+} else {
+    $arr[] = $myrow;
 }
+$arr[] = $code;
+$arr[] = $errors;
+$arr[] = $sql;
+sendResponse(json_encode($arr));
+
+
 ?>
