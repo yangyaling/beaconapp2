@@ -40,3 +40,13 @@ function query_sql($sql, $conn, &$code, &$errors)
     }
     return $result;
 }
+
+//
+function fetch_single_row($result, $result_type = MYSQL_BOTH)
+{
+    if ($result_type != null) {
+        return mysql_fetch_array($result, $result_type);
+    } else {
+        return mysql_fetch_row($result);
+    }
+}

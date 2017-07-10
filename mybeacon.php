@@ -32,7 +32,7 @@ $result = query_sql($sql, $conn, $code, $errors);
 if ($result)
 {
     
-    $dbcount = mysql_fetch_row($result);
+    $dbcount = fetch_single_row($result);
     $tpl_db_count = $dbcount[0];
 }
 else
