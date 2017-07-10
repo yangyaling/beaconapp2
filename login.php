@@ -2,10 +2,10 @@
 
 include 'lib.php';
 
-$lifeTime = 24 * 3600;
-session_set_cookie_params($lifeTime);
-
-session_start();
+//$lifeTime = 24 * 3600;
+//session_set_cookie_params($lifeTime);
+//
+//session_start();
 
 //  表单提交后...
 $posts = $_GET;
