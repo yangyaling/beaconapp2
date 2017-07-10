@@ -58,7 +58,7 @@ echo $thstr;
 echo "<th><input type='button' value='Add' onclick='addFun()' /> </th>";
 
 //表中的内容
-while ($row=mysql_fetch_array($result, MYSQL_ASSOC))//与$row=mysql_fetch_assoc($result)等价
+while ($row=fetch_single_row($result, MYSQL_ASSOC))//与$row=mysql_fetch_assoc($result)等价
 {
     echo "<tr>";
     $tdstr = "";
