@@ -23,7 +23,7 @@ group by u.uuid
 order by u.listindex asc";
 
 $result = query_sql($sql, $conn, $code, $errors);
-while ($row=mysql_fetch_row($result)) {
+while ($row=fetch_single_row($result)) {
     $d = array("uuid"=>$row[0],"username"=>$row[1],"num"=>$row[2],"status2"=>$row[3]);
     echo "data:".json_encode($d)."\n\n";
 

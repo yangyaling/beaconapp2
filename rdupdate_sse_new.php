@@ -20,7 +20,7 @@ $sql = "SELECT r.roomid,r.roomname,ifnull(count(us.useruuid),0) as num FROM rdro
 
 
 $result = query_sql($sql, $conn, $code, $errors);
-while ($row=mysql_fetch_row($result)) {
+while ($row=fetch_single_row($result)) {
     $d = array("roomid"=>$row[0],"roomname"=>$row[1],"num"=>$row[2]);
     echo "data:".json_encode($d)."\n\n";
 

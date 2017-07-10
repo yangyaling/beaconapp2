@@ -30,7 +30,7 @@ $result = query_sql($sql, $conn, $code, $errors);
 if ($result)
 {
 
-    $dbcount = mysql_fetch_row($result);
+    $dbcount = fetch_single_row($result);
     $tpl_db_count = $dbcount[0];
 }
 else
@@ -54,7 +54,7 @@ echo $thstr;
 echo "<th> </th>";
 
 //表中的内容
-while ($row=mysql_fetch_array($result, MYSQL_ASSOC))//与$row=mysql_fetch_assoc($result)等价
+while ($row=fetch_single_row($result, MYSQL_ASSOC))//与$row=mysql_fetch_assoc($result)等价
 {
     echo "<tr>";
     $tdstr = "";
@@ -75,8 +75,6 @@ while ($row=mysql_fetch_array($result, MYSQL_ASSOC))//与$row=mysql_fetch_assoc(
 }
 echo "</table>";
 
-
-mysql_free_result($result);
 closeConnection($conn);
 ?>
 

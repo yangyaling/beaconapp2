@@ -44,7 +44,6 @@ $tpl_db_coltitle = $dbcolarray;
 //表中内容
 $tpl_db_rows = array();
 $sql = sprintf("select %s from %s", implode(",",$dbcolarray), $tpl_db_tablename);
-//$result = mysql_query($sql, $conn);
 $result = query_sql($sql, $conn, $code, $errors);
 
 echo "<div  align='center' width='480px'>";
@@ -76,9 +75,7 @@ while ($row=fetch_single_row($result, MYSQL_ASSOC))//与$row=mysql_fetch_assoc($
 }
 echo "</table>";
 echo "</div>";
-
-mysql_free_result($result);
-//mysql_close($conn);
+;
 closeConnection($conn)
 ?>
 
