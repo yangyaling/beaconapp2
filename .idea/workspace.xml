@@ -56,9 +56,11 @@
       <file leaf-file-name="logintest.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/logintest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4516129">
-              <caret line="24" column="30" selection-start-line="22" selection-start-column="12" selection-end-line="24" selection-end-column="30" />
-              <folding />
+            <state vertical-scroll-proportion="0.780397">
+              <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+              <folding>
+                <marker date="1499676862030" expanded="true" signature="408:464" placeholder="SELECT * FRO..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -236,12 +238,6 @@
       <created>1497945744191</created>
       <option name="number" value="Default" />
       <updated>1497945744191</updated>
-    </task>
-    <task id="LOCAL-00002" summary="adsa">
-      <created>1499306333456</created>
-      <option name="number" value="00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1499306333456</updated>
     </task>
     <task id="LOCAL-00003" summary="adsa">
       <created>1499306448471</created>
@@ -531,7 +527,13 @@
       <option name="project" value="LOCAL" />
       <updated>1499676748483</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="adsa">
+      <created>1499676804506</created>
+      <option name="number" value="00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1499676804506</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1005,9 +1007,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/logintest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4516129">
-          <caret line="24" column="30" selection-start-line="22" selection-start-column="12" selection-end-line="24" selection-end-column="30" />
-          <folding />
+        <state vertical-scroll-proportion="0.780397">
+          <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+          <folding>
+            <marker date="1499676862030" expanded="true" signature="408:464" placeholder="SELECT * FRO..." />
+          </folding>
         </state>
       </provider>
     </entry>

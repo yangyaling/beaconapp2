@@ -20,9 +20,9 @@ $result = array();
 $result['username'] = $username;
 $result['password'] = $password;
 
-////查询用户是否存在
-//$sql = sprintf("SELECT * FROM [user] where userid='%s' and password='%s'",$username,$password);
-//$result = query_sql($sql, $conn, $code, $errors);
+//查询用户是否存在
+$sql = sprintf("SELECT * FROM [user] where userid='%s' and password='%s'", $username, $password);
+$result = query_sql($sql, $conn, $code, $errors);
 //
 //if ($myrow = fetch_single_row($result)){
 ////以下为身份验证成功后的相关操作
@@ -35,10 +35,12 @@ $result['password'] = $password;
 //    header("location:login.html");
 //}
 
+if ($result) {
+    $result['result'] = 'true';
+} else {
+    $result['result'] = 'false';
+}
 
-//sendResponse(json_encode( insertnewuser($uuid,$username,$status2)));
-
-//sendResponse($result);
 sendResponse(json_encode($result));
 
 
