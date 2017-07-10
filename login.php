@@ -8,7 +8,7 @@ session_set_cookie_params($lifeTime);
 session_start();
 
 //  表单提交后...
-$posts = $_POST;
+$posts = $_GET;
 //  清除一些空白符号
 foreach ($posts as $key => $value) {
     $posts[$key] = trim($value);
