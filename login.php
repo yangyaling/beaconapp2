@@ -21,9 +21,8 @@ $username = $posts["username"];
 $sql = sprintf("SELECT * FROM user where userid='%s' and password='%s'",$username,$password);
 $result = query_sql($sql, $conn, $code, $errors);
 
-if ($myrow = mysql_fetch_row($result)){
+if ($myrow = fetch_single_row($result)){
 //以下为身份验证成功后的相关操作
-    //alert();
     $_SESSION["admin"] = $username;
     header("location:mybeacon.php");
 }else{
