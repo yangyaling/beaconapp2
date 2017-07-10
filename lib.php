@@ -15,7 +15,8 @@ define("SAE_MYSQL_DB", "beacondb");
 $conn = @mysql_connect(SAE_MYSQL_HOST_M . ':' . SAE_MYSQL_PORT, SAE_MYSQL_USER, SAE_MYSQL_PASS) or die("connect failed" . mysql_error());
 mysql_select_db(SAE_MYSQL_DB, $conn);
 
-// 连接到数据库
+
+// 关闭连接
 function closeConnection($conn)
 {
     // mysql数据库
@@ -25,7 +26,7 @@ function closeConnection($conn)
     //    sqlsrv_close($conn);
 }
 
-// 关闭连接
+// 连接到数据库
 function query_sql($sql, $conn, &$code, &$errors)
 {
     $result = mysql_query($sql, $conn);

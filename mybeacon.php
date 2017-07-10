@@ -5,7 +5,7 @@
     <link href="mybeacon.css" rel="stylesheet" type="text/css" media="all" />
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="mybeacon.js"></script>
-    <title>BEACON情报</title>
+    <title>BEACON信息</title>
 </head>
 <body>
 <h1>BEACON信息</h1>
@@ -46,6 +46,7 @@ $tpl_db_rows = array();
 $sql = sprintf("select %s from %s", implode(",",$dbcolarray), $tpl_db_tablename);
 //$result = mysql_query($sql, $conn);
 $result = query_sql($sql, $conn, $code, $errors);
+
 echo "<div  align='center' width='480px'>";
 echo "<div padding='0px'>";
 echo "<caption style='font-size:15px' align='left'>数量：<label id='tableRowCount'>".$dbcount[0]."</label></caption>";
