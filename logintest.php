@@ -1,6 +1,6 @@
 <?php
 
-include 'lib.php';
+include 'librd.php';
 
 //$lifeTime = 24 * 3600;
 //session_set_cookie_params($lifeTime);
@@ -13,11 +13,21 @@ include 'lib.php';
 //foreach ($posts as $key => $value) {
 //    $posts[$key] = trim($value);
 //}
-$password = $_POST["password"];
+//$password = $_POST["password"];
+//$username = $_POST["username"];
+
+$uuid = $_POST["uuid"];
 $username = $_POST["username"];
+$status2 = $_POST["status2"];
+
+
 $result = array();
+$result['uuid'] = $uuid;
 $result['username'] = $username;
-$result['password'] = $password;
+$result['status2'] = $status2;
+
+//$result['username'] = $username;
+//$result['password'] = $password;
 
 ////查询用户是否存在
 //$sql = sprintf("SELECT * FROM [user] where userid='%s' and password='%s'",$username,$password);
@@ -34,6 +44,8 @@ $result['password'] = $password;
 //    header("location:login.html");
 //}
 
+
+//sendResponse(json_encode( insertnewuser($uuid,$username,$status2)));
 
 //sendResponse($result);
 sendResponse(json_encode($result));
