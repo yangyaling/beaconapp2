@@ -28,6 +28,6 @@ if ($myrow = fetch_single_row($result)){
     $_SESSION["admin"] = null;
     header("Content-type: text/html; charset=utf-8");
     echo "用户名或者密码不正确";
-    header("location:login.html");
+    header("location:mybeacon.php");
 }
 ?>
