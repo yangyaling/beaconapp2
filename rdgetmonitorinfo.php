@@ -37,8 +37,8 @@ if ($result) {
         $arrayReturn[$row[0] . $row[2]] = array('location' => $row[1], 'updatetime' => $row[2], 'status' => $row[3]);
     }
 }
-$arrayReturn['cd']=$code;
-$arrayReturn['er']=$errors;
+//$arrayReturn['cd']=$code;
+//$arrayReturn['er']=$errors;
 sendResponse(json_encode($arrayReturn));
 
 ?>
