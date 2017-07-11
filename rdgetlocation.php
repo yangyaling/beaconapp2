@@ -14,7 +14,7 @@ include 'librd.php';
 $arrayReturn = array();
 
 $result = query_sql("SELECT locationname,uuid,major,minor FROM RDBEACONINFO", $conn, $code, $errors);
-if ($result) {;
+if ($result) {
     while ($row = fetch_single_row($result)) {
         $arrayReturn[$row[0]] = array('uuid' => $row[1], 'major' => $row[2], 'minor' => $row[3]);
     }
