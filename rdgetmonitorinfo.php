@@ -16,7 +16,7 @@ $arrayReturn = array();
 $strquery = "SELECT  TOP 10
 	U.username,
 	B.locationname,
-	CONVERT(VARCHAR(19),M.updatetime,120 updatetime,
+	CONVERT(VARCHAR(19),M.updatetime,120) updatetime,
 	M.status
 FROM
 	RDMONITOR M
