@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7aae7f51-ac83-46fb-a069-40ab1709ffc6" name="Default" comment="adsa">
+    <list default="true" id="7aae7f51-ac83-46fb-a069-40ab1709ffc6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rdgetmonitorinfo.php" afterPath="$PROJECT_DIR$/rdgetmonitorinfo.php" />
     </list>
@@ -42,11 +42,11 @@
       <file leaf-file-name="rdgetmonitorinfo.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rdgetmonitorinfo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.79553264">
-              <caret line="39" column="10" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.6786941">
+              <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
               <folding>
-                <marker date="1499759011757" expanded="true" signature="210:217" placeholder="SELECT TOP 1..RDMONITOR..." />
-                <marker date="1499759011757" expanded="true" signature="210:487" placeholder="SELECT U.use..RDMONITOR..." />
+                <marker date="1499759224821" expanded="true" signature="210:217" placeholder="SELECT TOP 1..RDMONITOR..." />
+                <marker date="1499759224821" expanded="true" signature="210:487" placeholder="SELECT U.use..RDMONITOR..." />
               </folding>
             </state>
           </provider>
@@ -256,12 +256,6 @@
       <created>1497945744191</created>
       <option name="number" value="Default" />
       <updated>1497945744191</updated>
-    </task>
-    <task id="LOCAL-00032" summary="adsa">
-      <created>1499646383580</created>
-      <option name="number" value="00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1499646383580</updated>
     </task>
     <task id="LOCAL-00033" summary="adsa">
       <created>1499647531838</created>
@@ -551,7 +545,13 @@
       <option name="project" value="LOCAL" />
       <updated>1499758097857</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="adsa">
+      <created>1499759019610</created>
+      <option name="number" value="00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1499759019610</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1051,11 +1051,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rdgetmonitorinfo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79553264">
-          <caret line="39" column="10" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.6786941">
+          <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
           <folding>
-            <marker date="1499759011757" expanded="true" signature="210:217" placeholder="SELECT TOP 1..RDMONITOR..." />
-            <marker date="1499759011757" expanded="true" signature="210:487" placeholder="SELECT U.use..RDMONITOR..." />
+            <marker date="1499759224821" expanded="true" signature="210:217" placeholder="SELECT TOP 1..RDMONITOR..." />
+            <marker date="1499759224821" expanded="true" signature="210:487" placeholder="SELECT U.use..RDMONITOR..." />
           </folding>
         </state>
       </provider>
