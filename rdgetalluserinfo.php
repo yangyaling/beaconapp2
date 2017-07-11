@@ -32,7 +32,7 @@ SELECT
 	U.uuid,
 	U.username,
 	ISNULL(B.locationname, '') locationname,
-	ISNULL(M.updatetime, '') updatetimem,
+	ISNULL(CONVERT(VARCHAR(19),M.updatetime,120), '') updatetimem,
 	M.status,
 	U.status2
 FROM
