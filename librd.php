@@ -200,14 +200,14 @@ function getlocation()
         //mysql_query("SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'", $conn);
         //在html里设置utf8避免乱码
         //mysql_select_db(SAE_MYSQL_DB, $conn);
-        $result = query_sql("SELECT locationname,uuid,major,minor FROM RDBEACONINFO");
+        $result = query_sql("SELECT locationname,uuid,major,minor FROM RDBEACONINFO", $conn, $code, $errors);
         if ($result) {
             //$arrayReturn['yyy'] = 'OI';
             while ($row = fetch_single_row($result)) {
                 $arrayReturn[$row[0]] = array('uuid' => $row[1], 'major' => $row[2], 'minor' => $row[3]);
             }
         } else {
-           // $arrayReturn['yyy'] = mysql_error();
+            $arrayReturn['yyy'] = mysql_error();
         }
 //    } else {
         //$arrayReturn['yyy'] = mysql_error();

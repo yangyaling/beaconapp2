@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7aae7f51-ac83-46fb-a069-40ab1709ffc6" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logintest.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/librd.php" afterPath="$PROJECT_DIR$/librd.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rdgetlocation.php" afterPath="$PROJECT_DIR$/rdgetlocation.php" />
     </list>
     <ignored path="rdbeacon.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,24 +29,12 @@
       <file leaf-file-name="lib.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.461538">
-              <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+            <state vertical-scroll-proportion="-4.423077">
+              <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
               <folding>
                 <element signature="n#openConnection#0;n#!!top" expanded="false" />
                 <element signature="n#closeConnection#0;n#!!top" expanded="false" />
                 <element signature="n#sendResponse#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="myinsert.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myinsert.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.769231">
-              <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="13" />
-              <folding>
-                <marker date="1499737310179" expanded="true" signature="189:285" placeholder="INSERT INTO rdbeaconinfo..." />
               </folding>
             </state>
           </provider>
@@ -64,65 +52,42 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mybeacon.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mybeacon.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="11.576923">
-              <caret line="56" column="56" selection-start-line="56" selection-start-column="52" selection-end-line="56" selection-end-column="58" />
-              <folding>
-                <marker date="1499649727468" expanded="true" signature="857:880" placeholder="select count..." />
-                <marker date="1499649727468" expanded="true" signature="1196:1213" placeholder="select %s fr..." />
-                <marker date="1499649727468" expanded="true" signature="1407:1421" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mybeacon.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mybeacon.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="82" column="9" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rdgetlocation.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rdgetlocation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.2692308">
-              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="librd.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="librd.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/librd.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.332696">
-              <caret line="212" column="12" selection-start-line="212" selection-start-column="12" selection-end-line="212" selection-end-column="12" />
+            <state vertical-scroll-proportion="-30.346153">
+              <caret line="207" column="13" selection-start-line="72" selection-start-column="0" selection-end-line="207" selection-end-column="13" />
               <folding>
-                <element signature="n#getmonitorinfo#0;n#!!top" expanded="false" />
                 <element signature="n#getalluserinfo#0;n#!!top" expanded="false" />
                 <element signature="n#updateusercomment#0;n#!!top" expanded="false" />
                 <element signature="n#insertnewuser#0;n#!!top" expanded="false" />
                 <element signature="n#updatestatus#0;n#!!top" expanded="false" />
                 <element signature="n#reupdatestatus#0;n#!!top" expanded="false" />
-                <marker date="1499739165278" expanded="true" signature="798:1075" placeholder="SELECT U.use..RDMONITOR..." />
-                <marker date="1499739165278" expanded="true" signature="3484:3563" placeholder="update RDUSE..." />
-                <marker date="1499739165278" expanded="true" signature="4124:4179" placeholder="select * fro..RDUSERINFO..." />
-                <marker date="1499739165278" expanded="true" signature="4205:4313" placeholder="update RDUSE..." />
-                <marker date="1499739165278" expanded="true" signature="4338:4463" placeholder="INSERT INTO RDUSERINFO..." />
-                <marker date="1499739165278" expanded="true" signature="4728:4803" placeholder="select uuid,..RDUSERINFO..." />
-                <marker date="1499739165278" expanded="true" signature="5681:5889" placeholder="INSERT INTO RDMONITOR..." />
-                <marker date="1499739165278" expanded="true" signature="5959:6147" placeholder="INSERT INTO RDUSERSTATUS..." />
-                <marker date="1499739165278" expanded="true" signature="6172:6310" placeholder="DELETE FROM ..." />
-                <marker date="1499739165278" expanded="true" signature="6825:7025" placeholder="INSERT INTO RDMONITOR..." />
-                <marker date="1499739165278" expanded="true" signature="7128:7308" placeholder="INSERT INTO RDUSERSTATUS..." />
-                <marker date="1499739165278" expanded="true" signature="7333:7471" placeholder="DELETE FROM ..." />
-                <marker date="1499739165278" expanded="true" signature="8201:8255" placeholder="SELECT locat..RDBEACONINFO..." />
+                <marker date="1499740250431" expanded="true" signature="798:1075" placeholder="SELECT U.use..RDMONITOR..." />
+                <marker date="1499740250431" expanded="true" signature="3484:3563" placeholder="update RDUSE..." />
+                <marker date="1499740250431" expanded="true" signature="4124:4179" placeholder="select * fro..RDUSERINFO..." />
+                <marker date="1499740250431" expanded="true" signature="4205:4313" placeholder="update RDUSE..." />
+                <marker date="1499740250431" expanded="true" signature="4338:4463" placeholder="INSERT INTO RDUSERINFO..." />
+                <marker date="1499740250431" expanded="true" signature="4728:4803" placeholder="select uuid,..RDUSERINFO..." />
+                <marker date="1499740250431" expanded="true" signature="5681:5889" placeholder="INSERT INTO RDMONITOR..." />
+                <marker date="1499740250431" expanded="true" signature="5959:6147" placeholder="INSERT INTO RDUSERSTATUS..." />
+                <marker date="1499740250431" expanded="true" signature="6172:6310" placeholder="DELETE FROM ..." />
+                <marker date="1499740250431" expanded="true" signature="6825:7025" placeholder="INSERT INTO RDMONITOR..." />
+                <marker date="1499740250431" expanded="true" signature="7128:7308" placeholder="INSERT INTO RDUSERSTATUS..." />
+                <marker date="1499740250431" expanded="true" signature="7333:7471" placeholder="DELETE FROM ..." />
+                <marker date="1499740250431" expanded="true" signature="8121:8175" placeholder="SELECT locat..RDBEACONINFO..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rdgetlocation.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rdgetlocation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.44292805">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding>
+                <marker date="1499740250421" expanded="true" signature="190:244" placeholder="SELECT locat..RDBEACONINFO..." />
               </folding>
             </state>
           </provider>
@@ -147,7 +112,6 @@
         <option value="$PROJECT_DIR$/myupdateroom.php" />
         <option value="$PROJECT_DIR$/myupdateuser.php" />
         <option value="$PROJECT_DIR$/rdgetalluserinfo.php" />
-        <option value="$PROJECT_DIR$/rdgetlocation.php" />
         <option value="$PROJECT_DIR$/rdgetmonitorinfo.php" />
         <option value="$PROJECT_DIR$/rdupdate_sse.php" />
         <option value="$PROJECT_DIR$/rdupdate_sse_new.php" />
@@ -162,6 +126,7 @@
         <option value="$PROJECT_DIR$/myinsert.php" />
         <option value="$PROJECT_DIR$/myinsertroom.php" />
         <option value="$PROJECT_DIR$/librd.php" />
+        <option value="$PROJECT_DIR$/rdgetlocation.php" />
       </list>
     </option>
   </component>
@@ -240,8 +205,11 @@
       <recent name="D:\示例程序\beaconapp2" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Script.atest.php">
+  <component name="RunManager" selected="PHP Script.librd.php">
     <configuration default="false" name="atest.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/atest.php">
+      <method />
+    </configuration>
+    <configuration default="false" name="librd.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/librd.php">
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -272,12 +240,14 @@
       <envs />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="PHP Script.atest.php" />
+      <item index="1" class="java.lang.String" itemvalue="PHP Script.librd.php" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="PHP Script.atest.php" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="PHP Script.librd.php" />
+        <item index="1" class="java.lang.String" itemvalue="PHP Script.atest.php" />
       </list>
     </recent_temporary>
   </component>
@@ -291,18 +261,6 @@
       <created>1497945744191</created>
       <option name="number" value="Default" />
       <updated>1497945744191</updated>
-    </task>
-    <task id="LOCAL-00011" summary="adsa">
-      <created>1499327848222</created>
-      <option name="number" value="00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1499327848222</updated>
-    </task>
-    <task id="LOCAL-00012" summary="adsa">
-      <created>1499328124319</created>
-      <option name="number" value="00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1499328124319</updated>
     </task>
     <task id="LOCAL-00013" summary="adsa">
       <created>1499397268692</created>
@@ -586,7 +544,19 @@
       <option name="project" value="LOCAL" />
       <updated>1499737511471</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="adsa">
+      <created>1499739175192</created>
+      <option name="number" value="00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1499739175192</updated>
+    </task>
+    <task id="LOCAL-00061" summary="adsa">
+      <created>1499739368451</created>
+      <option name="number" value="00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1499739368457</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -598,19 +568,19 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908458" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32792583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32792583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908458" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39976826" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908458" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -650,7 +620,21 @@
     <option name="LAST_COMMIT_MESSAGE" value="adsa" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/librd.php</url>
+          <line>202</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/librd.php</url>
+          <line>209</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="7" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -909,18 +893,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rdroom.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.83716476">
-          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-          <folding>
-            <marker date="1499651206244" expanded="true" signature="833:856" placeholder="select count..." />
-            <marker date="1499651206244" expanded="true" signature="1156:1173" placeholder="select %s fr..." />
-            <marker date="1499651206244" expanded="true" signature="1339:1353" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/sqlsrv.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34367245">
@@ -967,16 +939,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myupdate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.4615386">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <marker date="1499403232027" expanded="true" signature="246:343" placeholder="update RDBEA..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mydelete.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.230769">
@@ -1007,10 +969,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mybeacon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="82" column="9" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myinsert.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58508605">
+          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <marker date="1499737310179" expanded="true" signature="189:285" placeholder="INSERT INTO rdbeaconinfo..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybeacon.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19694072">
+          <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+          <folding>
+            <marker date="1499649727468" expanded="true" signature="857:880" placeholder="select count..." />
+            <marker date="1499649727468" expanded="true" signature="1196:1213" placeholder="select %s fr..." />
+            <marker date="1499649727468" expanded="true" signature="1407:1421" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myupdate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17208412">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <marker date="1499403232027" expanded="true" signature="246:343" placeholder="update RDBEA..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.461538">
-          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+        <state vertical-scroll-proportion="-4.423077">
+          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
           <folding>
             <element signature="n#openConnection#0;n#!!top" expanded="false" />
             <element signature="n#closeConnection#0;n#!!top" expanded="false" />
@@ -1019,12 +1021,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myinsert.php">
+    <entry file="file://$PROJECT_DIR$/rdroom.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.769231">
-          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="13" />
+        <state vertical-scroll-proportion="-25.5">
+          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
           <folding>
-            <marker date="1499737310179" expanded="true" signature="189:285" placeholder="INSERT INTO rdbeaconinfo..." />
+            <marker date="1499651206244" expanded="true" signature="833:856" placeholder="select count..." />
+            <marker date="1499651206244" expanded="true" signature="1156:1173" placeholder="select %s fr..." />
+            <marker date="1499651206244" expanded="true" signature="1339:1353" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1039,58 +1043,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mybeacon.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="11.576923">
-          <caret line="56" column="56" selection-start-line="56" selection-start-column="52" selection-end-line="56" selection-end-column="58" />
-          <folding>
-            <marker date="1499649727468" expanded="true" signature="857:880" placeholder="select count..." />
-            <marker date="1499649727468" expanded="true" signature="1196:1213" placeholder="select %s fr..." />
-            <marker date="1499649727468" expanded="true" signature="1407:1421" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mybeacon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="82" column="9" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rdgetlocation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/librd.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.332696">
-          <caret line="212" column="12" selection-start-line="212" selection-start-column="12" selection-end-line="212" selection-end-column="12" />
+        <state vertical-scroll-proportion="-30.346153">
+          <caret line="207" column="13" selection-start-line="72" selection-start-column="0" selection-end-line="207" selection-end-column="13" />
           <folding>
-            <element signature="n#getmonitorinfo#0;n#!!top" expanded="false" />
             <element signature="n#getalluserinfo#0;n#!!top" expanded="false" />
             <element signature="n#updateusercomment#0;n#!!top" expanded="false" />
             <element signature="n#insertnewuser#0;n#!!top" expanded="false" />
             <element signature="n#updatestatus#0;n#!!top" expanded="false" />
             <element signature="n#reupdatestatus#0;n#!!top" expanded="false" />
-            <marker date="1499739165278" expanded="true" signature="798:1075" placeholder="SELECT U.use..RDMONITOR..." />
-            <marker date="1499739165278" expanded="true" signature="3484:3563" placeholder="update RDUSE..." />
-            <marker date="1499739165278" expanded="true" signature="4124:4179" placeholder="select * fro..RDUSERINFO..." />
-            <marker date="1499739165278" expanded="true" signature="4205:4313" placeholder="update RDUSE..." />
-            <marker date="1499739165278" expanded="true" signature="4338:4463" placeholder="INSERT INTO RDUSERINFO..." />
-            <marker date="1499739165278" expanded="true" signature="4728:4803" placeholder="select uuid,..RDUSERINFO..." />
-            <marker date="1499739165278" expanded="true" signature="5681:5889" placeholder="INSERT INTO RDMONITOR..." />
-            <marker date="1499739165278" expanded="true" signature="5959:6147" placeholder="INSERT INTO RDUSERSTATUS..." />
-            <marker date="1499739165278" expanded="true" signature="6172:6310" placeholder="DELETE FROM ..." />
-            <marker date="1499739165278" expanded="true" signature="6825:7025" placeholder="INSERT INTO RDMONITOR..." />
-            <marker date="1499739165278" expanded="true" signature="7128:7308" placeholder="INSERT INTO RDUSERSTATUS..." />
-            <marker date="1499739165278" expanded="true" signature="7333:7471" placeholder="DELETE FROM ..." />
-            <marker date="1499739165278" expanded="true" signature="8201:8255" placeholder="SELECT locat..RDBEACONINFO..." />
+            <marker date="1499740250431" expanded="true" signature="798:1075" placeholder="SELECT U.use..RDMONITOR..." />
+            <marker date="1499740250431" expanded="true" signature="3484:3563" placeholder="update RDUSE..." />
+            <marker date="1499740250431" expanded="true" signature="4124:4179" placeholder="select * fro..RDUSERINFO..." />
+            <marker date="1499740250431" expanded="true" signature="4205:4313" placeholder="update RDUSE..." />
+            <marker date="1499740250431" expanded="true" signature="4338:4463" placeholder="INSERT INTO RDUSERINFO..." />
+            <marker date="1499740250431" expanded="true" signature="4728:4803" placeholder="select uuid,..RDUSERINFO..." />
+            <marker date="1499740250431" expanded="true" signature="5681:5889" placeholder="INSERT INTO RDMONITOR..." />
+            <marker date="1499740250431" expanded="true" signature="5959:6147" placeholder="INSERT INTO RDUSERSTATUS..." />
+            <marker date="1499740250431" expanded="true" signature="6172:6310" placeholder="DELETE FROM ..." />
+            <marker date="1499740250431" expanded="true" signature="6825:7025" placeholder="INSERT INTO RDMONITOR..." />
+            <marker date="1499740250431" expanded="true" signature="7128:7308" placeholder="INSERT INTO RDUSERSTATUS..." />
+            <marker date="1499740250431" expanded="true" signature="7333:7471" placeholder="DELETE FROM ..." />
+            <marker date="1499740250431" expanded="true" signature="8121:8175" placeholder="SELECT locat..RDBEACONINFO..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rdgetlocation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44292805">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <marker date="1499740250421" expanded="true" signature="190:244" placeholder="SELECT locat..RDBEACONINFO..." />
           </folding>
         </state>
       </provider>
