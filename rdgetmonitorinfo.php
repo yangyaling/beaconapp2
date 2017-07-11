@@ -25,7 +25,7 @@ LEFT JOIN RDBEACONINFO B ON M.uuid = B.UUID
 AND M.major = B.major
 AND M.minor = B.minor
 WHERE
-	M.useruuid = '$uuid'
+	M.useruuid = '" . $useruuid . "'
 ORDER BY
 	M.updatetime DESC";
 
