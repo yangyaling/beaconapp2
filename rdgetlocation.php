@@ -6,7 +6,7 @@
  * Time: 11:55
  */
 
-include 'librd.php';
+include 'lib.php';
 
 //$arrReturn = getlocation();
 
@@ -23,7 +23,7 @@ if ($result) {
     $arrayReturn['yyy'] = sqlsrv_errors();
     echo "f";
 }
-return $arrayReturn;
+//return $arrayReturn;
 
 sendResponse(json_encode($arrayReturn));
 
