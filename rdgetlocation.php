@@ -19,7 +19,7 @@ if ($result) {;
         $arrayReturn[$row[0]] = array('uuid' => $row[1], 'major' => $row[2], 'minor' => $row[3]);
     }
 } else {
-    $arrayReturn['yyy'] = mysql_error();
+    $arrayReturn['yyy'] = sqlsrv_errors();
 }
 return $arrayReturn;
 

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7aae7f51-ac83-46fb-a069-40ab1709ffc6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/librd.php" afterPath="$PROJECT_DIR$/librd.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rdgetlocation.php" afterPath="$PROJECT_DIR$/rdgetlocation.php" />
     </list>
     <ignored path="rdbeacon.iws" />
@@ -29,7 +28,7 @@
       <file leaf-file-name="lib.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.423077">
+            <state vertical-scroll-proportion="-15.307693">
               <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
               <folding>
                 <element signature="n#openConnection#0;n#!!top" expanded="false" />
@@ -84,10 +83,10 @@
       <file leaf-file-name="rdgetlocation.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rdgetlocation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44292805">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.33746898">
+              <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
               <folding>
-                <marker date="1499740250421" expanded="true" signature="190:244" placeholder="SELECT locat..RDBEACONINFO..." />
+                <marker date="1499740284330" expanded="true" signature="190:244" placeholder="SELECT locat..RDBEACONINFO..." />
               </folding>
             </state>
           </provider>
@@ -261,12 +260,6 @@
       <created>1497945744191</created>
       <option name="number" value="Default" />
       <updated>1497945744191</updated>
-    </task>
-    <task id="LOCAL-00013" summary="adsa">
-      <created>1499397268692</created>
-      <option name="number" value="00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1499397268692</updated>
     </task>
     <task id="LOCAL-00014" summary="adsa">
       <created>1499397336770</created>
@@ -556,7 +549,13 @@
       <option name="project" value="LOCAL" />
       <updated>1499739368457</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="adsa">
+      <created>1499740257483</created>
+      <option name="number" value="00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1499740257486</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1009,18 +1008,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.423077">
-          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-          <folding>
-            <element signature="n#openConnection#0;n#!!top" expanded="false" />
-            <element signature="n#closeConnection#0;n#!!top" expanded="false" />
-            <element signature="n#sendResponse#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rdroom.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-25.5">
@@ -1070,12 +1057,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.307693">
+          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+          <folding>
+            <element signature="n#openConnection#0;n#!!top" expanded="false" />
+            <element signature="n#closeConnection#0;n#!!top" expanded="false" />
+            <element signature="n#sendResponse#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/rdgetlocation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44292805">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.33746898">
+          <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
           <folding>
-            <marker date="1499740250421" expanded="true" signature="190:244" placeholder="SELECT locat..RDBEACONINFO..." />
+            <marker date="1499740284330" expanded="true" signature="190:244" placeholder="SELECT locat..RDBEACONINFO..." />
           </folding>
         </state>
       </provider>
