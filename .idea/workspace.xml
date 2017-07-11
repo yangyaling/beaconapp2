@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7aae7f51-ac83-46fb-a069-40ab1709ffc6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rdinsertuser.php" afterPath="$PROJECT_DIR$/rdinsertuser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rdgetalluserinfo.php" afterPath="$PROJECT_DIR$/rdgetalluserinfo.php" />
     </list>
     <ignored path="rdbeacon.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,34 +54,29 @@
       <file leaf-file-name="librd.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/librd.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.576923">
-              <caret line="98" column="34" selection-start-line="98" selection-start-column="25" selection-end-line="98" selection-end-column="34" />
+            <state vertical-scroll-proportion="-9.807693">
+              <caret line="30" column="0" selection-start-line="36" selection-start-column="2" selection-end-line="71" selection-end-column="3" />
               <folding>
                 <element signature="e#6#93#0#PHP" expanded="true" />
                 <marker date="1499742278072" expanded="true" signature="798:1075" placeholder="SELECT U.use..RDMONITOR..." />
-                <marker date="1499742278072" expanded="true" signature="3484:3563" placeholder="update RDUSE..." />
-                <marker date="1499742278072" expanded="true" signature="5771:5970" placeholder="INSERT INTO RDMONITOR..." />
-                <marker date="1499742278072" expanded="true" signature="6040:6218" placeholder="INSERT INTO RDUSERSTATUS..." />
-                <marker date="1499742278072" expanded="true" signature="6243:6381" placeholder="DELETE FROM ..." />
-                <marker date="1499742278072" expanded="true" signature="6896:7087" placeholder="INSERT INTO RDMONITOR..." />
-                <marker date="1499742278072" expanded="true" signature="7190:7360" placeholder="INSERT INTO RDUSERSTATUS..." />
-                <marker date="1499742278072" expanded="true" signature="7385:7523" placeholder="DELETE FROM ..." />
+                <marker date="1499742278072" expanded="true" signature="3556:3635" placeholder="update RDUSE..." />
+                <marker date="1499742278072" expanded="true" signature="5843:6042" placeholder="INSERT INTO RDMONITOR..." />
+                <marker date="1499742278072" expanded="true" signature="6112:6290" placeholder="INSERT INTO RDUSERSTATUS..." />
+                <marker date="1499742278072" expanded="true" signature="6315:6453" placeholder="DELETE FROM ..." />
+                <marker date="1499742278072" expanded="true" signature="6968:7159" placeholder="INSERT INTO RDMONITOR..." />
+                <marker date="1499742278072" expanded="true" signature="7262:7432" placeholder="INSERT INTO RDUSERSTATUS..." />
+                <marker date="1499742278072" expanded="true" signature="7457:7595" placeholder="DELETE FROM ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rdinsertuser.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/rdinsertuser.php">
+      <file leaf-file-name="rdgetalluserinfo.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rdgetalluserinfo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44292805">
-              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-              <folding>
-                <marker date="1499742500486" expanded="true" signature="229:284" placeholder="select * fro..RDUSERINFO..." />
-                <marker date="1499742500486" expanded="true" signature="301:409" placeholder="update RDUSE..." />
-                <marker date="1499742500486" expanded="true" signature="426:542" placeholder="INSERT INTO RDUSERINFO..." />
-                <marker date="1499742500486" expanded="true" signature="805:880" placeholder="select uuid,..RDUSERINFO..." />
-              </folding>
+            <state vertical-scroll-proportion="0.41731265">
+              <caret line="24" column="24" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -89,8 +84,8 @@
       <file leaf-file-name="rdgetlocation.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rdgetlocation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.769231">
-              <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+            <state vertical-scroll-proportion="-11.115385">
+              <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="42" />
               <folding>
                 <marker date="1499742036486" expanded="true" signature="188:242" placeholder="SELECT locat..RDBEACONINFO..." />
               </folding>
@@ -116,7 +111,6 @@
         <option value="$PROJECT_DIR$/myupdate.php" />
         <option value="$PROJECT_DIR$/myupdateroom.php" />
         <option value="$PROJECT_DIR$/myupdateuser.php" />
-        <option value="$PROJECT_DIR$/rdgetalluserinfo.php" />
         <option value="$PROJECT_DIR$/rdgetmonitorinfo.php" />
         <option value="$PROJECT_DIR$/rdupdate_sse.php" />
         <option value="$PROJECT_DIR$/rdupdate_sse_new.php" />
@@ -130,9 +124,10 @@
         <option value="$PROJECT_DIR$/logintest.php" />
         <option value="$PROJECT_DIR$/myinsert.php" />
         <option value="$PROJECT_DIR$/myinsertroom.php" />
-        <option value="$PROJECT_DIR$/librd.php" />
         <option value="$PROJECT_DIR$/rdgetlocation.php" />
         <option value="$PROJECT_DIR$/rdinsertuser.php" />
+        <option value="$PROJECT_DIR$/librd.php" />
+        <option value="$PROJECT_DIR$/rdgetalluserinfo.php" />
       </list>
     </option>
   </component>
@@ -267,18 +262,6 @@
       <created>1497945744191</created>
       <option name="number" value="Default" />
       <updated>1497945744191</updated>
-    </task>
-    <task id="LOCAL-00022" summary="adsa">
-      <created>1499398361743</created>
-      <option name="number" value="00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1499398361743</updated>
-    </task>
-    <task id="LOCAL-00023" summary="adsa">
-      <created>1499398739428</created>
-      <option name="number" value="00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1499398739428</updated>
     </task>
     <task id="LOCAL-00024" summary="adsa">
       <created>1499398760069</created>
@@ -562,14 +545,26 @@
       <option name="project" value="LOCAL" />
       <updated>1499742319480</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="adsa">
+      <created>1499742504879</created>
+      <option name="number" value="00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1499742504879</updated>
+    </task>
+    <task id="LOCAL-00072" summary="adsa">
+      <created>1499742811992</created>
+      <option name="number" value="00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1499742811992</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13068181" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2913961" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908458" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -591,22 +586,22 @@
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32908458" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908458" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908458" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26910827" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2913961" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289941" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32792583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39976826" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -807,13 +802,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.076923">
           <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rdgetalluserinfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1041,44 +1029,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rdgetlocation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.769231">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding>
-            <marker date="1499742036486" expanded="true" signature="188:242" placeholder="SELECT locat..RDBEACONINFO..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/librd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923">
-          <caret line="98" column="34" selection-start-line="98" selection-start-column="25" selection-end-line="98" selection-end-column="34" />
-          <folding>
-            <element signature="e#6#93#0#PHP" expanded="true" />
-            <marker date="1499742278072" expanded="true" signature="798:1075" placeholder="SELECT U.use..RDMONITOR..." />
-            <marker date="1499742278072" expanded="true" signature="3484:3563" placeholder="update RDUSE..." />
-            <marker date="1499742278072" expanded="true" signature="5771:5970" placeholder="INSERT INTO RDMONITOR..." />
-            <marker date="1499742278072" expanded="true" signature="6040:6218" placeholder="INSERT INTO RDUSERSTATUS..." />
-            <marker date="1499742278072" expanded="true" signature="6243:6381" placeholder="DELETE FROM ..." />
-            <marker date="1499742278072" expanded="true" signature="6896:7087" placeholder="INSERT INTO RDMONITOR..." />
-            <marker date="1499742278072" expanded="true" signature="7190:7360" placeholder="INSERT INTO RDUSERSTATUS..." />
-            <marker date="1499742278072" expanded="true" signature="7385:7523" placeholder="DELETE FROM ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rdinsertuser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44292805">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.37965262">
+          <caret line="18" column="52" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="52" />
           <folding>
             <marker date="1499742500486" expanded="true" signature="229:284" placeholder="select * fro..RDUSERINFO..." />
             <marker date="1499742500486" expanded="true" signature="301:409" placeholder="update RDUSE..." />
             <marker date="1499742500486" expanded="true" signature="426:542" placeholder="INSERT INTO RDUSERINFO..." />
             <marker date="1499742500486" expanded="true" signature="805:880" placeholder="select uuid,..RDUSERINFO..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/librd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.807693">
+          <caret line="30" column="0" selection-start-line="36" selection-start-column="2" selection-end-line="71" selection-end-column="3" />
+          <folding>
+            <element signature="e#6#93#0#PHP" expanded="true" />
+            <marker date="1499742278072" expanded="true" signature="798:1075" placeholder="SELECT U.use..RDMONITOR..." />
+            <marker date="1499742278072" expanded="true" signature="3556:3635" placeholder="update RDUSE..." />
+            <marker date="1499742278072" expanded="true" signature="5843:6042" placeholder="INSERT INTO RDMONITOR..." />
+            <marker date="1499742278072" expanded="true" signature="6112:6290" placeholder="INSERT INTO RDUSERSTATUS..." />
+            <marker date="1499742278072" expanded="true" signature="6315:6453" placeholder="DELETE FROM ..." />
+            <marker date="1499742278072" expanded="true" signature="6968:7159" placeholder="INSERT INTO RDMONITOR..." />
+            <marker date="1499742278072" expanded="true" signature="7262:7432" placeholder="INSERT INTO RDUSERSTATUS..." />
+            <marker date="1499742278072" expanded="true" signature="7457:7595" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rdgetlocation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.115385">
+          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="42" />
+          <folding>
+            <marker date="1499742036486" expanded="true" signature="188:242" placeholder="SELECT locat..RDBEACONINFO..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rdgetalluserinfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41731265">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>

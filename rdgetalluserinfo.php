@@ -30,10 +30,15 @@ $arrayReturn = array();
     $strquery = $str1 . $str2 . $str3 . $str4 . $str5 . $str6 . $str7 . $str8 . $str9 . $str10 . $str11 . $str12 . $str13 . $str14 . $str15;
 
     $result = query_sql($strquery, $conn, $code, $errors);
-    $index = 0;
-    while ($row = fetch_single_row($result)) {
-        $arrayReturn[$row[0]] = array('username' => $row[1], 'locationname' => $row[2], 'lasttime' => $row[3], 'status' => $row[4], 'status2' => $row[5]);
+    if($result){
+        while ($row = fetch_single_row($result)) {
+            $arrayReturn[$row[0]] = array('username' => $row[1], 'locationname' => $row[2], 'lasttime' => $row[3], 'status' => $row[4], 'status2' => $row[5]);
+        }
+    }else{
+        $arrayReturn['yyy'] = sqlsrv_errors();
     }
+
+
 
 //$arrReturn = getalluserinfo();
 sendResponse(json_encode($arrayReturn));
