@@ -16,12 +16,17 @@ $sqlcheck = "select * from RDUSERINFO WHERE uuid='" . $useruuid . "'";
 $sqlupdate = "update RDUSERINFO set username='" . $username . "',status2='" . $status2 . "' WHERE uuid='" . $useruuid . "'";
 $sqlinsert = "INSERT INTO RDUSERINFO (id, uuid, username,status2) VALUES (NULL,'" . $useruuid . "', '" . $username . "','" . $status2 . "')";
 
-if ($result) {
+$result = query_sql($sqlcheck, $conn, $code, $errors);
+if ($row = fetch_single_row($result)) {
+    $result = query_sql($sqlupdate, $conn, $code, $errors);
+} else {
+    $result = query_sql($sqlinsert, $conn, $code, $errors);
+}
 
+if ($result) {
     $sqlcheck = "select uuid,username,status2 from RDUSERINFO WHERE uuid='" . $useruuid . "'";
     $resultreq = query_sql($sqlcheck, $conn, $code, $errors);
     if ($resultreq) {
-
         while ($row = fetch_single_row($resultreq)) {
             //array_push($arrayReturn,$row);
             $ret['useruuid'] = $row[0];
