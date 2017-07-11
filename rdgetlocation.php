@@ -18,10 +18,10 @@ if ($result) {
     while ($row = fetch_single_row($result)) {
         $arrayReturn[$row[0]] = array('uuid' => $row[1], 'major' => $row[2], 'minor' => $row[3]);
     }
-    echo "t";
+    //echo "t";
 } else {
     $arrayReturn['yyy'] = sqlsrv_errors();
-    echo "f";
+   // echo "f";
 }
 //return $arrayReturn;
 
