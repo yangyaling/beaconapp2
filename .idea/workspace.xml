@@ -42,11 +42,11 @@
       <file leaf-file-name="rdgetmonitorinfo.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rdgetmonitorinfo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6786941">
-              <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.6202749">
+              <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
               <folding>
-                <marker date="1499759277680" expanded="true" signature="210:217" placeholder="SELECT TOP 1..RDMONITOR..." />
-                <marker date="1499759277680" expanded="true" signature="210:487" placeholder="SELECT U.use..RDMONITOR..." />
+                <marker date="1499759323293" expanded="true" signature="210:217" placeholder="SELECT TOP 1..RDMONITOR..." />
+                <marker date="1499759323293" expanded="true" signature="210:487" placeholder="SELECT U.use..RDMONITOR..." />
               </folding>
             </state>
           </provider>
@@ -256,12 +256,6 @@
       <created>1497945744191</created>
       <option name="number" value="Default" />
       <updated>1497945744191</updated>
-    </task>
-    <task id="LOCAL-00034" summary="adsa">
-      <created>1499647634605</created>
-      <option name="number" value="00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1499647634605</updated>
     </task>
     <task id="LOCAL-00035" summary="adsa">
       <created>1499648496727</created>
@@ -551,7 +545,13 @@
       <option name="project" value="LOCAL" />
       <updated>1499759229279</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="adsa">
+      <created>1499759282538</created>
+      <option name="number" value="00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1499759282538</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1051,11 +1051,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rdgetmonitorinfo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6786941">
-          <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.6202749">
+          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
           <folding>
-            <marker date="1499759277680" expanded="true" signature="210:217" placeholder="SELECT TOP 1..RDMONITOR..." />
-            <marker date="1499759277680" expanded="true" signature="210:487" placeholder="SELECT U.use..RDMONITOR..." />
+            <marker date="1499759323293" expanded="true" signature="210:217" placeholder="SELECT TOP 1..RDMONITOR..." />
+            <marker date="1499759323293" expanded="true" signature="210:487" placeholder="SELECT U.use..RDMONITOR..." />
           </folding>
         </state>
       </provider>
