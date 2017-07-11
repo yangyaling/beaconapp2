@@ -14,7 +14,7 @@ $ret = array();
 
 $sqlcheck = "select * from RDUSERINFO WHERE uuid='" . $useruuid . "'";
 $sqlupdate = "update RDUSERINFO set username='" . $username . "',status2='" . $status2 . "' WHERE uuid='" . $useruuid . "'";
-$sqlinsert = "INSERT INTO RDUSERINFO (id, uuid, username,status2) VALUES (NULL,'" . $useruuid . "', '" . $username . "','" . $status2 . "')";
+$sqlinsert = "INSERT INTO RDUSERINFO (uuid, username,status2) VALUES ('" . $useruuid . "', '" . $username . "','" . $status2 . "')";
 
 $result = query_sql($sqlcheck, $conn, $code, $errors);
 if ($row = fetch_single_row($result)) {

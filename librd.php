@@ -150,11 +150,11 @@ function updatestatus($useruuid, $uuid, $major, $minor, $status)
     if ($conn) {
         mysql_select_db(SAE_MYSQL_DB, $conn);
 
-        $sqlinsert = "INSERT INTO RDMONITOR (id, useruuid, uuid,major,minor,updatetime, status) VALUES (NULL,'" . $useruuid . "', '" . $uuid . "', '" . $major . "', '" . $minor . "','" . date('Y-m-d H:i:s') . "','" . $status . "')";
+        $sqlinsert = "INSERT INTO RDMONITOR (useruuid, uuid,major,minor,updatetime, status) VALUES ('" . $useruuid . "', '" . $uuid . "', '" . $major . "', '" . $minor . "','" . date('Y-m-d H:i:s') . "','" . $status . "')";
 
         $result = mysql_query($sqlinsert);
 
-        $sqlstsins = "INSERT INTO RDUSERSTATUS (id, useruuid, uuid, major,minor,updatetime) VALUES (NULL, '" . $useruuid . "', '" . $uuid . "', '" . $major . "', '" . $minor . "', '" . date('Y-m-d H:i:s') . "')";
+        $sqlstsins = "INSERT INTO RDUSERSTATUS (useruuid, uuid, major,minor,updatetime) VALUES ('" . $useruuid . "', '" . $uuid . "', '" . $major . "', '" . $minor . "', '" . date('Y-m-d H:i:s') . "')";
         $sqlstsdel = "DELETE FROM RDUSERSTATUS WHERE useruuid='" . $useruuid . "' AND uuid='" . $uuid . "' AND major='" . $major . "' AND minor='" . $minor . "'";
         if ($status == '1') {
             $result = mysql_query($sqlstsins);
@@ -174,11 +174,11 @@ function reupdatestatus($useruuid, $uuid, $major, $minor, $status, $updatetime)
     if ($conn) {
         mysql_select_db(SAE_MYSQL_DB, $conn);
 
-        $sqlinsert = "INSERT INTO RDMONITOR (id, useruuid, uuid,major,minor,updatetime, status) VALUES (NULL,'" . $useruuid . "', '" . $uuid . "', '" . $major . "', '" . $minor . "','" . $updatetime . "','" . $status . "')";
+        $sqlinsert = "INSERT INTO RDMONITOR (useruuid, uuid,major,minor,updatetime, status) VALUES ('" . $useruuid . "', '" . $uuid . "', '" . $major . "', '" . $minor . "','" . $updatetime . "','" . $status . "')";
         $ret['sql'] = $sqlinsert;
         $result = mysql_query($sqlinsert);
 
-        $sqlstsins = "INSERT INTO RDUSERSTATUS (id, useruuid, uuid, major,minor,updatetime) VALUES (NULL, '" . $useruuid . "', '" . $uuid . "', '" . $major . "', '" . $minor . "', '" . $updatetime . "')";
+        $sqlstsins = "INSERT INTO RDUSERSTATUS (useruuid, uuid, major,minor,updatetime) VALUES ('" . $useruuid . "', '" . $uuid . "', '" . $major . "', '" . $minor . "', '" . $updatetime . "')";
         $sqlstsdel = "DELETE FROM RDUSERSTATUS WHERE useruuid='" . $useruuid . "' AND uuid='" . $uuid . "' AND major='" . $major . "' AND minor='" . $minor . "'";
         if ($status == '1') {
             $result = mysql_query($sqlstsins);
@@ -214,4 +214,8 @@ function reupdatestatus($useruuid, $uuid, $major, $minor, $status, $updatetime)
 ////   }
 //    //print_r($arrayReturn);
 //    return $arrayReturn;
+//}
+arrayReturn;
+//}
+arrayReturn;
 //}
