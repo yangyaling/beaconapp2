@@ -15,7 +15,8 @@ closeConnection($conn);
 
 if ($result)
 
-    echo mysql_insert_id($conn);
+    //echo mysql_insert_id($conn);
+    echo "t";
 else
     echo 'f';
 
