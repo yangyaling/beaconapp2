@@ -45,8 +45,8 @@
             <state vertical-scroll-proportion="0.6786941">
               <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
               <folding>
-                <marker date="1499759224821" expanded="true" signature="210:217" placeholder="SELECT TOP 1..RDMONITOR..." />
-                <marker date="1499759224821" expanded="true" signature="210:487" placeholder="SELECT U.use..RDMONITOR..." />
+                <marker date="1499759277680" expanded="true" signature="210:217" placeholder="SELECT TOP 1..RDMONITOR..." />
+                <marker date="1499759277680" expanded="true" signature="210:487" placeholder="SELECT U.use..RDMONITOR..." />
               </folding>
             </state>
           </provider>
@@ -256,12 +256,6 @@
       <created>1497945744191</created>
       <option name="number" value="Default" />
       <updated>1497945744191</updated>
-    </task>
-    <task id="LOCAL-00033" summary="adsa">
-      <created>1499647531838</created>
-      <option name="number" value="00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1499647531838</updated>
     </task>
     <task id="LOCAL-00034" summary="adsa">
       <created>1499647634605</created>
@@ -551,7 +545,13 @@
       <option name="project" value="LOCAL" />
       <updated>1499759019610</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="adsa">
+      <created>1499759229279</created>
+      <option name="number" value="00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1499759229279</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1054,8 +1054,8 @@
         <state vertical-scroll-proportion="0.6786941">
           <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
           <folding>
-            <marker date="1499759224821" expanded="true" signature="210:217" placeholder="SELECT TOP 1..RDMONITOR..." />
-            <marker date="1499759224821" expanded="true" signature="210:487" placeholder="SELECT U.use..RDMONITOR..." />
+            <marker date="1499759277680" expanded="true" signature="210:217" placeholder="SELECT TOP 1..RDMONITOR..." />
+            <marker date="1499759277680" expanded="true" signature="210:487" placeholder="SELECT U.use..RDMONITOR..." />
           </folding>
         </state>
       </provider>
