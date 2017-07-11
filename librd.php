@@ -96,51 +96,51 @@ function updateusercomment($useruuid, $comment)
     return $ret;
 }
 
-function insertnewuser($useruuid, $username, $status2)
-{
-    $ret = array();
-    $conn = @mysql_connect(SAE_MYSQL_HOST_M, SAE_MYSQL_USER, SAE_MYSQL_PASS);
-    if ($conn) {
-        mysql_select_db(SAE_MYSQL_DB, $conn);
-
-        //$sqldel ="delete from APPUSERINFO WHERE uuid='" . $useruuid ."'";
-        $sqlcheck = "select * from RDUSERINFO WHERE uuid='" . $useruuid . "'";
-
-        $sqlupdate = "update RDUSERINFO set username='" . $username . "',status2='" . $status2 . "' WHERE uuid='" . $useruuid . "'";
-        $sqlinsert = "INSERT INTO RDUSERINFO (id, uuid, username,status2) VALUES (NULL,'" . $useruuid . "', '" . $username . "','" . $status2 . "')";
-
-        $result = mysql_query($sqlcheck);
-
-        if ($row = mysql_fetch_row($result)) {
-            $result = mysql_query($sqlupdate);
-        } else {
-            $result = mysql_query($sqlinsert);
-        }
-
-        if ($result) {
-
-            $sqlcheck = "select uuid,username,status2 from RDUSERINFO WHERE uuid='" . $useruuid . "'";
-            $resultreq = mysql_query($sqlcheck);
-            if ($resultreq) {
-
-                while ($row = mysql_fetch_row($resultreq)) {
-                    //array_push($arrayReturn,$row);
-                    $ret['useruuid'] = $row[0];
-                    $ret['username'] = $row[1];
-                    $ret['status2'] = $row[2];
-
-                }
-            } else {
-                $ret['error'] = mysql_error();
-            }
-        } else {
-            $ret['error'] = mysql_error();
-        }
-    }
-    mysql_close($conn);
-    //print_r($ret);
-    return $ret;
-}
+//function insertnewuser($useruuid, $username, $status2)
+//{
+//    $ret = array();
+//    $conn = @mysql_connect(SAE_MYSQL_HOST_M, SAE_MYSQL_USER, SAE_MYSQL_PASS);
+//    if ($conn) {
+//        mysql_select_db(SAE_MYSQL_DB, $conn);
+//
+//        //$sqldel ="delete from APPUSERINFO WHERE uuid='" . $useruuid ."'";
+//        $sqlcheck = "select * from RDUSERINFO WHERE uuid='" . $useruuid . "'";
+//
+//        $sqlupdate = "update RDUSERINFO set username='" . $username . "',status2='" . $status2 . "' WHERE uuid='" . $useruuid . "'";
+//        $sqlinsert = "INSERT INTO RDUSERINFO (id, uuid, username,status2) VALUES (NULL,'" . $useruuid . "', '" . $username . "','" . $status2 . "')";
+//
+//        $result = mysql_query($sqlcheck);
+//
+//        if ($row = mysql_fetch_row($result)) {
+//            $result = mysql_query($sqlupdate);
+//        } else {
+//            $result = mysql_query($sqlinsert);
+//        }
+//
+//        if ($result) {
+//
+//            $sqlcheck = "select uuid,username,status2 from RDUSERINFO WHERE uuid='" . $useruuid . "'";
+//            $resultreq = mysql_query($sqlcheck);
+//            if ($resultreq) {
+//
+//                while ($row = mysql_fetch_row($resultreq)) {
+//                    //array_push($arrayReturn,$row);
+//                    $ret['useruuid'] = $row[0];
+//                    $ret['username'] = $row[1];
+//                    $ret['status2'] = $row[2];
+//
+//                }
+//            } else {
+//                $ret['error'] = mysql_error();
+//            }
+//        } else {
+//            $ret['error'] = mysql_error();
+//        }
+//    }
+//    mysql_close($conn);
+//    //print_r($ret);
+//    return $ret;
+//}
 
 function updatestatus($useruuid, $uuid, $major, $minor, $status)
 {
@@ -191,27 +191,27 @@ function reupdatestatus($useruuid, $uuid, $major, $minor, $status, $updatetime)
     return $ret;
 }
 
-function getlocation()
-{
-    //多条数据需要遍历
-    //header('Content-type: text/json; charset=UTF-8');
-    $arrayReturn = array();
-//    if ($conn) {
-        //mysql_query("SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'", $conn);
-        //在html里设置utf8避免乱码
-        //mysql_select_db(SAE_MYSQL_DB, $conn);
-        $result = query_sql("SELECT locationname,uuid,major,minor FROM RDBEACONINFO", $conn, $code, $errors);
-        if ($result) {
-            //$arrayReturn['yyy'] = 'OI';
-            while ($row = fetch_single_row($result)) {
-                $arrayReturn[$row[0]] = array('uuid' => $row[1], 'major' => $row[2], 'minor' => $row[3]);
-            }
-        } else {
-            $arrayReturn['yyy'] = mysql_error();
-        }
-//    } else {
-        //$arrayReturn['yyy'] = mysql_error();
-//   }
-    //print_r($arrayReturn);
-    return $arrayReturn;
-}
+//function getlocation()
+//{
+//    //多条数据需要遍历
+//    //header('Content-type: text/json; charset=UTF-8');
+//    $arrayReturn = array();
+////    if ($conn) {
+//        //mysql_query("SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'", $conn);
+//        //在html里设置utf8避免乱码
+//        //mysql_select_db(SAE_MYSQL_DB, $conn);
+//        $result = query_sql("SELECT locationname,uuid,major,minor FROM RDBEACONINFO", $conn, $code, $errors);
+//        if ($result) {
+//            //$arrayReturn['yyy'] = 'OI';
+//            while ($row = fetch_single_row($result)) {
+//                $arrayReturn[$row[0]] = array('uuid' => $row[1], 'major' => $row[2], 'minor' => $row[3]);
+//            }
+//        } else {
+//            $arrayReturn['yyy'] = mysql_error();
+//        }
+////    } else {
+//        //$arrayReturn['yyy'] = mysql_error();
+////   }
+//    //print_r($arrayReturn);
+//    return $arrayReturn;
+//}
