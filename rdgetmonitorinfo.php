@@ -31,11 +31,14 @@ ORDER BY
 
 $result = query_sql($strquery, $conn, $code, $errors);
 $index = 0;
-while ($row = fetch_single_row($result)) {
-    $index = $index + 1;
-    $arrayReturn[$row[0] . $row[2]] = array('location' => $row[1], 'updatetime' => $row[2], 'status' => $row[3]);
+if ($result) {
+    while ($row = fetch_single_row($result)) {
+        $index = $index + 1;
+        $arrayReturn[$row[0] . $row[2]] = array('location' => $row[1], 'updatetime' => $row[2], 'status' => $row[3]);
+    }
 }
-
+$arrayReturn['cd']=$code;
+$arrayReturn['er']=$errors;
 sendResponse(json_encode($arrayReturn));
 
 ?>
