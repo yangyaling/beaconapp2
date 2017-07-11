@@ -7,7 +7,7 @@
  */
 include 'lib.php';
 
-$uuid = $_POST["uuid"];
+$useruuid = $_POST["uuid"];
 $username = $_POST["username"];
 $status2 = $_POST["status2"];
 $ret = array();

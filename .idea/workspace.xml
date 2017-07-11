@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7aae7f51-ac83-46fb-a069-40ab1709ffc6" name="Default" comment="adsa">
+    <list default="true" id="7aae7f51-ac83-46fb-a069-40ab1709ffc6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/librd.php" afterPath="$PROJECT_DIR$/librd.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rdinsertuser.php" afterPath="$PROJECT_DIR$/rdinsertuser.php" />
     </list>
     <ignored path="rdbeacon.iws" />
@@ -55,23 +54,18 @@
       <file leaf-file-name="librd.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/librd.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.230769">
-              <caret line="102" column="16" selection-start-line="102" selection-start-column="16" selection-end-line="102" selection-end-column="16" />
+            <state vertical-scroll-proportion="-4.576923">
+              <caret line="98" column="34" selection-start-line="98" selection-start-column="25" selection-end-line="98" selection-end-column="34" />
               <folding>
-                <marker date="1499742278072" expanded="false" signature="9:91" placeholder=" Created by PhpStorm. ..." />
-                <marker date="1499742278072" expanded="true" signature="95:309" placeholder="//..." />
-                <marker date="1499742278072" expanded="true" signature="365:1416" placeholder="{...}" />
-                <marker date="1499742278072" expanded="true" signature="505:1359" placeholder="..." />
+                <element signature="e#6#93#0#PHP" expanded="true" />
                 <marker date="1499742278072" expanded="true" signature="798:1075" placeholder="SELECT U.use..RDMONITOR..." />
-                <marker date="1499742278072" expanded="true" signature="1189:1353" placeholder="..." />
-                <marker date="1499742278072" expanded="false" signature="1443:3171" placeholder="{...}" />
-                <marker date="1499742278072" expanded="true" signature="1583:3114" placeholder="..." />
-                <marker date="1499742278072" expanded="true" signature="2940:3108" placeholder="..." />
-                <marker date="1499742278072" expanded="false" signature="3220:3806" placeholder="{...}" />
-                <marker date="1499742278072" expanded="true" signature="3337:3741" placeholder="..." />
                 <marker date="1499742278072" expanded="true" signature="3484:3563" placeholder="update RDUSE..." />
-                <marker date="1499742278072" expanded="true" signature="3633:3675" placeholder="..." />
-                <marker date="1499742278072" expanded="true" signature="3683:3735" placeholder="..." />
+                <marker date="1499742278072" expanded="true" signature="5771:5970" placeholder="INSERT INTO RDMONITOR..." />
+                <marker date="1499742278072" expanded="true" signature="6040:6218" placeholder="INSERT INTO RDUSERSTATUS..." />
+                <marker date="1499742278072" expanded="true" signature="6243:6381" placeholder="DELETE FROM ..." />
+                <marker date="1499742278072" expanded="true" signature="6896:7087" placeholder="INSERT INTO RDMONITOR..." />
+                <marker date="1499742278072" expanded="true" signature="7190:7360" placeholder="INSERT INTO RDUSERSTATUS..." />
+                <marker date="1499742278072" expanded="true" signature="7385:7523" placeholder="DELETE FROM ..." />
               </folding>
             </state>
           </provider>
@@ -80,13 +74,13 @@
       <file leaf-file-name="rdinsertuser.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rdinsertuser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.662531">
-              <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.44292805">
+              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
               <folding>
-                <marker date="1499742215644" expanded="true" signature="225:280" placeholder="select * fro..RDUSERINFO..." />
-                <marker date="1499742215644" expanded="true" signature="297:405" placeholder="update RDUSE..." />
-                <marker date="1499742215644" expanded="true" signature="422:538" placeholder="INSERT INTO RDUSERINFO..." />
-                <marker date="1499742215644" expanded="true" signature="801:876" placeholder="select uuid,..RDUSERINFO..." />
+                <marker date="1499742500486" expanded="true" signature="229:284" placeholder="select * fro..RDUSERINFO..." />
+                <marker date="1499742500486" expanded="true" signature="301:409" placeholder="update RDUSE..." />
+                <marker date="1499742500486" expanded="true" signature="426:542" placeholder="INSERT INTO RDUSERINFO..." />
+                <marker date="1499742500486" expanded="true" signature="805:880" placeholder="select uuid,..RDUSERINFO..." />
               </folding>
             </state>
           </provider>
@@ -273,12 +267,6 @@
       <created>1497945744191</created>
       <option name="number" value="Default" />
       <updated>1497945744191</updated>
-    </task>
-    <task id="LOCAL-00021" summary="adsa">
-      <created>1499398246383</created>
-      <option name="number" value="00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1499398246383</updated>
     </task>
     <task id="LOCAL-00022" summary="adsa">
       <created>1499398361743</created>
@@ -568,14 +556,20 @@
       <option name="project" value="LOCAL" />
       <updated>1499742042123</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="adsa">
+      <created>1499742319480</created>
+      <option name="number" value="00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1499742319480</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27353895" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13068181" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908458" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1047,29 +1041,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/librd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.230769">
-          <caret line="102" column="16" selection-start-line="102" selection-start-column="16" selection-end-line="102" selection-end-column="16" />
-          <folding>
-            <marker date="1499742278072" expanded="false" signature="9:91" placeholder=" Created by PhpStorm. ..." />
-            <marker date="1499742278072" expanded="true" signature="95:309" placeholder="//..." />
-            <marker date="1499742278072" expanded="true" signature="365:1416" placeholder="{...}" />
-            <marker date="1499742278072" expanded="true" signature="505:1359" placeholder="..." />
-            <marker date="1499742278072" expanded="true" signature="798:1075" placeholder="SELECT U.use..RDMONITOR..." />
-            <marker date="1499742278072" expanded="true" signature="1189:1353" placeholder="..." />
-            <marker date="1499742278072" expanded="false" signature="1443:3171" placeholder="{...}" />
-            <marker date="1499742278072" expanded="true" signature="1583:3114" placeholder="..." />
-            <marker date="1499742278072" expanded="true" signature="2940:3108" placeholder="..." />
-            <marker date="1499742278072" expanded="false" signature="3220:3806" placeholder="{...}" />
-            <marker date="1499742278072" expanded="true" signature="3337:3741" placeholder="..." />
-            <marker date="1499742278072" expanded="true" signature="3484:3563" placeholder="update RDUSE..." />
-            <marker date="1499742278072" expanded="true" signature="3633:3675" placeholder="..." />
-            <marker date="1499742278072" expanded="true" signature="3683:3735" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rdgetlocation.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.769231">
@@ -1080,15 +1051,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/librd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.576923">
+          <caret line="98" column="34" selection-start-line="98" selection-start-column="25" selection-end-line="98" selection-end-column="34" />
+          <folding>
+            <element signature="e#6#93#0#PHP" expanded="true" />
+            <marker date="1499742278072" expanded="true" signature="798:1075" placeholder="SELECT U.use..RDMONITOR..." />
+            <marker date="1499742278072" expanded="true" signature="3484:3563" placeholder="update RDUSE..." />
+            <marker date="1499742278072" expanded="true" signature="5771:5970" placeholder="INSERT INTO RDMONITOR..." />
+            <marker date="1499742278072" expanded="true" signature="6040:6218" placeholder="INSERT INTO RDUSERSTATUS..." />
+            <marker date="1499742278072" expanded="true" signature="6243:6381" placeholder="DELETE FROM ..." />
+            <marker date="1499742278072" expanded="true" signature="6896:7087" placeholder="INSERT INTO RDMONITOR..." />
+            <marker date="1499742278072" expanded="true" signature="7190:7360" placeholder="INSERT INTO RDUSERSTATUS..." />
+            <marker date="1499742278072" expanded="true" signature="7385:7523" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/rdinsertuser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.662531">
-          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.44292805">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
           <folding>
-            <marker date="1499742215644" expanded="true" signature="225:280" placeholder="select * fro..RDUSERINFO..." />
-            <marker date="1499742215644" expanded="true" signature="297:405" placeholder="update RDUSE..." />
-            <marker date="1499742215644" expanded="true" signature="422:538" placeholder="INSERT INTO RDUSERINFO..." />
-            <marker date="1499742215644" expanded="true" signature="801:876" placeholder="select uuid,..RDUSERINFO..." />
+            <marker date="1499742500486" expanded="true" signature="229:284" placeholder="select * fro..RDUSERINFO..." />
+            <marker date="1499742500486" expanded="true" signature="301:409" placeholder="update RDUSE..." />
+            <marker date="1499742500486" expanded="true" signature="426:542" placeholder="INSERT INTO RDUSERINFO..." />
+            <marker date="1499742500486" expanded="true" signature="805:880" placeholder="select uuid,..RDUSERINFO..." />
           </folding>
         </state>
       </provider>
