@@ -31,18 +31,20 @@
 <body onload="init()">
 <?php
 
-define("SAE_MYSQL_HOST_M",     "ja-cdbr-azure-east-a.cloudapp.net");
-define("SAE_MYSQL_USER",     "b5b35eecdcd068");
-define("SAE_MYSQL_PASS",     "b5074189");
-define("SAE_MYSQL_DB",     "rdbeacoAd7N1JMXE");
+include 'lib.php';
 
-$conn = @mysql_connect(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS);
-mysql_select_db(SAE_MYSQL_DB,$conn);
+//define("SAE_MYSQL_HOST_M",     "ja-cdbr-azure-east-a.cloudapp.net");
+//define("SAE_MYSQL_USER",     "b5b35eecdcd068");
+//define("SAE_MYSQL_PASS",     "b5074189");
+//define("SAE_MYSQL_DB",     "rdbeacoAd7N1JMXE");
+//
+//$conn = @mysql_connect(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS);
+//mysql_select_db(SAE_MYSQL_DB,$conn);
 
 $sql = "select roomname from rdroom where visible=1";
-$result = mysql_query($sql, $conn);
+$result = query_sql($sql, $conn, $code, $errors);
 $displayname='ルーム未設定';
-if ($row=mysql_fetch_array($result, MYSQL_ASSOC)){
+if ($row=fetch_single_row($result, MYSQL_ASSOC)){
     $displayname=$row['roomname'];
 }
 
@@ -58,7 +60,7 @@ where u.visible = 1
 group by u.uuid
 order by u.listindex asc";
 
-$result = mysql_query($sql, $conn);
+$result = query_sql($sql, $conn, $code, $errors);
 
 //$dbcolarray = array(0=>'ユーザID',1=>'ユーザネーム',2=>$displayname);
 
@@ -68,7 +70,7 @@ echo   "<div  align='center'>
 
 echo "<th style='display: none'>uuid</th><th>メンバー</th><th>$displayname</th>";
 
-while ($row=mysql_fetch_array($result, MYSQL_ASSOC)) {
+while ($row=fetch_single_row($result, MYSQL_ASSOC)) {
     echo "<tr>";
     $uuid= $row['uuid'];
     $username=$row['username'];
@@ -102,8 +104,8 @@ echo "</div>";
 
 
 
-mysql_free_result($result);
-mysql_close($conn);
+//mysql_free_result($result);
+//mysql_close($conn);
 ?>
 
 <script>
