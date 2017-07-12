@@ -44,21 +44,47 @@ include 'lib.php';
 $sql = "select roomname from rdroom where visible=1";
 $result = query_sql($sql, $conn, $code, $errors);
 $displayname='ルーム未設定';
-if ($row=fetch_single_row($result, MYSQL_ASSOC)){
+if ($row=fetch_single_row($result)){
     $displayname=$row['roomname'];
 }
 
 //表中的内容
-$sql = "SELECT u.uuid,u.username,count(rm.roomid) as num,u.status2
-FROM rduserinfo u
-left join rduserstatus us on u.uuid = us.useruuid and date_format(us.updatetime,'%Y-%m-%d') = date_format(now(),'%Y-%m-%d')
-left join rdbeaconinfo b on b.uuid = us.uuid
-						and b.major = us.major
-                        and b.minor = us.minor
-left join rdroom rm on rm.roomid = b.roomid and rm.visible = 1
-where u.visible = 1
-group by u.uuid
-order by u.listindex asc";
+$sql = "SELECT
+	u.uuid,
+	u.username,
+	u.status2,
+	COUNT (u.roomid) AS num
+FROM
+	(
+		SELECT
+			u.uuid,
+			u.username,
+			u.status2,
+			u.listindex,
+			rm.roomid
+		FROM
+			rduserinfo u
+		LEFT JOIN rduserstatus us ON u.uuid = us.useruuid
+		AND CONVERT (
+			VARCHAR (10),
+			us.updatetime,
+			120
+		) = CONVERT (VARCHAR(10), GETDATE(), 120)
+		LEFT JOIN rdbeaconinfo b ON b.uuid = us.uuid
+		AND b.major = us.major
+		AND b.minor = us.minor
+		LEFT JOIN rdroom rm ON rm.roomid = b.roomid
+		AND rm.visible = 1
+		WHERE
+			u.visible = 1
+	) u
+GROUP BY
+	u.uuid,
+	u.username,
+	u.status2,
+	u.listindex
+ORDER BY
+	u.listindex ASC";
 
 $result = query_sql($sql, $conn, $code, $errors);
 
@@ -70,7 +96,7 @@ echo   "<div  align='center'>
 
 echo "<th style='display: none'>uuid</th><th>メンバー</th><th>$displayname</th>";
 
-while ($row=fetch_single_row($result, MYSQL_ASSOC)) {
+while ($row=fetch_single_row($result)) {
     echo "<tr>";
     $uuid= $row['uuid'];
     $username=$row['username'];
