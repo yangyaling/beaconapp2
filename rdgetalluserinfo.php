@@ -41,11 +41,11 @@ LEFT JOIN (
 	SELECT
 		M.*,
 		ROW_NUMBER () OVER (
-			partition BY m.uuid
+			partition BY m.useruuid
 			ORDER BY
 				updatetime DESC
 		) rn,
-		COUNT (uuid) OVER (PARTITION BY uuid) status
+		COUNT (uuid) OVER (PARTITION BY useruuid) status
 	FROM
 		RDUSERSTATUS M
 ) AS M ON U.uuid = M.useruuid

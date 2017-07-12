@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7aae7f51-ac83-46fb-a069-40ab1709ffc6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rdgetalluserinfo.php" afterPath="$PROJECT_DIR$/rdgetalluserinfo.php" />
     </list>
     <ignored path="rdbeacon.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,21 +25,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="rdgetalluserinfo.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="rdgetalluserinfo.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rdgetalluserinfo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.692308">
-              <caret line="42" column="28" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.34948605">
+              <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24444444">
-              <caret line="98" column="9" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
+            <state vertical-scroll-proportion="-8.153846">
+              <caret line="104" column="30" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="30" />
               <folding>
                 <marker date="1499837633939" expanded="true" signature="1525:1568" placeholder="select roomn..rdroom..." />
                 <marker date="1499837633939" expanded="true" signature="1735:2339" placeholder="SELECT u.uui..uuid..." />
@@ -103,8 +103,8 @@
         <option value="$PROJECT_DIR$/rdupdateall.php" />
         <option value="$PROJECT_DIR$/librd.php" />
         <option value="$PROJECT_DIR$/rdgetmonitorinfo.php" />
-        <option value="$PROJECT_DIR$/rdgetalluserinfo.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/rdgetalluserinfo.php" />
       </list>
     </option>
   </component>
@@ -238,12 +238,6 @@
       <created>1497945744191</created>
       <option name="number" value="Default" />
       <updated>1497945744191</updated>
-    </task>
-    <task id="LOCAL-00041" summary="adsa">
-      <created>1499651330457</created>
-      <option name="number" value="00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1499651330457</updated>
     </task>
     <task id="LOCAL-00042" summary="adsa">
       <created>1499674435629</created>
@@ -533,7 +527,13 @@
       <option name="project" value="LOCAL" />
       <updated>1499831051316</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="index update">
+      <created>1499837643844</created>
+      <option name="number" value="00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1499837643844</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -545,7 +545,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908458" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41251448" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14484356" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -895,14 +895,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rdgetalluserinfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.692308">
-          <caret line="42" column="28" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33746898">
@@ -979,8 +971,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24444444">
-          <caret line="98" column="9" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
+        <state vertical-scroll-proportion="-8.153846">
+          <caret line="104" column="30" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="30" />
           <folding>
             <marker date="1499837633939" expanded="true" signature="1525:1568" placeholder="select roomn..rdroom..." />
             <marker date="1499837633939" expanded="true" signature="1735:2339" placeholder="SELECT u.uui..uuid..." />
@@ -991,6 +983,14 @@
             <marker date="1499837633939" expanded="true" signature="3412:3585" placeholder="..." />
             <marker date="1499837633939" expanded="true" signature="3456:3585" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rdgetalluserinfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34948605">
+          <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
