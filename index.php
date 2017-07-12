@@ -94,7 +94,7 @@ echo   "<div  align='center'>
         <table id='Table' border=1 cellpadding=10 cellspacing=1 bordercolor=#408080 width='50%'>";
 
 
-echo "<th style='display: none'>uuid</th><th>メンバー</th><th>$displayname</th>";
+echo "<th style='display: none'>uuid</th><th>用户名</th><th>$displayname</th>";
 
 while ($row=fetch_single_row($result)) {
     echo "<tr>";
